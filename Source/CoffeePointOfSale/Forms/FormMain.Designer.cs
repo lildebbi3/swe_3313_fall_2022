@@ -36,7 +36,11 @@ sealed partial class FormMain
             // 
             // btnManagement
             // 
+<<<<<<< HEAD
             this.btnManagement.Location = new System.Drawing.Point(337, 268);
+=======
+            this.btnManagement.Location = new System.Drawing.Point(46, 40);
+>>>>>>> 9413816b87ee774ed162a227f6caca73a7f341aa
             this.btnManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.Size = new System.Drawing.Size(140, 22);
@@ -88,14 +92,16 @@ sealed partial class FormMain
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnManagement);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+=======
+>>>>>>> 9413816b87ee774ed162a227f6caca73a7f341aa
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form";
-            this.Load += new System.EventHandler(this.OnLoad);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnFormMainClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
