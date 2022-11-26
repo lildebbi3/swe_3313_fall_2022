@@ -10,9 +10,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace CoffeePointOfSale.Forms
 {
+
+    //class to check if a number is a phone number
+    public static class PhoneNumber
+    {
+        // Regular expression used to validate a phone number.
+        public const string motif = @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
+
+        //method to call to identify if a number is a phone number
+        public static bool IsPhoneNbr(string number)
+        {
+            if (number != null) return Regex.IsMatch(number, motif);
+            else return false;
+        }
+    }
+    
     public partial class FormCreateCustomer : Base.FormNoCloseBase
     {
         private ICustomerService _customerService;
@@ -40,17 +56,21 @@ namespace CoffeePointOfSale.Forms
         //does not do that yet, it adds to the customer dictionary but not the json
         private void button1_Click(object sender, EventArgs e)
         {
+            //gets the values from the text boxes and places them in variables
             string phoneNumber = textBoxPN.Text;
             string firstName = textBoxFN.Text;
             string lastName = textBoxLN.Text;
+
+            //checks if lastname and firstname are empty, if they are then displays message
             if ((lastName=="")||(firstName==""))
             {
 
                 CCwarningLabel.Visible = true;
             }
-            else
+            else if(PhoneNumber.IsPhoneNbr(phoneNumber))
             {
                 CCwarningLabel.Visible = false;
+                //creates a customer object with values
                 var newCust = new Customer()
                 {
                     firstName = firstName,
