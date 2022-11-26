@@ -47,6 +47,7 @@ namespace CoffeePointOfSale.Forms
             string lastName = textBoxLN.Text;
 
             //checks if lastname and firstname are empty, if they are then displays message
+            //just for testing the github.
             if ((lastName=="")||(firstName==""))
             {
 

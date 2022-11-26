@@ -77,24 +77,15 @@
             // 
             // button1
             // 
-
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(426, 423);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ADD CUSTOMER";
-            this.button1.UseVisualStyleBackColor = false;
-
             this.button1.Location = new System.Drawing.Point(532, 529);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(235, 39);
             this.button1.TabIndex = 3;
             this.button1.Text = "ADD CUSTOMER";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-
             // 
             // label4
             // 
@@ -110,7 +101,7 @@
             // textBoxFN
             // 
             this.textBoxFN.Location = new System.Drawing.Point(447, 162);
-            this.textBoxFN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFN.Name = "textBoxFN";
             this.textBoxFN.Size = new System.Drawing.Size(167, 27);
             this.textBoxFN.TabIndex = 5;
@@ -118,7 +109,7 @@
             // textBoxLN
             // 
             this.textBoxLN.Location = new System.Drawing.Point(447, 207);
-            this.textBoxLN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLN.Name = "textBoxLN";
             this.textBoxLN.Size = new System.Drawing.Size(167, 27);
             this.textBoxLN.TabIndex = 6;
@@ -126,7 +117,7 @@
             // textBoxPN
             // 
             this.textBoxPN.Location = new System.Drawing.Point(447, 254);
-            this.textBoxPN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPN.Name = "textBoxPN";
             this.textBoxPN.Size = new System.Drawing.Size(167, 27);
             this.textBoxPN.TabIndex = 7;
@@ -136,7 +127,7 @@
             this.labelCustomerSignupWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelCustomerSignupWarning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCustomerSignupWarning.Location = new System.Drawing.Point(791, 39);
-            this.labelCustomerSignupWarning.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelCustomerSignupWarning.Margin = new System.Windows.Forms.Padding(6);
             this.labelCustomerSignupWarning.Name = "labelCustomerSignupWarning";
             this.labelCustomerSignupWarning.Padding = new System.Windows.Forms.Padding(4, 8, 2, 24);
             this.labelCustomerSignupWarning.Size = new System.Drawing.Size(245, 123);
@@ -150,7 +141,7 @@
             // 
             this.backBtnCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.backBtnCC.Location = new System.Drawing.Point(10, 10);
-            this.backBtnCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backBtnCC.Margin = new System.Windows.Forms.Padding(2);
             this.backBtnCC.Name = "backBtnCC";
             this.backBtnCC.Size = new System.Drawing.Size(85, 47);
             this.backBtnCC.TabIndex = 8;
@@ -164,7 +155,7 @@
             this.CCwarningLabel.ForeColor = System.Drawing.Color.Red;
             this.CCwarningLabel.Location = new System.Drawing.Point(430, 464);
             this.CCwarningLabel.Name = "CCwarningLabel";
-            this.CCwarningLabel.Size = new System.Drawing.Size(497, 25);
+            this.CCwarningLabel.Size = new System.Drawing.Size(414, 20);
             this.CCwarningLabel.TabIndex = 9;
             this.CCwarningLabel.Text = "Please enter info into the three boxes to add a new customer.";
             this.CCwarningLabel.Visible = false;
@@ -173,13 +164,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1348, 721);
-
-            this.ClientSize = new System.Drawing.Size(1344, 712);
             this.Controls.Add(this.CCwarningLabel);
-
             this.Controls.Add(this.backBtnCC);
             this.Controls.Add(this.labelCustomerSignupWarning);
             this.Controls.Add(this.textBoxPN);
