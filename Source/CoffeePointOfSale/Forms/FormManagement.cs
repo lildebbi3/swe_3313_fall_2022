@@ -36,6 +36,7 @@ public partial class FormManagement : FormNoCloseBase
         for (var customerIdx = 0; customerIdx < customerList.Count; customerIdx++)
         {
             var customer = customerList[customerIdx];
+            txtDeleteThis.AppendText($"{customerIdx+1}.{customer}{Environment.NewLine}");
         }
     }
 

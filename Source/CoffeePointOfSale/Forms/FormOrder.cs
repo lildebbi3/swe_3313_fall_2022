@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeePointOfSale.Configuration;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +11,12 @@ using System.Windows.Forms;
 
 namespace CoffeePointOfSale.Forms
 {
-    public partial class FormOrder : Form
+    public partial class FormOrder : Base.FormNoCloseBase
     {
-        public FormOrder()
+        private IAppSettings _appSettings;
+        public FormOrder(IAppSettings appSettings)
         {
+            _appSettings = appSettings;
             InitializeComponent();
         }
     }
