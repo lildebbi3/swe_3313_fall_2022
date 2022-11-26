@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Services.FormFactory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,8 @@ namespace CoffeePointOfSale.Forms
 
         private void RecceiptMainMenubtn_Click(object sender, EventArgs e)
         {
-
+            Close();
+            FormFactory.Get<FormMain>().Show();
         }
     }
 }
