@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateCustomer));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,77 +44,91 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(415, 202);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(332, 162);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 25);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(415, 262);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(332, 210);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Last Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(415, 322);
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(332, 258);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 25);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Phone Number";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(532, 529);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(426, 423);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 39);
+            this.button1.Size = new System.Drawing.Size(188, 31);
             this.button1.TabIndex = 3;
             this.button1.Text = "ADD CUSTOMER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(559, 86);
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(447, 69);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 25);
+            this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "CUSTOMER SIGNUP";
             // 
             // textBoxFN
             // 
-            this.textBoxFN.Location = new System.Drawing.Point(559, 202);
+            this.textBoxFN.Location = new System.Drawing.Point(447, 162);
+            this.textBoxFN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFN.Name = "textBoxFN";
-            this.textBoxFN.Size = new System.Drawing.Size(208, 31);
+            this.textBoxFN.Size = new System.Drawing.Size(167, 27);
             this.textBoxFN.TabIndex = 5;
             // 
             // textBoxLN
             // 
-            this.textBoxLN.Location = new System.Drawing.Point(559, 259);
+            this.textBoxLN.Location = new System.Drawing.Point(447, 207);
+            this.textBoxLN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLN.Name = "textBoxLN";
-            this.textBoxLN.Size = new System.Drawing.Size(208, 31);
+            this.textBoxLN.Size = new System.Drawing.Size(167, 27);
             this.textBoxLN.TabIndex = 6;
             // 
             // textBoxPN
             // 
-            this.textBoxPN.Location = new System.Drawing.Point(559, 317);
+            this.textBoxPN.Location = new System.Drawing.Point(447, 254);
+            this.textBoxPN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPN.Name = "textBoxPN";
-            this.textBoxPN.Size = new System.Drawing.Size(208, 31);
+            this.textBoxPN.Size = new System.Drawing.Size(167, 27);
             this.textBoxPN.TabIndex = 7;
             // 
             // labelCustomerSignupWarning
             // 
+            this.labelCustomerSignupWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelCustomerSignupWarning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelCustomerSignupWarning.Location = new System.Drawing.Point(989, 49);
-            this.labelCustomerSignupWarning.Margin = new System.Windows.Forms.Padding(7);
+            this.labelCustomerSignupWarning.Location = new System.Drawing.Point(791, 39);
+            this.labelCustomerSignupWarning.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.labelCustomerSignupWarning.Name = "labelCustomerSignupWarning";
-            this.labelCustomerSignupWarning.Padding = new System.Windows.Forms.Padding(5, 10, 2, 30);
-            this.labelCustomerSignupWarning.Size = new System.Drawing.Size(306, 153);
+            this.labelCustomerSignupWarning.Padding = new System.Windows.Forms.Padding(4, 8, 2, 24);
+            this.labelCustomerSignupWarning.Size = new System.Drawing.Size(245, 123);
             this.labelCustomerSignupWarning.TabIndex = 1;
             this.labelCustomerSignupWarning.Text = "All fields must be filled and cannot be left empty, doing so will result in an in" +
     "valid statement occuring on the screen.";
@@ -122,19 +137,22 @@
             // 
             // backBtnCC
             // 
-            this.backBtnCC.Location = new System.Drawing.Point(12, 12);
+            this.backBtnCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.backBtnCC.Location = new System.Drawing.Point(10, 10);
+            this.backBtnCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backBtnCC.Name = "backBtnCC";
-            this.backBtnCC.Size = new System.Drawing.Size(106, 59);
+            this.backBtnCC.Size = new System.Drawing.Size(85, 47);
             this.backBtnCC.TabIndex = 8;
             this.backBtnCC.Text = "Back";
-            this.backBtnCC.UseVisualStyleBackColor = true;
+            this.backBtnCC.UseVisualStyleBackColor = false;
             this.backBtnCC.Click += new System.EventHandler(this.backBtnCC_Click);
             // 
             // FormCreateCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1348, 721);
             this.Controls.Add(this.backBtnCC);
             this.Controls.Add(this.labelCustomerSignupWarning);
             this.Controls.Add(this.textBoxPN);
@@ -145,9 +163,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(13, 22, 13, 22);
+            this.Margin = new System.Windows.Forms.Padding(10, 18, 10, 18);
             this.Name = "FormCreateCustomer";
-            this.Text = "FormCreateCustomer";
+            this.ShowIcon = false;
+            this.Text = "Jeff\'s Coffee Shop";
             this.ResumeLayout(false);
             this.PerformLayout();
 
