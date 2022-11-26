@@ -77,8 +77,7 @@
             // 
             // button1
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(426, 423);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -87,16 +86,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "ADD CUSTOMER";
             this.button1.UseVisualStyleBackColor = false;
-=======
-            this.addCustomerBtn.Location = new System.Drawing.Point(532, 529);
-            this.addCustomerBtn.Name = "addCustomerBtn";
-            this.addCustomerBtn.Size = new System.Drawing.Size(235, 39);
-            this.addCustomerBtn.TabIndex = 3;
-            this.addCustomerBtn.Text = "ADD CUSTOMER";
-            this.addCustomerBtn.UseVisualStyleBackColor = true;
-            this.addCustomerBtn.Click += new System.EventHandler(this.button1_Click);
->>>>>>> 92a26549c57947fbcf0bb83fccf78ac48c204565
-=======
+
             this.button1.Location = new System.Drawing.Point(532, 529);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(235, 39);
@@ -104,7 +94,7 @@
             this.button1.Text = "ADD CUSTOMER";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
->>>>>>> f45d1185f7f3f88eb2158ec1b91473ba0c65730d
+
             // 
             // label4
             // 
@@ -183,13 +173,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1348, 721);
-=======
+
             this.ClientSize = new System.Drawing.Size(1344, 712);
             this.Controls.Add(this.CCwarningLabel);
->>>>>>> 92a26549c57947fbcf0bb83fccf78ac48c204565
+
             this.Controls.Add(this.backBtnCC);
             this.Controls.Add(this.labelCustomerSignupWarning);
             this.Controls.Add(this.textBoxPN);
