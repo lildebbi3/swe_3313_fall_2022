@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.addCustomerBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxFN = new System.Windows.Forms.TextBox();
             this.textBoxLN = new System.Windows.Forms.TextBox();
@@ -68,15 +68,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Phone Number";
             // 
-            // addCustomerBtn
+            // button1
             // 
-            this.addCustomerBtn.Location = new System.Drawing.Point(532, 529);
-            this.addCustomerBtn.Name = "addCustomerBtn";
-            this.addCustomerBtn.Size = new System.Drawing.Size(235, 39);
-            this.addCustomerBtn.TabIndex = 3;
-            this.addCustomerBtn.Text = "ADD CUSTOMER";
-            this.addCustomerBtn.UseVisualStyleBackColor = true;
-            this.addCustomerBtn.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Location = new System.Drawing.Point(532, 529);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 39);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "ADD CUSTOMER";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -155,7 +155,7 @@
             this.Controls.Add(this.textBoxLN);
             this.Controls.Add(this.textBoxFN);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.addCustomerBtn);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -172,7 +172,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button addCustomerBtn;
+        private Button button1;
         private Label label4;
         private TextBox textBoxFN;
         private TextBox textBoxLN;
