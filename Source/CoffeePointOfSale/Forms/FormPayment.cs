@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Services.FormFactory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,12 @@ namespace CoffeePointOfSale.Forms
         {
             InitializeComponent();
             _appSettings = appSettings;
+        }
+
+        private void paymentCancelBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+            FormFactory.Get<FormMain>().Show();
         }
     }
 }

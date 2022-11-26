@@ -11,6 +11,7 @@ public partial class FormMain : FormBase
         InitializeComponent();
     }
 
+    //btn takes user to management form
     private void OnClickBtnManagement(object sender, EventArgs e)
     {
         Hide();
@@ -22,9 +23,17 @@ public partial class FormMain : FormBase
         Application.Exit();
     }
 
+    //btn takes user to customer list form
     private void OnClickBtnCustomerListing(object sender, EventArgs e)
     {
         Hide();
         FormFactory.Get<FormCustomerList>().ShowDialog();
+    }
+
+    //btn takes user to order form
+    private void button1_Click(object sender, EventArgs e)
+    {
+        Hide();
+        FormFactory.Get<FormOrder>().ShowDialog();
     }
 }

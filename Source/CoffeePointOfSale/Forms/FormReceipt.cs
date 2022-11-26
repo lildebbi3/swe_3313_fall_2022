@@ -24,5 +24,10 @@ namespace CoffeePointOfSale.Forms
         {
 
         }
+
+        private void RecceiptMainMenubtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
