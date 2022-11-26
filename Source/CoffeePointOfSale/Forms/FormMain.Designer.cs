@@ -88,7 +88,10 @@ sealed partial class FormMain
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnManagement);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+=======
+>>>>>>> 1be089ce03704322b46794b58b1b1c7fb3ccc511
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
