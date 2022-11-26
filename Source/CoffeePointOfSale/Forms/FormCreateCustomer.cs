@@ -14,21 +14,6 @@ using System.Text.RegularExpressions;
 
 namespace CoffeePointOfSale.Forms
 {
-
-    //class to check if a number is a phone number
-    public static class PhoneNumber
-    {
-        // Regular expression used to validate a phone number.
-        public const string motif = @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
-
-        //method to call to identify if a number is a phone number
-        public static bool IsPhoneNbr(string number)
-        {
-            if (number != null) return Regex.IsMatch(number, motif);
-            else return false;
-        }
-    }
-    
     public partial class FormCreateCustomer : Base.FormNoCloseBase
     {
         private ICustomerService _customerService;
@@ -89,6 +74,19 @@ namespace CoffeePointOfSale.Forms
                 FormFactory.Get<FormManagement>().Show();
             }
 
+        }
+    }
+    //class to check if a number is a phone number
+    public static class PhoneNumber
+    {
+        // Regular expression used to validate a phone number.
+        public const string motif = @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
+
+        //method to call to identify if a number is a phone number
+        public static bool IsPhoneNbr(string number)
+        {
+            if (number != null) return Regex.IsMatch(number, motif);
+            else return false;
         }
     }
 }
