@@ -24,5 +24,11 @@ namespace CoffeePointOfSale.Forms
             FormFactory.Get<FormMain>().ShowDialog();
         }
 
+        //btn that takes user to create customer form
+        private void newCustomerBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+            FormFactory.Get<FormCreateCustomer>().Show();
+        }
     }
 }
