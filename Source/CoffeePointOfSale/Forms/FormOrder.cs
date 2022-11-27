@@ -19,5 +19,10 @@ namespace CoffeePointOfSale.Forms
             _appSettings = appSettings;
             InitializeComponent();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
