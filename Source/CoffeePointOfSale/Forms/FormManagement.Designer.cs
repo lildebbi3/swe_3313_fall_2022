@@ -37,10 +37,9 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnClose.Location = new System.Drawing.Point(430, 358);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(491, 477);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(139, 36);
+            this.btnClose.Size = new System.Drawing.Size(159, 48);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -48,34 +47,33 @@
             // 
             // txtDeleteThis
             // 
-            this.txtDeleteThis.Location = new System.Drawing.Point(436, 159);
-            this.txtDeleteThis.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDeleteThis.Location = new System.Drawing.Point(498, 212);
+            this.txtDeleteThis.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDeleteThis.Multiline = true;
             this.txtDeleteThis.Name = "txtDeleteThis";
-            this.txtDeleteThis.Size = new System.Drawing.Size(299, 120);
+            this.txtDeleteThis.Size = new System.Drawing.Size(341, 159);
             this.txtDeleteThis.TabIndex = 1;
             // 
             // GenerateCSVbtn
             // 
             this.GenerateCSVbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.GenerateCSVbtn.Location = new System.Drawing.Point(606, 358);
-            this.GenerateCSVbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GenerateCSVbtn.Location = new System.Drawing.Point(693, 477);
             this.GenerateCSVbtn.Name = "GenerateCSVbtn";
-            this.GenerateCSVbtn.Size = new System.Drawing.Size(139, 36);
+            this.GenerateCSVbtn.Size = new System.Drawing.Size(159, 48);
             this.GenerateCSVbtn.TabIndex = 2;
             this.GenerateCSVbtn.Text = "Generate CSV";
             this.GenerateCSVbtn.UseVisualStyleBackColor = false;
             // 
             // FormManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1284, 701);
+            this.ClientSize = new System.Drawing.Size(1348, 721);
             this.Controls.Add(this.GenerateCSVbtn);
             this.Controls.Add(this.txtDeleteThis);
             this.Controls.Add(this.btnClose);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "FormManagement";
             this.Text = "FormManagement";
             this.Load += new System.EventHandler(this.OnLoadFormManagement);

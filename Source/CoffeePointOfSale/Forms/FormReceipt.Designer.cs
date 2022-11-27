@@ -53,7 +53,7 @@
             // 
             // recieptTxtbox
             // 
-            this.recieptTxtbox.Location = new System.Drawing.Point(552, 128);
+            this.recieptTxtbox.Location = new System.Drawing.Point(496, 52);
             this.recieptTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recieptTxtbox.Multiline = true;
             this.recieptTxtbox.Name = "recieptTxtbox";
