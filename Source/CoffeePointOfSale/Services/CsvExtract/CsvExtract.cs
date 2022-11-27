@@ -26,10 +26,7 @@ namespace CoffeePointOfSale.Services.CsvExtract
         /// Add service to DI container - normally done in an extension method, but this way for simplicity
         /// </summary>
         /// <param name="services"></param>
-        public static void ConfigureService(IServiceCollection services)
-        {
-            services.AddSingleton<ICsvExtract, CsvExtract>();
-        }
+      
     }
 
 }

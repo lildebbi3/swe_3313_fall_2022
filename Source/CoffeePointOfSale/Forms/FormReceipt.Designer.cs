@@ -31,16 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReceipt));
             this.RecceiptMainMenubtn = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.recieptTxtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // RecceiptMainMenubtn
             // 
             this.RecceiptMainMenubtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.RecceiptMainMenubtn.Location = new System.Drawing.Point(15, 15);
-            this.RecceiptMainMenubtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RecceiptMainMenubtn.Location = new System.Drawing.Point(10, 9);
+            this.RecceiptMainMenubtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RecceiptMainMenubtn.Name = "RecceiptMainMenubtn";
-            this.RecceiptMainMenubtn.Size = new System.Drawing.Size(141, 55);
+            this.RecceiptMainMenubtn.Size = new System.Drawing.Size(105, 48);
             this.RecceiptMainMenubtn.TabIndex = 0;
             this.RecceiptMainMenubtn.Text = "MainMenu";
             this.RecceiptMainMenubtn.UseVisualStyleBackColor = false;
@@ -51,19 +52,29 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // recieptTxtbox
+            // 
+            this.recieptTxtbox.Location = new System.Drawing.Point(483, 96);
+            this.recieptTxtbox.Multiline = true;
+            this.recieptTxtbox.Name = "recieptTxtbox";
+            this.recieptTxtbox.Size = new System.Drawing.Size(330, 418);
+            this.recieptTxtbox.TabIndex = 1;
+            // 
             // FormReceipt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1685, 901);
+            this.ClientSize = new System.Drawing.Size(1284, 701);
+            this.Controls.Add(this.recieptTxtbox);
             this.Controls.Add(this.RecceiptMainMenubtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 11, 4, 11);
+            this.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
             this.Name = "FormReceipt";
             this.Text = "Jeff\'s Coffee Shop";
             this.Load += new System.EventHandler(this.FormReceipt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,5 +82,6 @@
 
         private Button RecceiptMainMenubtn;
         private FileSystemWatcher fileSystemWatcher1;
+        private TextBox recieptTxtbox;
     }
 }
