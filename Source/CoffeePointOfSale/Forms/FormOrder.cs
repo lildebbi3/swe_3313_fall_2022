@@ -33,5 +33,10 @@ namespace CoffeePointOfSale.Forms
             Close();
             FormFactory.Get<FormMain>().Show();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,39 +30,52 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrder));
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
+            this.coffeeObtn = new System.Windows.Forms.Button();
+            this.espressoObtn = new System.Windows.Forms.Button();
+            this.mgtlObtn = new System.Windows.Forms.Button();
+            this.latteObtn = new System.Windows.Forms.Button();
+            this.cappuccinoObtn = new System.Windows.Forms.Button();
+            this.smallSbtn = new System.Windows.Forms.Button();
+            this.mediumSbtn = new System.Windows.Forms.Button();
+            this.largeSbtn = new System.Windows.Forms.Button();
+            this.minusBtnQ = new System.Windows.Forms.Button();
+            this.addBtnQ = new System.Windows.Forms.Button();
+            this.QtyTxtbox = new System.Windows.Forms.TextBox();
+            this.payWCCBtn = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.payWReward = new System.Windows.Forms.Button();
+            this.waterObtn = new System.Windows.Forms.Button();
+            this.teaObtn = new System.Windows.Forms.Button();
+            this.coffeeLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.sizeLabel = new System.Windows.Forms.Label();
+            this.tempHotCB = new System.Windows.Forms.CheckBox();
+            this.wholeMilkCB = new System.Windows.Forms.CheckBox();
+            this.nfMilkCB = new System.Windows.Forms.CheckBox();
+            this.tempColdCB = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.oatMilkCB = new System.Windows.Forms.CheckBox();
+            this.almondMilkCB = new System.Windows.Forms.CheckBox();
+            this.soyMilkCB = new System.Windows.Forms.CheckBox();
+            this.sugarCB = new System.Windows.Forms.CheckBox();
+            this.steviaCB = new System.Windows.Forms.CheckBox();
+            this.SNLCB = new System.Windows.Forms.CheckBox();
+            this.foamCB = new System.Windows.Forms.CheckBox();
+            this.whippedCreamCB = new System.Windows.Forms.CheckBox();
+            this.chocolateSCB = new System.Windows.Forms.CheckBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(2, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 36);
             this.button1.TabIndex = 0;
@@ -70,240 +83,144 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // coffeeObtn
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(408, 61);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 31);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "          Order";
+            this.coffeeObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.coffeeObtn.Location = new System.Drawing.Point(108, 136);
+            this.coffeeObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.coffeeObtn.Name = "coffeeObtn";
+            this.coffeeObtn.Size = new System.Drawing.Size(133, 60);
+            this.coffeeObtn.TabIndex = 3;
+            this.coffeeObtn.Text = "Coffee";
+            this.coffeeObtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // espressoObtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(2, 210);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Coffee";
-            this.button2.UseVisualStyleBackColor = false;
+            this.espressoObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.espressoObtn.Location = new System.Drawing.Point(108, 210);
+            this.espressoObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.espressoObtn.Name = "espressoObtn";
+            this.espressoObtn.Size = new System.Drawing.Size(133, 60);
+            this.espressoObtn.TabIndex = 6;
+            this.espressoObtn.Text = "Espresso";
+            this.espressoObtn.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // mgtlObtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(346, 339);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 36);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Double Espresso";
-            this.button3.UseVisualStyleBackColor = false;
+            this.mgtlObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.mgtlObtn.Location = new System.Drawing.Point(302, 136);
+            this.mgtlObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.mgtlObtn.Name = "mgtlObtn";
+            this.mgtlObtn.Size = new System.Drawing.Size(133, 60);
+            this.mgtlObtn.TabIndex = 7;
+            this.mgtlObtn.Text = "Matcha Green Tea Latte";
+            this.mgtlObtn.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // latteObtn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(346, 210);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 36);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Espresso";
-            this.button4.UseVisualStyleBackColor = false;
+            this.latteObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.latteObtn.Location = new System.Drawing.Point(108, 296);
+            this.latteObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.latteObtn.Name = "latteObtn";
+            this.latteObtn.Size = new System.Drawing.Size(133, 60);
+            this.latteObtn.TabIndex = 8;
+            this.latteObtn.Text = "Latte";
+            this.latteObtn.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // cappuccinoObtn
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button5.Location = new System.Drawing.Point(550, 155);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(118, 36);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Mocha";
-            this.button5.UseVisualStyleBackColor = false;
+            this.cappuccinoObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.cappuccinoObtn.Location = new System.Drawing.Point(302, 222);
+            this.cappuccinoObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.cappuccinoObtn.Name = "cappuccinoObtn";
+            this.cappuccinoObtn.Size = new System.Drawing.Size(133, 60);
+            this.cappuccinoObtn.TabIndex = 9;
+            this.cappuccinoObtn.Text = "Cappuccino";
+            this.cappuccinoObtn.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // smallSbtn
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(346, 271);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(118, 36);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Macchiato";
-            this.button6.UseVisualStyleBackColor = false;
+            this.smallSbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.smallSbtn.Location = new System.Drawing.Point(41, 468);
+            this.smallSbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.smallSbtn.Name = "smallSbtn";
+            this.smallSbtn.Size = new System.Drawing.Size(118, 36);
+            this.smallSbtn.TabIndex = 11;
+            this.smallSbtn.Text = "Small";
+            this.smallSbtn.UseVisualStyleBackColor = false;
+            this.smallSbtn.UseWaitCursor = true;
             // 
-            // button7
+            // mediumSbtn
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button7.Location = new System.Drawing.Point(346, 155);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(118, 36);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Capuccino";
-            this.button7.UseVisualStyleBackColor = false;
+            this.mediumSbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.mediumSbtn.Location = new System.Drawing.Point(41, 528);
+            this.mediumSbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.mediumSbtn.Name = "mediumSbtn";
+            this.mediumSbtn.Size = new System.Drawing.Size(118, 36);
+            this.mediumSbtn.TabIndex = 12;
+            this.mediumSbtn.Text = "Medium";
+            this.mediumSbtn.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // largeSbtn
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox2.Location = new System.Drawing.Point(2, 411);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 31);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "Size: ";
+            this.largeSbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.largeSbtn.Location = new System.Drawing.Point(41, 594);
+            this.largeSbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.largeSbtn.Name = "largeSbtn";
+            this.largeSbtn.Size = new System.Drawing.Size(118, 36);
+            this.largeSbtn.TabIndex = 13;
+            this.largeSbtn.Text = "Large";
+            this.largeSbtn.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // minusBtnQ
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button8.Location = new System.Drawing.Point(41, 468);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(118, 36);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Small";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.UseWaitCursor = true;
+            this.minusBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.minusBtnQ.Location = new System.Drawing.Point(631, 612);
+            this.minusBtnQ.Margin = new System.Windows.Forms.Padding(4);
+            this.minusBtnQ.Name = "minusBtnQ";
+            this.minusBtnQ.Size = new System.Drawing.Size(48, 36);
+            this.minusBtnQ.TabIndex = 22;
+            this.minusBtnQ.Text = "-";
+            this.minusBtnQ.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // addBtnQ
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button9.Location = new System.Drawing.Point(41, 528);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(118, 36);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "Medium";
-            this.button9.UseVisualStyleBackColor = false;
+            this.addBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.addBtnQ.Location = new System.Drawing.Point(762, 611);
+            this.addBtnQ.Margin = new System.Windows.Forms.Padding(4);
+            this.addBtnQ.Name = "addBtnQ";
+            this.addBtnQ.Size = new System.Drawing.Size(54, 36);
+            this.addBtnQ.TabIndex = 23;
+            this.addBtnQ.Text = "+";
+            this.addBtnQ.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // QtyTxtbox
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(41, 594);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(118, 36);
-            this.button10.TabIndex = 13;
-            this.button10.Text = "Large";
-            this.button10.UseVisualStyleBackColor = false;
+            this.QtyTxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.QtyTxtbox.Location = new System.Drawing.Point(674, 611);
+            this.QtyTxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.QtyTxtbox.Multiline = true;
+            this.QtyTxtbox.Name = "QtyTxtbox";
+            this.QtyTxtbox.Size = new System.Drawing.Size(94, 45);
+            this.QtyTxtbox.TabIndex = 24;
+            this.QtyTxtbox.Text = "    Qty";
             // 
-            // textBox3
+            // payWCCBtn
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox3.Location = new System.Drawing.Point(346, 411);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 31);
-            this.textBox3.TabIndex = 14;
-            this.textBox3.Text = "Customizations";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button11.Location = new System.Drawing.Point(346, 468);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(118, 36);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "Extra Sugar";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button12.Location = new System.Drawing.Point(346, 528);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(118, 36);
-            this.button12.TabIndex = 16;
-            this.button12.Text = "Caramel";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button13.Location = new System.Drawing.Point(561, 468);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(118, 36);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "Capuccino";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button15.Location = new System.Drawing.Point(561, 528);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(118, 36);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "Mocha";
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button16.Location = new System.Drawing.Point(346, 594);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(118, 36);
-            this.button16.TabIndex = 20;
-            this.button16.Text = "Foam";
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button18.Location = new System.Drawing.Point(631, 612);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(48, 36);
-            this.button18.TabIndex = 22;
-            this.button18.Text = "-";
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button19.Location = new System.Drawing.Point(762, 611);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(54, 36);
-            this.button19.TabIndex = 23;
-            this.button19.Text = "+";
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox4.Location = new System.Drawing.Point(674, 611);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(94, 45);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.Text = "    Qty";
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button14.Location = new System.Drawing.Point(1202, 528);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(166, 36);
-            this.button14.TabIndex = 25;
-            this.button14.Text = "Pay via Card";
-            this.button14.UseVisualStyleBackColor = false;
+            this.payWCCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.payWCCBtn.Location = new System.Drawing.Point(907, 529);
+            this.payWCCBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.payWCCBtn.Name = "payWCCBtn";
+            this.payWCCBtn.Size = new System.Drawing.Size(166, 36);
+            this.payWCCBtn.TabIndex = 25;
+            this.payWCCBtn.Text = "Pay via Card";
+            this.payWCCBtn.UseVisualStyleBackColor = false;
             // 
             // button17
             // 
             this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button17.Location = new System.Drawing.Point(1465, 528);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(144, 36);
             this.button17.TabIndex = 26;
@@ -312,8 +229,8 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(1202, 42);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Location = new System.Drawing.Point(907, 43);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(405, 275);
@@ -323,8 +240,8 @@
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox6.Location = new System.Drawing.Point(1231, 360);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(936, 361);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(155, 31);
             this.textBox6.TabIndex = 28;
@@ -333,8 +250,8 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox7.Location = new System.Drawing.Point(1231, 411);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Location = new System.Drawing.Point(936, 412);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(155, 31);
             this.textBox7.TabIndex = 29;
@@ -343,51 +260,287 @@
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox8.Location = new System.Drawing.Point(1231, 464);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Location = new System.Drawing.Point(936, 465);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(155, 31);
             this.textBox8.TabIndex = 30;
             this.textBox8.Text = "Total: ";
+            // 
+            // payWReward
+            // 
+            this.payWReward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.payWReward.Location = new System.Drawing.Point(1126, 529);
+            this.payWReward.Margin = new System.Windows.Forms.Padding(4);
+            this.payWReward.Name = "payWReward";
+            this.payWReward.Size = new System.Drawing.Size(166, 36);
+            this.payWReward.TabIndex = 31;
+            this.payWReward.Text = "Pay via Rewards";
+            this.payWReward.UseVisualStyleBackColor = false;
+            // 
+            // waterObtn
+            // 
+            this.waterObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.waterObtn.Location = new System.Drawing.Point(491, 136);
+            this.waterObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.waterObtn.Name = "waterObtn";
+            this.waterObtn.Size = new System.Drawing.Size(133, 60);
+            this.waterObtn.TabIndex = 32;
+            this.waterObtn.Text = "Water";
+            this.waterObtn.UseVisualStyleBackColor = false;
+            // 
+            // teaObtn
+            // 
+            this.teaObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.teaObtn.Location = new System.Drawing.Point(491, 222);
+            this.teaObtn.Margin = new System.Windows.Forms.Padding(4);
+            this.teaObtn.Name = "teaObtn";
+            this.teaObtn.Size = new System.Drawing.Size(133, 60);
+            this.teaObtn.TabIndex = 33;
+            this.teaObtn.Text = "Tea";
+            this.teaObtn.UseVisualStyleBackColor = false;
+            // 
+            // coffeeLabel
+            // 
+            this.coffeeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.coffeeLabel.Location = new System.Drawing.Point(108, 88);
+            this.coffeeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.coffeeLabel.Name = "coffeeLabel";
+            this.coffeeLabel.Size = new System.Drawing.Size(327, 30);
+            this.coffeeLabel.TabIndex = 34;
+            this.coffeeLabel.Tag = "";
+            this.coffeeLabel.Text = "Coffees";
+            this.coffeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(489, 88);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 30);
+            this.label1.TabIndex = 35;
+            this.label1.Tag = "";
+            this.label1.Text = "Others";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sizeLabel
+            // 
+            this.sizeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sizeLabel.Location = new System.Drawing.Point(28, 412);
+            this.sizeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.sizeLabel.Name = "sizeLabel";
+            this.sizeLabel.Size = new System.Drawing.Size(152, 30);
+            this.sizeLabel.TabIndex = 36;
+            this.sizeLabel.Tag = "";
+            this.sizeLabel.Text = "Sizes";
+            this.sizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tempHotCB
+            // 
+            this.tempHotCB.AutoSize = true;
+            this.tempHotCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tempHotCB.Location = new System.Drawing.Point(6, 30);
+            this.tempHotCB.Name = "tempHotCB";
+            this.tempHotCB.Size = new System.Drawing.Size(68, 29);
+            this.tempHotCB.TabIndex = 37;
+            this.tempHotCB.Text = "Hot";
+            this.tempHotCB.UseVisualStyleBackColor = false;
+            // 
+            // wholeMilkCB
+            // 
+            this.wholeMilkCB.AutoSize = true;
+            this.wholeMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.wholeMilkCB.Location = new System.Drawing.Point(6, 135);
+            this.wholeMilkCB.Name = "wholeMilkCB";
+            this.wholeMilkCB.Size = new System.Drawing.Size(127, 29);
+            this.wholeMilkCB.TabIndex = 38;
+            this.wholeMilkCB.Text = "Whole Milk";
+            this.wholeMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // nfMilkCB
+            // 
+            this.nfMilkCB.AutoSize = true;
+            this.nfMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.nfMilkCB.Location = new System.Drawing.Point(6, 100);
+            this.nfMilkCB.Name = "nfMilkCB";
+            this.nfMilkCB.Size = new System.Drawing.Size(140, 29);
+            this.nfMilkCB.TabIndex = 39;
+            this.nfMilkCB.Text = "Non-Fat Milk";
+            this.nfMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // tempColdCB
+            // 
+            this.tempColdCB.AutoSize = true;
+            this.tempColdCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tempColdCB.Location = new System.Drawing.Point(6, 65);
+            this.tempColdCB.Name = "tempColdCB";
+            this.tempColdCB.Size = new System.Drawing.Size(115, 29);
+            this.tempColdCB.TabIndex = 40;
+            this.tempColdCB.Text = "Cold/Iced";
+            this.tempColdCB.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox1.Controls.Add(this.chocolateSCB);
+            this.groupBox1.Controls.Add(this.whippedCreamCB);
+            this.groupBox1.Controls.Add(this.foamCB);
+            this.groupBox1.Controls.Add(this.SNLCB);
+            this.groupBox1.Controls.Add(this.steviaCB);
+            this.groupBox1.Controls.Add(this.sugarCB);
+            this.groupBox1.Controls.Add(this.soyMilkCB);
+            this.groupBox1.Controls.Add(this.almondMilkCB);
+            this.groupBox1.Controls.Add(this.oatMilkCB);
+            this.groupBox1.Controls.Add(this.tempHotCB);
+            this.groupBox1.Controls.Add(this.wholeMilkCB);
+            this.groupBox1.Controls.Add(this.nfMilkCB);
+            this.groupBox1.Controls.Add(this.tempColdCB);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Location = new System.Drawing.Point(233, 412);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(366, 288);
+            this.groupBox1.TabIndex = 41;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Customizations";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // oatMilkCB
+            // 
+            this.oatMilkCB.AutoSize = true;
+            this.oatMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.oatMilkCB.Location = new System.Drawing.Point(6, 170);
+            this.oatMilkCB.Name = "oatMilkCB";
+            this.oatMilkCB.Size = new System.Drawing.Size(105, 29);
+            this.oatMilkCB.TabIndex = 41;
+            this.oatMilkCB.Text = "Oat Milk";
+            this.oatMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // almondMilkCB
+            // 
+            this.almondMilkCB.AutoSize = true;
+            this.almondMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.almondMilkCB.Location = new System.Drawing.Point(6, 204);
+            this.almondMilkCB.Name = "almondMilkCB";
+            this.almondMilkCB.Size = new System.Drawing.Size(140, 29);
+            this.almondMilkCB.TabIndex = 42;
+            this.almondMilkCB.Text = "Almond Milk";
+            this.almondMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // soyMilkCB
+            // 
+            this.soyMilkCB.AutoSize = true;
+            this.soyMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.soyMilkCB.Location = new System.Drawing.Point(6, 239);
+            this.soyMilkCB.Name = "soyMilkCB";
+            this.soyMilkCB.Size = new System.Drawing.Size(106, 29);
+            this.soyMilkCB.TabIndex = 43;
+            this.soyMilkCB.Text = "Soy Milk";
+            this.soyMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // sugarCB
+            // 
+            this.sugarCB.AutoSize = true;
+            this.sugarCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.sugarCB.Location = new System.Drawing.Point(168, 30);
+            this.sugarCB.Name = "sugarCB";
+            this.sugarCB.Size = new System.Drawing.Size(84, 29);
+            this.sugarCB.TabIndex = 44;
+            this.sugarCB.Text = "Sugar";
+            this.sugarCB.UseVisualStyleBackColor = false;
+            // 
+            // steviaCB
+            // 
+            this.steviaCB.AutoSize = true;
+            this.steviaCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.steviaCB.Location = new System.Drawing.Point(168, 63);
+            this.steviaCB.Name = "steviaCB";
+            this.steviaCB.Size = new System.Drawing.Size(84, 29);
+            this.steviaCB.TabIndex = 45;
+            this.steviaCB.Text = "Stevia";
+            this.steviaCB.UseVisualStyleBackColor = false;
+            // 
+            // SNLCB
+            // 
+            this.SNLCB.AutoSize = true;
+            this.SNLCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.SNLCB.Location = new System.Drawing.Point(168, 100);
+            this.SNLCB.Name = "SNLCB";
+            this.SNLCB.Size = new System.Drawing.Size(138, 29);
+            this.SNLCB.TabIndex = 46;
+            this.SNLCB.Text = "Sweet\'N\'Low";
+            this.SNLCB.UseVisualStyleBackColor = false;
+            // 
+            // foamCB
+            // 
+            this.foamCB.AutoSize = true;
+            this.foamCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.foamCB.Location = new System.Drawing.Point(168, 135);
+            this.foamCB.Name = "foamCB";
+            this.foamCB.Size = new System.Drawing.Size(83, 29);
+            this.foamCB.TabIndex = 47;
+            this.foamCB.Text = "Foam";
+            this.foamCB.UseVisualStyleBackColor = false;
+            // 
+            // whippedCreamCB
+            // 
+            this.whippedCreamCB.AutoSize = true;
+            this.whippedCreamCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.whippedCreamCB.Location = new System.Drawing.Point(168, 170);
+            this.whippedCreamCB.Name = "whippedCreamCB";
+            this.whippedCreamCB.Size = new System.Drawing.Size(167, 29);
+            this.whippedCreamCB.TabIndex = 48;
+            this.whippedCreamCB.Text = "Whipped Cream";
+            this.whippedCreamCB.UseVisualStyleBackColor = false;
+            // 
+            // chocolateSCB
+            // 
+            this.chocolateSCB.AutoSize = true;
+            this.chocolateSCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.chocolateSCB.Location = new System.Drawing.Point(168, 207);
+            this.chocolateSCB.Name = "chocolateSCB";
+            this.chocolateSCB.Size = new System.Drawing.Size(167, 29);
+            this.chocolateSCB.TabIndex = 49;
+            this.chocolateSCB.Text = "Chocolate Syrup";
+            this.chocolateSCB.UseVisualStyleBackColor = false;
             // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-
-        
+            this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.sizeLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.coffeeLabel);
+            this.Controls.Add(this.teaObtn);
+            this.Controls.Add(this.waterObtn);
+            this.Controls.Add(this.payWReward);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button17);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.payWCCBtn);
+            this.Controls.Add(this.QtyTxtbox);
+            this.Controls.Add(this.addBtnQ);
+            this.Controls.Add(this.minusBtnQ);
+            this.Controls.Add(this.largeSbtn);
+            this.Controls.Add(this.mediumSbtn);
+            this.Controls.Add(this.smallSbtn);
+            this.Controls.Add(this.cappuccinoObtn);
+            this.Controls.Add(this.latteObtn);
+            this.Controls.Add(this.mgtlObtn);
+            this.Controls.Add(this.espressoObtn);
+            this.Controls.Add(this.coffeeObtn);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4, 11, 4, 11);
             this.Name = "FormOrder";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Jeff\'s Coffee Shop";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,31 +549,43 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private TextBox textBox2;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private TextBox textBox3;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button15;
-        private Button button16;
-        private Button button18;
-        private Button button19;
-        private TextBox textBox4;
-        private Button button14;
+        private Button coffeeObtn;
+        private Button espressoObtn;
+        private Button mgtlObtn;
+        private Button latteObtn;
+        private Button cappuccinoObtn;
+        private Button smallSbtn;
+        private Button mediumSbtn;
+        private Button largeSbtn;
+        private Button minusBtnQ;
+        private Button addBtnQ;
+        private TextBox QtyTxtbox;
+        private Button payWCCBtn;
         private Button button17;
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
         private TextBox textBox8;
+        private Button payWReward;
+        private Button waterObtn;
+        private Button teaObtn;
+        private Label coffeeLabel;
+        private Label label1;
+        private Label sizeLabel;
+        private CheckBox tempHotCB;
+        private CheckBox wholeMilkCB;
+        private CheckBox nfMilkCB;
+        private CheckBox tempColdCB;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private GroupBox groupBox1;
+        private CheckBox oatMilkCB;
+        private CheckBox steviaCB;
+        private CheckBox sugarCB;
+        private CheckBox soyMilkCB;
+        private CheckBox almondMilkCB;
+        private CheckBox SNLCB;
+        private CheckBox chocolateSCB;
+        private CheckBox whippedCreamCB;
+        private CheckBox foamCB;
     }
 }

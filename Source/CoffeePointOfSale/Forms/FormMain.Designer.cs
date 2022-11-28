@@ -38,9 +38,10 @@ sealed partial class FormMain
             // btnManagement
             // 
             this.btnManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnManagement.Location = new System.Drawing.Point(658, 505);
+            this.btnManagement.Location = new System.Drawing.Point(533, 513);
+            this.btnManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManagement.Name = "btnManagement";
-            this.btnManagement.Size = new System.Drawing.Size(200, 51);
+            this.btnManagement.Size = new System.Drawing.Size(250, 64);
             this.btnManagement.TabIndex = 0;
             this.btnManagement.Text = "Management";
             this.btnManagement.UseVisualStyleBackColor = false;
@@ -49,10 +50,10 @@ sealed partial class FormMain
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(658, 351);
-            this.button1.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            this.button1.Location = new System.Drawing.Point(533, 321);
+            this.button1.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 51);
+            this.button1.Size = new System.Drawing.Size(250, 64);
             this.button1.TabIndex = 1;
             this.button1.Text = "Order";
             this.button1.UseVisualStyleBackColor = false;
@@ -61,10 +62,10 @@ sealed partial class FormMain
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(658, 416);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            this.button2.Location = new System.Drawing.Point(533, 402);
+            this.button2.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 65);
+            this.button2.Size = new System.Drawing.Size(250, 81);
             this.button2.TabIndex = 2;
             this.button2.Text = "Customer Listing ";
             this.button2.UseVisualStyleBackColor = false;
@@ -74,10 +75,10 @@ sealed partial class FormMain
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(637, 223);
+            this.label1.Location = new System.Drawing.Point(507, 161);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 20);
+            this.label1.Size = new System.Drawing.Size(302, 25);
             this.label1.TabIndex = 3;
             this.label1.Tag = "";
             this.label1.Text = "Jeff\'s Ordering Coffee System (JOCS)";
@@ -85,16 +86,16 @@ sealed partial class FormMain
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.ClientSize = new System.Drawing.Size(1344, 712);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnManagement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
