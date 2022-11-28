@@ -140,12 +140,12 @@
             // backBtnCC
             // 
             this.backBtnCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.backBtnCC.Location = new System.Drawing.Point(11, 11);
+            this.backBtnCC.Location = new System.Drawing.Point(0, 4);
             this.backBtnCC.Margin = new System.Windows.Forms.Padding(1);
             this.backBtnCC.Name = "backBtnCC";
-            this.backBtnCC.Size = new System.Drawing.Size(106, 59);
+            this.backBtnCC.Size = new System.Drawing.Size(154, 54);
             this.backBtnCC.TabIndex = 8;
-            this.backBtnCC.Text = "Back";
+            this.backBtnCC.Text = "Main Menu";
             this.backBtnCC.UseVisualStyleBackColor = false;
             this.backBtnCC.Click += new System.EventHandler(this.backBtnCC_Click);
             // 

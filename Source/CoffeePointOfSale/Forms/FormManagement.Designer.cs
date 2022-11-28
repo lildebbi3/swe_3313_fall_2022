@@ -37,12 +37,12 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnClose.Location = new System.Drawing.Point(428, 494);
+            this.btnClose.Location = new System.Drawing.Point(0, 4);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(199, 60);
+            this.btnClose.Size = new System.Drawing.Size(154, 54);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Main Menu";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.OnClickBtnClose);
             // 
@@ -58,7 +58,7 @@
             // GenerateCSVbtn
             // 
             this.GenerateCSVbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.GenerateCSVbtn.Location = new System.Drawing.Point(680, 494);
+            this.GenerateCSVbtn.Location = new System.Drawing.Point(565, 492);
             this.GenerateCSVbtn.Margin = new System.Windows.Forms.Padding(4);
             this.GenerateCSVbtn.Name = "GenerateCSVbtn";
             this.GenerateCSVbtn.Size = new System.Drawing.Size(199, 60);

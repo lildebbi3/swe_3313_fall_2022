@@ -46,7 +46,7 @@
             // paymentCancelBtn
             // 
             this.paymentCancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.paymentCancelBtn.Location = new System.Drawing.Point(1, 1);
+            this.paymentCancelBtn.Location = new System.Drawing.Point(0, 4);
             this.paymentCancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.paymentCancelBtn.Name = "paymentCancelBtn";
             this.paymentCancelBtn.Size = new System.Drawing.Size(154, 54);
@@ -149,11 +149,12 @@
             // orderTotalTxtbox
             // 
             this.orderTotalTxtbox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.orderTotalTxtbox.Location = new System.Drawing.Point(531, 166);
+            this.orderTotalTxtbox.Location = new System.Drawing.Point(531, 31);
             this.orderTotalTxtbox.Margin = new System.Windows.Forms.Padding(1);
+            this.orderTotalTxtbox.Multiline = true;
             this.orderTotalTxtbox.Name = "orderTotalTxtbox";
             this.orderTotalTxtbox.ReadOnly = true;
-            this.orderTotalTxtbox.Size = new System.Drawing.Size(298, 31);
+            this.orderTotalTxtbox.Size = new System.Drawing.Size(298, 209);
             this.orderTotalTxtbox.TabIndex = 15;
             // 
             // CCwarningLabel

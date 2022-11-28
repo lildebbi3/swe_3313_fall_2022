@@ -38,12 +38,12 @@
             // OnClickBtntoMain1
             // 
             this.OnClickBtntoMain1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.OnClickBtntoMain1.Location = new System.Drawing.Point(12, 14);
+            this.OnClickBtntoMain1.Location = new System.Drawing.Point(0, 4);
             this.OnClickBtntoMain1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OnClickBtntoMain1.Name = "OnClickBtntoMain1";
-            this.OnClickBtntoMain1.Size = new System.Drawing.Size(112, 56);
+            this.OnClickBtntoMain1.Size = new System.Drawing.Size(154, 54);
             this.OnClickBtntoMain1.TabIndex = 0;
-            this.OnClickBtntoMain1.Text = "Back";
+            this.OnClickBtntoMain1.Text = "Main Menu";
             this.OnClickBtntoMain1.UseVisualStyleBackColor = false;
             this.OnClickBtntoMain1.Click += new System.EventHandler(this.OnClickBtnCustomerListing);
             // 

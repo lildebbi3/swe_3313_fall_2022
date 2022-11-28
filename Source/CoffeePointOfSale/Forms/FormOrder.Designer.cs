@@ -74,10 +74,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(2, 4);
+            this.button1.Location = new System.Drawing.Point(0, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 36);
+            this.button1.Size = new System.Drawing.Size(154, 54);
             this.button1.TabIndex = 0;
             this.button1.Text = "Main Menu";
             this.button1.UseVisualStyleBackColor = false;
@@ -306,7 +306,7 @@
             // coffeeLabel
             // 
             this.coffeeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.coffeeLabel.Location = new System.Drawing.Point(213, 56);
+            this.coffeeLabel.Location = new System.Drawing.Point(213, 62);
             this.coffeeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.coffeeLabel.Name = "coffeeLabel";
             this.coffeeLabel.Size = new System.Drawing.Size(327, 30);
@@ -318,7 +318,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(594, 56);
+            this.label1.Location = new System.Drawing.Point(594, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 30);
@@ -330,10 +330,10 @@
             // sizeLabel
             // 
             this.sizeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sizeLabel.Location = new System.Drawing.Point(10, 56);
+            this.sizeLabel.Location = new System.Drawing.Point(23, 62);
             this.sizeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.sizeLabel.Name = "sizeLabel";
-            this.sizeLabel.Size = new System.Drawing.Size(152, 30);
+            this.sizeLabel.Size = new System.Drawing.Size(118, 30);
             this.sizeLabel.TabIndex = 36;
             this.sizeLabel.Tag = "";
             this.sizeLabel.Text = "Sizes";
@@ -400,7 +400,7 @@
             this.groupBox1.Controls.Add(this.nfMilkCB);
             this.groupBox1.Controls.Add(this.tempColdCB);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(54, 380);
+            this.groupBox1.Location = new System.Drawing.Point(56, 356);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(523, 288);
             this.groupBox1.TabIndex = 41;

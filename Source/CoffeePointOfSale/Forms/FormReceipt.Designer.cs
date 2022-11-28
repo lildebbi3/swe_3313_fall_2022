@@ -38,10 +38,10 @@
             // RecceiptMainMenubtn
             // 
             this.RecceiptMainMenubtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.RecceiptMainMenubtn.Location = new System.Drawing.Point(14, 15);
+            this.RecceiptMainMenubtn.Location = new System.Drawing.Point(0, 4);
             this.RecceiptMainMenubtn.Margin = new System.Windows.Forms.Padding(4);
             this.RecceiptMainMenubtn.Name = "RecceiptMainMenubtn";
-            this.RecceiptMainMenubtn.Size = new System.Drawing.Size(150, 80);
+            this.RecceiptMainMenubtn.Size = new System.Drawing.Size(154, 54);
             this.RecceiptMainMenubtn.TabIndex = 0;
             this.RecceiptMainMenubtn.Text = "MainMenu";
             this.RecceiptMainMenubtn.UseVisualStyleBackColor = false;
