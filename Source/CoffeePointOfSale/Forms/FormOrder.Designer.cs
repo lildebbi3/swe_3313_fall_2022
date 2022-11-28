@@ -59,15 +59,15 @@
             this.tempColdCB = new System.Windows.Forms.CheckBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.oatMilkCB = new System.Windows.Forms.CheckBox();
-            this.almondMilkCB = new System.Windows.Forms.CheckBox();
-            this.soyMilkCB = new System.Windows.Forms.CheckBox();
-            this.sugarCB = new System.Windows.Forms.CheckBox();
-            this.steviaCB = new System.Windows.Forms.CheckBox();
-            this.SNLCB = new System.Windows.Forms.CheckBox();
-            this.foamCB = new System.Windows.Forms.CheckBox();
-            this.whippedCreamCB = new System.Windows.Forms.CheckBox();
             this.chocolateSCB = new System.Windows.Forms.CheckBox();
+            this.whippedCreamCB = new System.Windows.Forms.CheckBox();
+            this.foamCB = new System.Windows.Forms.CheckBox();
+            this.SNLCB = new System.Windows.Forms.CheckBox();
+            this.steviaCB = new System.Windows.Forms.CheckBox();
+            this.sugarCB = new System.Windows.Forms.CheckBox();
+            this.soyMilkCB = new System.Windows.Forms.CheckBox();
+            this.almondMilkCB = new System.Windows.Forms.CheckBox();
+            this.oatMilkCB = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,6 +215,7 @@
             this.payWCCBtn.TabIndex = 25;
             this.payWCCBtn.Text = "Pay via Card";
             this.payWCCBtn.UseVisualStyleBackColor = false;
+            this.payWCCBtn.Click += new System.EventHandler(this.payWCCBtn_Click);
             // 
             // button17
             // 
@@ -277,6 +278,7 @@
             this.payWReward.TabIndex = 31;
             this.payWReward.Text = "Pay via Rewards";
             this.payWReward.UseVisualStyleBackColor = false;
+            this.payWReward.Click += new System.EventHandler(this.payWReward_Click);
             // 
             // waterObtn
             // 
@@ -405,82 +407,16 @@
             this.groupBox1.Text = "Customizations";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // oatMilkCB
+            // chocolateSCB
             // 
-            this.oatMilkCB.AutoSize = true;
-            this.oatMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.oatMilkCB.Location = new System.Drawing.Point(6, 170);
-            this.oatMilkCB.Name = "oatMilkCB";
-            this.oatMilkCB.Size = new System.Drawing.Size(105, 29);
-            this.oatMilkCB.TabIndex = 41;
-            this.oatMilkCB.Text = "Oat Milk";
-            this.oatMilkCB.UseVisualStyleBackColor = false;
-            // 
-            // almondMilkCB
-            // 
-            this.almondMilkCB.AutoSize = true;
-            this.almondMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.almondMilkCB.Location = new System.Drawing.Point(6, 204);
-            this.almondMilkCB.Name = "almondMilkCB";
-            this.almondMilkCB.Size = new System.Drawing.Size(140, 29);
-            this.almondMilkCB.TabIndex = 42;
-            this.almondMilkCB.Text = "Almond Milk";
-            this.almondMilkCB.UseVisualStyleBackColor = false;
-            // 
-            // soyMilkCB
-            // 
-            this.soyMilkCB.AutoSize = true;
-            this.soyMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.soyMilkCB.Location = new System.Drawing.Point(6, 239);
-            this.soyMilkCB.Name = "soyMilkCB";
-            this.soyMilkCB.Size = new System.Drawing.Size(106, 29);
-            this.soyMilkCB.TabIndex = 43;
-            this.soyMilkCB.Text = "Soy Milk";
-            this.soyMilkCB.UseVisualStyleBackColor = false;
-            // 
-            // sugarCB
-            // 
-            this.sugarCB.AutoSize = true;
-            this.sugarCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.sugarCB.Location = new System.Drawing.Point(168, 30);
-            this.sugarCB.Name = "sugarCB";
-            this.sugarCB.Size = new System.Drawing.Size(84, 29);
-            this.sugarCB.TabIndex = 44;
-            this.sugarCB.Text = "Sugar";
-            this.sugarCB.UseVisualStyleBackColor = false;
-            // 
-            // steviaCB
-            // 
-            this.steviaCB.AutoSize = true;
-            this.steviaCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.steviaCB.Location = new System.Drawing.Point(168, 63);
-            this.steviaCB.Name = "steviaCB";
-            this.steviaCB.Size = new System.Drawing.Size(84, 29);
-            this.steviaCB.TabIndex = 45;
-            this.steviaCB.Text = "Stevia";
-            this.steviaCB.UseVisualStyleBackColor = false;
-            // 
-            // SNLCB
-            // 
-            this.SNLCB.AutoSize = true;
-            this.SNLCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.SNLCB.Location = new System.Drawing.Point(168, 100);
-            this.SNLCB.Name = "SNLCB";
-            this.SNLCB.Size = new System.Drawing.Size(138, 29);
-            this.SNLCB.TabIndex = 46;
-            this.SNLCB.Text = "Sweet\'N\'Low";
-            this.SNLCB.UseVisualStyleBackColor = false;
-            // 
-            // foamCB
-            // 
-            this.foamCB.AutoSize = true;
-            this.foamCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.foamCB.Location = new System.Drawing.Point(168, 135);
-            this.foamCB.Name = "foamCB";
-            this.foamCB.Size = new System.Drawing.Size(83, 29);
-            this.foamCB.TabIndex = 47;
-            this.foamCB.Text = "Foam";
-            this.foamCB.UseVisualStyleBackColor = false;
+            this.chocolateSCB.AutoSize = true;
+            this.chocolateSCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.chocolateSCB.Location = new System.Drawing.Point(168, 207);
+            this.chocolateSCB.Name = "chocolateSCB";
+            this.chocolateSCB.Size = new System.Drawing.Size(167, 29);
+            this.chocolateSCB.TabIndex = 49;
+            this.chocolateSCB.Text = "Chocolate Syrup";
+            this.chocolateSCB.UseVisualStyleBackColor = false;
             // 
             // whippedCreamCB
             // 
@@ -493,16 +429,82 @@
             this.whippedCreamCB.Text = "Whipped Cream";
             this.whippedCreamCB.UseVisualStyleBackColor = false;
             // 
-            // chocolateSCB
+            // foamCB
             // 
-            this.chocolateSCB.AutoSize = true;
-            this.chocolateSCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.chocolateSCB.Location = new System.Drawing.Point(168, 207);
-            this.chocolateSCB.Name = "chocolateSCB";
-            this.chocolateSCB.Size = new System.Drawing.Size(167, 29);
-            this.chocolateSCB.TabIndex = 49;
-            this.chocolateSCB.Text = "Chocolate Syrup";
-            this.chocolateSCB.UseVisualStyleBackColor = false;
+            this.foamCB.AutoSize = true;
+            this.foamCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.foamCB.Location = new System.Drawing.Point(168, 135);
+            this.foamCB.Name = "foamCB";
+            this.foamCB.Size = new System.Drawing.Size(83, 29);
+            this.foamCB.TabIndex = 47;
+            this.foamCB.Text = "Foam";
+            this.foamCB.UseVisualStyleBackColor = false;
+            // 
+            // SNLCB
+            // 
+            this.SNLCB.AutoSize = true;
+            this.SNLCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.SNLCB.Location = new System.Drawing.Point(168, 100);
+            this.SNLCB.Name = "SNLCB";
+            this.SNLCB.Size = new System.Drawing.Size(138, 29);
+            this.SNLCB.TabIndex = 46;
+            this.SNLCB.Text = "Sweet\'N\'Low";
+            this.SNLCB.UseVisualStyleBackColor = false;
+            // 
+            // steviaCB
+            // 
+            this.steviaCB.AutoSize = true;
+            this.steviaCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.steviaCB.Location = new System.Drawing.Point(168, 63);
+            this.steviaCB.Name = "steviaCB";
+            this.steviaCB.Size = new System.Drawing.Size(84, 29);
+            this.steviaCB.TabIndex = 45;
+            this.steviaCB.Text = "Stevia";
+            this.steviaCB.UseVisualStyleBackColor = false;
+            // 
+            // sugarCB
+            // 
+            this.sugarCB.AutoSize = true;
+            this.sugarCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.sugarCB.Location = new System.Drawing.Point(168, 30);
+            this.sugarCB.Name = "sugarCB";
+            this.sugarCB.Size = new System.Drawing.Size(84, 29);
+            this.sugarCB.TabIndex = 44;
+            this.sugarCB.Text = "Sugar";
+            this.sugarCB.UseVisualStyleBackColor = false;
+            // 
+            // soyMilkCB
+            // 
+            this.soyMilkCB.AutoSize = true;
+            this.soyMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.soyMilkCB.Location = new System.Drawing.Point(6, 239);
+            this.soyMilkCB.Name = "soyMilkCB";
+            this.soyMilkCB.Size = new System.Drawing.Size(106, 29);
+            this.soyMilkCB.TabIndex = 43;
+            this.soyMilkCB.Text = "Soy Milk";
+            this.soyMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // almondMilkCB
+            // 
+            this.almondMilkCB.AutoSize = true;
+            this.almondMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.almondMilkCB.Location = new System.Drawing.Point(6, 204);
+            this.almondMilkCB.Name = "almondMilkCB";
+            this.almondMilkCB.Size = new System.Drawing.Size(140, 29);
+            this.almondMilkCB.TabIndex = 42;
+            this.almondMilkCB.Text = "Almond Milk";
+            this.almondMilkCB.UseVisualStyleBackColor = false;
+            // 
+            // oatMilkCB
+            // 
+            this.oatMilkCB.AutoSize = true;
+            this.oatMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.oatMilkCB.Location = new System.Drawing.Point(6, 170);
+            this.oatMilkCB.Name = "oatMilkCB";
+            this.oatMilkCB.Size = new System.Drawing.Size(105, 29);
+            this.oatMilkCB.TabIndex = 41;
+            this.oatMilkCB.Text = "Oat Milk";
+            this.oatMilkCB.UseVisualStyleBackColor = false;
             // 
             // FormOrder
             // 

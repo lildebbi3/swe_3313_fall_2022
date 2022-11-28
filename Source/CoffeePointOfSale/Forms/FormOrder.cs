@@ -38,5 +38,21 @@ namespace CoffeePointOfSale.Forms
         {
 
         }
+
+
+        //pay with credit card button
+
+        private void payWCCBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+            FormFactory.Get<FormPayment>().Show();
+        }
+
+        //pay with rewards button
+        private void payWReward_Click(object sender, EventArgs e)
+        {
+            Close();
+            FormFactory.Get<FormPayment>().Show();
+        }
     }
 }

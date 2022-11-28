@@ -78,7 +78,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(526, 587);
+            this.button1.Location = new System.Drawing.Point(518, 529);
             this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(294, 49);
@@ -127,7 +127,7 @@
             this.labelCustomerSignupWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelCustomerSignupWarning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCustomerSignupWarning.Location = new System.Drawing.Point(959, 67);
-            this.labelCustomerSignupWarning.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.labelCustomerSignupWarning.Margin = new System.Windows.Forms.Padding(9);
             this.labelCustomerSignupWarning.Name = "labelCustomerSignupWarning";
             this.labelCustomerSignupWarning.Padding = new System.Windows.Forms.Padding(6, 10, 1, 30);
             this.labelCustomerSignupWarning.Size = new System.Drawing.Size(306, 153);
@@ -153,7 +153,7 @@
             // 
             this.CCwarningLabel.AutoSize = true;
             this.CCwarningLabel.ForeColor = System.Drawing.Color.Red;
-            this.CCwarningLabel.Location = new System.Drawing.Point(420, 520);
+            this.CCwarningLabel.Location = new System.Drawing.Point(412, 462);
             this.CCwarningLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CCwarningLabel.Name = "CCwarningLabel";
             this.CCwarningLabel.Size = new System.Drawing.Size(497, 25);

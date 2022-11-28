@@ -22,6 +22,7 @@ namespace CoffeePointOfSale.Forms
             _appSettings = appSettings;
         }
 
+        //cancel payment button, takes you back to main menu
         private void paymentCancelBtn_Click(object sender, EventArgs e)
         {
             Close();
