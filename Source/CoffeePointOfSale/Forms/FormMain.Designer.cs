@@ -73,7 +73,6 @@ sealed partial class FormMain
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(495, 137);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
@@ -96,13 +95,11 @@ sealed partial class FormMain
             this.Controls.Add(this.btnManagement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimizeBox = false;
             this.Name = "FormMain";
             this.Text = "Jeff\'s Coffee Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnFormMainClosed);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
     }
 

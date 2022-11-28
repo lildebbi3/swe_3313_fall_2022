@@ -32,6 +32,7 @@
             this.OnClickBtntoMain1 = new System.Windows.Forms.Button();
             this.newCustomerBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.customerListTxtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // OnClickBtntoMain1
@@ -49,10 +50,10 @@
             // newCustomerBtn
             // 
             this.newCustomerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newCustomerBtn.Location = new System.Drawing.Point(604, 540);
+            this.newCustomerBtn.Location = new System.Drawing.Point(550, 562);
             this.newCustomerBtn.Margin = new System.Windows.Forms.Padding(2);
             this.newCustomerBtn.Name = "newCustomerBtn";
-            this.newCustomerBtn.Size = new System.Drawing.Size(188, 34);
+            this.newCustomerBtn.Size = new System.Drawing.Size(224, 56);
             this.newCustomerBtn.TabIndex = 1;
             this.newCustomerBtn.Text = "New Customer";
             this.newCustomerBtn.UseVisualStyleBackColor = false;
@@ -60,14 +61,23 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(499, 111);
+            this.label1.Location = new System.Drawing.Point(523, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 25);
+            this.label1.Size = new System.Drawing.Size(251, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "ALL CUSTOMERS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // customerListTxtbox
+            // 
+            this.customerListTxtbox.Location = new System.Drawing.Point(280, 82);
+            this.customerListTxtbox.Multiline = true;
+            this.customerListTxtbox.Name = "customerListTxtbox";
+            this.customerListTxtbox.ReadOnly = true;
+            this.customerListTxtbox.Size = new System.Drawing.Size(804, 440);
+            this.customerListTxtbox.TabIndex = 3;
             // 
             // FormCustomerList
             // 
@@ -75,6 +85,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1344, 712);
+            this.Controls.Add(this.customerListTxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newCustomerBtn);
             this.Controls.Add(this.OnClickBtntoMain1);
@@ -83,6 +94,7 @@
             this.Name = "FormCustomerList";
             this.Text = "FormCustomerList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormCustomerList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +105,6 @@
         private Button OnClickBtntoMain1;
         private Button newCustomerBtn;
         private Label label1;
+        private TextBox customerListTxtbox;
     }
 }
