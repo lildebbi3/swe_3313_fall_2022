@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Services.Customer;
 using CoffeePointOfSale.Services.FormFactory;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace CoffeePointOfSale.Forms
 {
     public partial class FormOrder : Base.FormNoCloseBase
     {
+        private readonly ICustomerService _customerService;
         private IAppSettings _appSettings;
-        public FormOrder(IAppSettings appSettings)
+        public FormOrder(IAppSettings appSettings, ICustomerService customerService)
         {
             _appSettings = appSettings;
+            _customerService = customerService;
             InitializeComponent();
         }
 
@@ -58,6 +61,12 @@ namespace CoffeePointOfSale.Forms
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        //demonstrating how to get the customer from the customer list 
+        private void FormOrder_Load(object sender, EventArgs e)
+        {
+            
+            coffeeLabel.Text = FormCustomerList.GetCustomer.ToString();
         }
     }
 }

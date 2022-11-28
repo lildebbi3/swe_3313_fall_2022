@@ -43,7 +43,7 @@
             this.QtyTxtbox = new System.Windows.Forms.TextBox();
             this.payWCCBtn = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.orderItems = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -228,15 +228,15 @@
             this.button17.Text = "Pay via RPoints";
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // textBox5
+            // orderItems
             // 
-            this.textBox5.Location = new System.Drawing.Point(869, 23);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(426, 308);
-            this.textBox5.TabIndex = 27;
-            this.textBox5.Text = "Orders: ";
+            this.orderItems.Location = new System.Drawing.Point(869, 23);
+            this.orderItems.Margin = new System.Windows.Forms.Padding(4);
+            this.orderItems.Multiline = true;
+            this.orderItems.Name = "orderItems";
+            this.orderItems.Size = new System.Drawing.Size(426, 308);
+            this.orderItems.TabIndex = 27;
+            this.orderItems.Text = "Orders: ";
             // 
             // textBox6
             // 
@@ -523,7 +523,7 @@
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.orderItems);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.payWCCBtn);
             this.Controls.Add(this.QtyTxtbox);
@@ -544,6 +544,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Jeff\'s Coffee Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormOrder_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -567,7 +568,7 @@
         private TextBox QtyTxtbox;
         private Button payWCCBtn;
         private Button button17;
-        private TextBox textBox5;
+        private TextBox orderItems;
         private TextBox textBox6;
         private TextBox textBox7;
         private TextBox textBox8;

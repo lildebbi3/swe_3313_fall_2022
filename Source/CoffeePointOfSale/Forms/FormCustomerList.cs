@@ -24,8 +24,12 @@ namespace CoffeePointOfSale.Forms
             _appSettings = appSettings;
             InitializeComponent();
         }
-       
-        
+
+        //redneck way of getting the customer
+       public static Customer GetCustomer
+        {
+            get; set;
+        }
         
 
         //displays customer data
@@ -43,27 +47,26 @@ namespace CoffeePointOfSale.Forms
                 //adds order button
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
                 btn.Size = new Size(175, 50);
-                
                 btn.Location = new Point(customerListTxtbox.ClientSize.Width - btn.Width, e);
                 e += 55;
                 btn.Cursor = Cursors.Default;
+                btn.Text = "Order";
                 //adds the functionality to the button
                 btn.Click += new EventHandler(orderbtn);
-                btn.Text = "Order";
+                //method that sends the cutomer the user selected to the order form and goes there
+                void orderbtn(object sender, EventArgs e)
+                {
+                    FormCustomerList.GetCustomer = customer;
+                    Hide();
+                    FormFactory.Get<FormOrder>().ShowDialog();
+                }
+                //adds the button
                 customerListTxtbox.Controls.Add(btn);
                 
             }
 
         }
-
-        
-
-        //order button to the customer
-        private void orderbtn (object sender, EventArgs e)
-        {
-            Hide();
-            FormFactory.Get<FormOrder>().ShowDialog();
-        }
+      
 
         //on load of the form it calls the method to display customers 
         private void FormCustomerList_Load(object sender, EventArgs e)
