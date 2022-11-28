@@ -41,10 +41,6 @@
         {
           "Size C": "Large",
           "Price": "1.00"
-        },
-        {
-          "Size D": "Mega",
-          "Price": "2.00"
         }
       ],
       "Customizations": [
@@ -128,10 +124,6 @@
         {
           "Size C": "Large",
           "Price": "1.00"
-        },
-        {
-          "Size D": "Mega",
-          "Price": "2.00"
         }
       ],
       "Customizations": [
