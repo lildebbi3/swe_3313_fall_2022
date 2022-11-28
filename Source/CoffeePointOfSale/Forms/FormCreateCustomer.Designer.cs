@@ -179,9 +179,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(11, 21, 11, 21);
+            this.MaximizeBox = true;
             this.Name = "FormCreateCustomer";
             this.ShowIcon = false;
             this.Text = "Jeff\'s Coffee Shop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -54,5 +54,10 @@ namespace CoffeePointOfSale.Forms
             Close();
             FormFactory.Get<FormPayment>().Show();
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -86,7 +86,7 @@
             // coffeeObtn
             // 
             this.coffeeObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.coffeeObtn.Location = new System.Drawing.Point(108, 136);
+            this.coffeeObtn.Location = new System.Drawing.Point(213, 104);
             this.coffeeObtn.Margin = new System.Windows.Forms.Padding(4);
             this.coffeeObtn.Name = "coffeeObtn";
             this.coffeeObtn.Size = new System.Drawing.Size(133, 60);
@@ -97,7 +97,7 @@
             // espressoObtn
             // 
             this.espressoObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.espressoObtn.Location = new System.Drawing.Point(108, 210);
+            this.espressoObtn.Location = new System.Drawing.Point(213, 178);
             this.espressoObtn.Margin = new System.Windows.Forms.Padding(4);
             this.espressoObtn.Name = "espressoObtn";
             this.espressoObtn.Size = new System.Drawing.Size(133, 60);
@@ -108,7 +108,7 @@
             // mgtlObtn
             // 
             this.mgtlObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.mgtlObtn.Location = new System.Drawing.Point(302, 136);
+            this.mgtlObtn.Location = new System.Drawing.Point(407, 104);
             this.mgtlObtn.Margin = new System.Windows.Forms.Padding(4);
             this.mgtlObtn.Name = "mgtlObtn";
             this.mgtlObtn.Size = new System.Drawing.Size(133, 60);
@@ -119,7 +119,7 @@
             // latteObtn
             // 
             this.latteObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.latteObtn.Location = new System.Drawing.Point(108, 296);
+            this.latteObtn.Location = new System.Drawing.Point(213, 264);
             this.latteObtn.Margin = new System.Windows.Forms.Padding(4);
             this.latteObtn.Name = "latteObtn";
             this.latteObtn.Size = new System.Drawing.Size(133, 60);
@@ -130,7 +130,7 @@
             // cappuccinoObtn
             // 
             this.cappuccinoObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.cappuccinoObtn.Location = new System.Drawing.Point(302, 222);
+            this.cappuccinoObtn.Location = new System.Drawing.Point(407, 190);
             this.cappuccinoObtn.Margin = new System.Windows.Forms.Padding(4);
             this.cappuccinoObtn.Name = "cappuccinoObtn";
             this.cappuccinoObtn.Size = new System.Drawing.Size(133, 60);
@@ -141,7 +141,7 @@
             // smallSbtn
             // 
             this.smallSbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.smallSbtn.Location = new System.Drawing.Point(41, 468);
+            this.smallSbtn.Location = new System.Drawing.Point(23, 112);
             this.smallSbtn.Margin = new System.Windows.Forms.Padding(4);
             this.smallSbtn.Name = "smallSbtn";
             this.smallSbtn.Size = new System.Drawing.Size(118, 36);
@@ -153,7 +153,7 @@
             // mediumSbtn
             // 
             this.mediumSbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.mediumSbtn.Location = new System.Drawing.Point(41, 528);
+            this.mediumSbtn.Location = new System.Drawing.Point(23, 172);
             this.mediumSbtn.Margin = new System.Windows.Forms.Padding(4);
             this.mediumSbtn.Name = "mediumSbtn";
             this.mediumSbtn.Size = new System.Drawing.Size(118, 36);
@@ -164,7 +164,7 @@
             // largeSbtn
             // 
             this.largeSbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.largeSbtn.Location = new System.Drawing.Point(41, 594);
+            this.largeSbtn.Location = new System.Drawing.Point(23, 238);
             this.largeSbtn.Margin = new System.Windows.Forms.Padding(4);
             this.largeSbtn.Name = "largeSbtn";
             this.largeSbtn.Size = new System.Drawing.Size(118, 36);
@@ -175,7 +175,7 @@
             // minusBtnQ
             // 
             this.minusBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.minusBtnQ.Location = new System.Drawing.Point(631, 612);
+            this.minusBtnQ.Location = new System.Drawing.Point(627, 532);
             this.minusBtnQ.Margin = new System.Windows.Forms.Padding(4);
             this.minusBtnQ.Name = "minusBtnQ";
             this.minusBtnQ.Size = new System.Drawing.Size(48, 36);
@@ -186,7 +186,7 @@
             // addBtnQ
             // 
             this.addBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.addBtnQ.Location = new System.Drawing.Point(762, 611);
+            this.addBtnQ.Location = new System.Drawing.Point(758, 531);
             this.addBtnQ.Margin = new System.Windows.Forms.Padding(4);
             this.addBtnQ.Name = "addBtnQ";
             this.addBtnQ.Size = new System.Drawing.Size(54, 36);
@@ -197,7 +197,7 @@
             // QtyTxtbox
             // 
             this.QtyTxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.QtyTxtbox.Location = new System.Drawing.Point(674, 611);
+            this.QtyTxtbox.Location = new System.Drawing.Point(670, 531);
             this.QtyTxtbox.Margin = new System.Windows.Forms.Padding(4);
             this.QtyTxtbox.Multiline = true;
             this.QtyTxtbox.Name = "QtyTxtbox";
@@ -208,7 +208,7 @@
             // payWCCBtn
             // 
             this.payWCCBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.payWCCBtn.Location = new System.Drawing.Point(907, 529);
+            this.payWCCBtn.Location = new System.Drawing.Point(869, 531);
             this.payWCCBtn.Margin = new System.Windows.Forms.Padding(4);
             this.payWCCBtn.Name = "payWCCBtn";
             this.payWCCBtn.Size = new System.Drawing.Size(166, 36);
@@ -230,18 +230,18 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(907, 43);
+            this.textBox5.Location = new System.Drawing.Point(869, 23);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(405, 275);
+            this.textBox5.Size = new System.Drawing.Size(426, 308);
             this.textBox5.TabIndex = 27;
             this.textBox5.Text = "Orders: ";
             // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox6.Location = new System.Drawing.Point(936, 361);
+            this.textBox6.Location = new System.Drawing.Point(869, 365);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(155, 31);
@@ -251,17 +251,18 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox7.Location = new System.Drawing.Point(936, 412);
+            this.textBox7.Location = new System.Drawing.Point(869, 404);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(155, 31);
             this.textBox7.TabIndex = 29;
             this.textBox7.Text = "Sales Tax: ";
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox8.Location = new System.Drawing.Point(936, 465);
+            this.textBox8.Location = new System.Drawing.Point(869, 443);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(155, 31);
@@ -271,7 +272,7 @@
             // payWReward
             // 
             this.payWReward.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.payWReward.Location = new System.Drawing.Point(1126, 529);
+            this.payWReward.Location = new System.Drawing.Point(1090, 533);
             this.payWReward.Margin = new System.Windows.Forms.Padding(4);
             this.payWReward.Name = "payWReward";
             this.payWReward.Size = new System.Drawing.Size(166, 36);
@@ -283,7 +284,7 @@
             // waterObtn
             // 
             this.waterObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.waterObtn.Location = new System.Drawing.Point(491, 136);
+            this.waterObtn.Location = new System.Drawing.Point(596, 104);
             this.waterObtn.Margin = new System.Windows.Forms.Padding(4);
             this.waterObtn.Name = "waterObtn";
             this.waterObtn.Size = new System.Drawing.Size(133, 60);
@@ -294,7 +295,7 @@
             // teaObtn
             // 
             this.teaObtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.teaObtn.Location = new System.Drawing.Point(491, 222);
+            this.teaObtn.Location = new System.Drawing.Point(596, 190);
             this.teaObtn.Margin = new System.Windows.Forms.Padding(4);
             this.teaObtn.Name = "teaObtn";
             this.teaObtn.Size = new System.Drawing.Size(133, 60);
@@ -305,7 +306,7 @@
             // coffeeLabel
             // 
             this.coffeeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.coffeeLabel.Location = new System.Drawing.Point(108, 88);
+            this.coffeeLabel.Location = new System.Drawing.Point(213, 56);
             this.coffeeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.coffeeLabel.Name = "coffeeLabel";
             this.coffeeLabel.Size = new System.Drawing.Size(327, 30);
@@ -317,7 +318,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(489, 88);
+            this.label1.Location = new System.Drawing.Point(594, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 30);
@@ -329,7 +330,7 @@
             // sizeLabel
             // 
             this.sizeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sizeLabel.Location = new System.Drawing.Point(28, 412);
+            this.sizeLabel.Location = new System.Drawing.Point(10, 56);
             this.sizeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.sizeLabel.Name = "sizeLabel";
             this.sizeLabel.Size = new System.Drawing.Size(152, 30);
@@ -342,7 +343,7 @@
             // 
             this.tempHotCB.AutoSize = true;
             this.tempHotCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tempHotCB.Location = new System.Drawing.Point(6, 30);
+            this.tempHotCB.Location = new System.Drawing.Point(387, 30);
             this.tempHotCB.Name = "tempHotCB";
             this.tempHotCB.Size = new System.Drawing.Size(68, 29);
             this.tempHotCB.TabIndex = 37;
@@ -353,7 +354,7 @@
             // 
             this.wholeMilkCB.AutoSize = true;
             this.wholeMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.wholeMilkCB.Location = new System.Drawing.Point(6, 135);
+            this.wholeMilkCB.Location = new System.Drawing.Point(6, 65);
             this.wholeMilkCB.Name = "wholeMilkCB";
             this.wholeMilkCB.Size = new System.Drawing.Size(127, 29);
             this.wholeMilkCB.TabIndex = 38;
@@ -364,7 +365,7 @@
             // 
             this.nfMilkCB.AutoSize = true;
             this.nfMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.nfMilkCB.Location = new System.Drawing.Point(6, 100);
+            this.nfMilkCB.Location = new System.Drawing.Point(6, 30);
             this.nfMilkCB.Name = "nfMilkCB";
             this.nfMilkCB.Size = new System.Drawing.Size(140, 29);
             this.nfMilkCB.TabIndex = 39;
@@ -375,7 +376,7 @@
             // 
             this.tempColdCB.AutoSize = true;
             this.tempColdCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tempColdCB.Location = new System.Drawing.Point(6, 65);
+            this.tempColdCB.Location = new System.Drawing.Point(387, 65);
             this.tempColdCB.Name = "tempColdCB";
             this.tempColdCB.Size = new System.Drawing.Size(115, 29);
             this.tempColdCB.TabIndex = 40;
@@ -399,9 +400,9 @@
             this.groupBox1.Controls.Add(this.nfMilkCB);
             this.groupBox1.Controls.Add(this.tempColdCB);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(233, 412);
+            this.groupBox1.Location = new System.Drawing.Point(54, 380);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 288);
+            this.groupBox1.Size = new System.Drawing.Size(523, 288);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customizations";
@@ -411,7 +412,7 @@
             // 
             this.chocolateSCB.AutoSize = true;
             this.chocolateSCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.chocolateSCB.Location = new System.Drawing.Point(168, 207);
+            this.chocolateSCB.Location = new System.Drawing.Point(187, 188);
             this.chocolateSCB.Name = "chocolateSCB";
             this.chocolateSCB.Size = new System.Drawing.Size(167, 29);
             this.chocolateSCB.TabIndex = 49;
@@ -422,7 +423,7 @@
             // 
             this.whippedCreamCB.AutoSize = true;
             this.whippedCreamCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.whippedCreamCB.Location = new System.Drawing.Point(168, 170);
+            this.whippedCreamCB.Location = new System.Drawing.Point(187, 153);
             this.whippedCreamCB.Name = "whippedCreamCB";
             this.whippedCreamCB.Size = new System.Drawing.Size(167, 29);
             this.whippedCreamCB.TabIndex = 48;
@@ -433,7 +434,7 @@
             // 
             this.foamCB.AutoSize = true;
             this.foamCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.foamCB.Location = new System.Drawing.Point(168, 135);
+            this.foamCB.Location = new System.Drawing.Point(188, 223);
             this.foamCB.Name = "foamCB";
             this.foamCB.Size = new System.Drawing.Size(83, 29);
             this.foamCB.TabIndex = 47;
@@ -444,7 +445,7 @@
             // 
             this.SNLCB.AutoSize = true;
             this.SNLCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.SNLCB.Location = new System.Drawing.Point(168, 100);
+            this.SNLCB.Location = new System.Drawing.Point(187, 65);
             this.SNLCB.Name = "SNLCB";
             this.SNLCB.Size = new System.Drawing.Size(138, 29);
             this.SNLCB.TabIndex = 46;
@@ -455,7 +456,7 @@
             // 
             this.steviaCB.AutoSize = true;
             this.steviaCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.steviaCB.Location = new System.Drawing.Point(168, 63);
+            this.steviaCB.Location = new System.Drawing.Point(187, 100);
             this.steviaCB.Name = "steviaCB";
             this.steviaCB.Size = new System.Drawing.Size(84, 29);
             this.steviaCB.TabIndex = 45;
@@ -466,7 +467,7 @@
             // 
             this.sugarCB.AutoSize = true;
             this.sugarCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.sugarCB.Location = new System.Drawing.Point(168, 30);
+            this.sugarCB.Location = new System.Drawing.Point(187, 30);
             this.sugarCB.Name = "sugarCB";
             this.sugarCB.Size = new System.Drawing.Size(84, 29);
             this.sugarCB.TabIndex = 44;
@@ -477,7 +478,7 @@
             // 
             this.soyMilkCB.AutoSize = true;
             this.soyMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.soyMilkCB.Location = new System.Drawing.Point(6, 239);
+            this.soyMilkCB.Location = new System.Drawing.Point(7, 170);
             this.soyMilkCB.Name = "soyMilkCB";
             this.soyMilkCB.Size = new System.Drawing.Size(106, 29);
             this.soyMilkCB.TabIndex = 43;
@@ -488,7 +489,7 @@
             // 
             this.almondMilkCB.AutoSize = true;
             this.almondMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.almondMilkCB.Location = new System.Drawing.Point(6, 204);
+            this.almondMilkCB.Location = new System.Drawing.Point(7, 135);
             this.almondMilkCB.Name = "almondMilkCB";
             this.almondMilkCB.Size = new System.Drawing.Size(140, 29);
             this.almondMilkCB.TabIndex = 42;
@@ -499,7 +500,7 @@
             // 
             this.oatMilkCB.AutoSize = true;
             this.oatMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.oatMilkCB.Location = new System.Drawing.Point(6, 170);
+            this.oatMilkCB.Location = new System.Drawing.Point(7, 100);
             this.oatMilkCB.Name = "oatMilkCB";
             this.oatMilkCB.Size = new System.Drawing.Size(105, 29);
             this.oatMilkCB.TabIndex = 41;
@@ -538,9 +539,11 @@
             this.Controls.Add(this.coffeeObtn);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4, 11, 4, 11);
+            this.MaximizeBox = true;
             this.Name = "FormOrder";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Jeff\'s Coffee Shop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

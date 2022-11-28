@@ -47,7 +47,7 @@
             // 
             this.paymentCancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.paymentCancelBtn.Location = new System.Drawing.Point(1, 1);
-            this.paymentCancelBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paymentCancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.paymentCancelBtn.Name = "paymentCancelBtn";
             this.paymentCancelBtn.Size = new System.Drawing.Size(154, 54);
             this.paymentCancelBtn.TabIndex = 1;
@@ -116,7 +116,7 @@
             // 
             this.CCPaymentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CCPaymentBtn.Location = new System.Drawing.Point(355, 546);
-            this.CCPaymentBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CCPaymentBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CCPaymentBtn.Name = "CCPaymentBtn";
             this.CCPaymentBtn.Size = new System.Drawing.Size(266, 54);
             this.CCPaymentBtn.TabIndex = 12;
@@ -128,7 +128,7 @@
             // 
             this.RewardPaymentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.RewardPaymentBtn.Location = new System.Drawing.Point(686, 546);
-            this.RewardPaymentBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RewardPaymentBtn.Margin = new System.Windows.Forms.Padding(4);
             this.RewardPaymentBtn.Name = "RewardPaymentBtn";
             this.RewardPaymentBtn.Size = new System.Drawing.Size(266, 54);
             this.RewardPaymentBtn.TabIndex = 13;
@@ -187,8 +187,10 @@
             this.Controls.Add(this.ccNumTxtbox);
             this.Controls.Add(this.paymentCancelBtn);
             this.Margin = new System.Windows.Forms.Padding(4, 11, 4, 11);
+            this.MaximizeBox = true;
             this.Name = "FormPayment";
             this.Text = "FormPayment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -39,7 +39,7 @@
             // 
             this.RecceiptMainMenubtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.RecceiptMainMenubtn.Location = new System.Drawing.Point(14, 15);
-            this.RecceiptMainMenubtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RecceiptMainMenubtn.Margin = new System.Windows.Forms.Padding(4);
             this.RecceiptMainMenubtn.Name = "RecceiptMainMenubtn";
             this.RecceiptMainMenubtn.Size = new System.Drawing.Size(150, 80);
             this.RecceiptMainMenubtn.TabIndex = 0;
@@ -70,8 +70,10 @@
             this.Controls.Add(this.recieptTxtbox);
             this.Controls.Add(this.RecceiptMainMenubtn);
             this.Margin = new System.Windows.Forms.Padding(4, 11, 4, 11);
+            this.MaximizeBox = true;
             this.Name = "FormReceipt";
             this.Text = "Jeff\'s Coffee Shop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormReceipt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);

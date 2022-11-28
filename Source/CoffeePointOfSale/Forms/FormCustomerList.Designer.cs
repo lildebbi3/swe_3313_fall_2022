@@ -79,8 +79,10 @@
             this.Controls.Add(this.newCustomerBtn);
             this.Controls.Add(this.OnClickBtntoMain1);
             this.Margin = new System.Windows.Forms.Padding(19, 38, 19, 38);
+            this.MaximizeBox = true;
             this.Name = "FormCustomerList";
             this.Text = "FormCustomerList";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

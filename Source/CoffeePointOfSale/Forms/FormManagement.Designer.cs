@@ -38,7 +38,7 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnClose.Location = new System.Drawing.Point(428, 494);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(199, 60);
             this.btnClose.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.GenerateCSVbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.GenerateCSVbtn.Location = new System.Drawing.Point(680, 494);
-            this.GenerateCSVbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GenerateCSVbtn.Margin = new System.Windows.Forms.Padding(4);
             this.GenerateCSVbtn.Name = "GenerateCSVbtn";
             this.GenerateCSVbtn.Size = new System.Drawing.Size(199, 60);
             this.GenerateCSVbtn.TabIndex = 2;
@@ -75,9 +75,11 @@
             this.Controls.Add(this.GenerateCSVbtn);
             this.Controls.Add(this.txtDeleteThis);
             this.Controls.Add(this.btnClose);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = true;
             this.Name = "FormManagement";
             this.Text = "FormManagement";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.OnLoadFormManagement);
             this.ResumeLayout(false);
             this.PerformLayout();
