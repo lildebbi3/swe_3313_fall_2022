@@ -1,87 +1,96 @@
 {
-  "DrinkMenu": [
+  "Drink": 
     {
-      "Category": "Coffee",
       "Type": [
         {
-          "Type 1": "Coffee",
+          "Type1": "Coffee",
           "Description": "Standard medium brewed coffee",
-          "Base Price": "2.50"
+          "BasePrice": "2.50"
         },
         {
-          "Type 2": "Latte",
+          "Type2": "Latte",
           "Description": "Espresso shot, steamed milk, foamed milk",
-          "Base Price": "4.00"
+          "BasePrice": "4.00"
         },
         {
-          "Type 3": "Matcha Green Tea Latte",
+          "Type3": "Matcha Green Tea Latte",
           "Description": "Espresso shot, matcha green tea flavor, steamed milk, foamed milk",
-          "Base Price": "5.25"
+          "BasePrice": "5.25"
         },
         {
-          "Type 4": "Espresso",
+          "Type4": "Espresso",
           "Description": "Just a shot of esspresso",
-          "Base Price": "2.50"
+          "BasePrice": "2.50"
         },
         {
-          "Type 5": "Cappuccino",
+          "Type5": "Cappuccino",
           "Description": "Two esspresso shots, steamed milk",
-          "Base Price": "5.00"
+          "BasePrice": "5.00"
+        },
+        {
+          "Type6": "Water",
+          "Description": "Just water",
+          "BasePrice": "0.00"
+        },
+        {
+          "Type7": "Tea",
+          "Description": "Black tea distilled in water",
+          "BasePrice": "2.50"
         }
       ],
       "Size": [
         {
-          "Size A": "Small",
+          "SizeA": "Small",
           "Price": "-1.00"
         },
         {
-          "Size B": "Regular",
+          "SizeB": "Regular",
           "Price": "0.00"
         },
         {
-          "Size C": "Large",
+          "SizeC": "Large",
           "Price": "1.00"
         }
       ],
       "Customizations": [
         {
-          "Temperature A": "Hot",
+          "TemperatureA": "Hot",
           "Price": "0.00"
         },
         {
-          "Temperature B": "Cold/Iced",
+          "TemperatureB": "Cold/Iced",
           "Price": "0.00"
         },
         {
-          "Creamer A": "Non-Fat Milk",
+          "CreamerA": "Non-Fat Milk",
           "Price": "0.00"
         },
         {
-          "Creamer B": "Whole Milk",
+          "CreamerB": "Whole Milk",
           "Price": "0.00"
         },
         {
-          "Creamer C": "Oat Milk",
+          "CreamerC": "Oat Milk",
           "Price": "1.50"
         },
         {
-          "Creamer D": "Almond Milk",
+          "CreamerD": "Almond Milk",
           "Price": "1.50"
         },
         {
-          "Creamer E": "Soy Milk",
+          "CreamerE": "Soy Milk",
           "Price": "1.50"
         },
         {
-          "Sweetner A": "Sugar",
+          "SweetnerA": "Sugar",
           "Price": "0.00"
         },
         {
-          "Sweetner B": "Stevia",
+          "SweetnerB": "Stevia",
           "Price": "0.00"
         },
         {
-          "Sweetner A": "Sweet'N Low",
+          "SweetnerA": "Sweet'N Low",
           "Price": "0.00"
         },
         {
@@ -97,61 +106,5 @@
           "Price": "0.00"
         }
       ]
-    },
-    {
-      "Category": "Other",
-      "Type": [
-        {
-          "Type 1": "Water",
-          "Description": "Just water",
-          "Base Price": "0.00"
-        },
-        {
-          "Type 2": "Tea",
-          "Description": "Black tea distilled in water",
-          "Base Price": "2.50"
-        }
-      ],
-      "Size": [
-        {
-          "Size A": "Small",
-          "Price": "-1.00"
-        },
-        {
-          "Size B": "Regular",
-          "Price": "0.00"
-        },
-        {
-          "Size C": "Large",
-          "Price": "1.00"
-        }
-      ],
-      "Customizations": [
-        {
-          "Temperature A": "Hot",
-          "Price": "0.00"
-        },
-        {
-          "Temperature B": "Cold/Iced",
-          "Price": "0.00"
-        },
-        {
-          "Sweetner A": "Sugar",
-          "Price": "0.00"
-        },
-        {
-          "Sweetner B": "Stevia",
-          "Price": "0.00"
-        },
-        {
-          "Sweetner A": "Sweet'N Low",
-          "Price": "0.00"
-        },
-        {
-          "Other": "Lemon Wedge",
-          "Price": "0.00"
-        }
-      ]
     }
-  ]
 }

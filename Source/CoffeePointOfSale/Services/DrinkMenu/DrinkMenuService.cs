@@ -1,4 +1,5 @@
-﻿using CoffeePointOfSale.Services.DrinkMenu;
+﻿using CoffeePointOfSale.Services.Customer;
+using CoffeePointOfSale.Services.DrinkMenu;
 using CoffeePointOfSale.Services.Storage;
 
 namespace CoffeePointOfSale.Services.Menu;
