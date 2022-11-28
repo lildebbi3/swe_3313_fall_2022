@@ -63,7 +63,7 @@ public class Customer
     public override string ToString()
     {
         return IsAnonymous  
-            ? "Anonymous Customer - No Reward Points"
-            : $"{Phone}                {lastName}                {firstName}";
+            ? "Anonymous Customer"
+            :$"{Phone}                {lastName}                {firstName}";
     }
 }

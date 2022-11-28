@@ -72,11 +72,13 @@
             // 
             // customerListTxtbox
             // 
-            this.customerListTxtbox.Location = new System.Drawing.Point(280, 82);
+            this.customerListTxtbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerListTxtbox.Location = new System.Drawing.Point(263, 82);
             this.customerListTxtbox.Multiline = true;
             this.customerListTxtbox.Name = "customerListTxtbox";
             this.customerListTxtbox.ReadOnly = true;
-            this.customerListTxtbox.Size = new System.Drawing.Size(804, 440);
+            this.customerListTxtbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.customerListTxtbox.Size = new System.Drawing.Size(838, 440);
             this.customerListTxtbox.TabIndex = 3;
             // 
             // FormCustomerList

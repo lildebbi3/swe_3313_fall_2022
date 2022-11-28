@@ -25,39 +25,51 @@ namespace CoffeePointOfSale.Forms
             InitializeComponent();
         }
        
+        
+        
 
         //displays customer data
         private void DisplayCustomers()
         {
+            //variable to increase location points by each new line
+            int e = 1;
             var customerList = _customerService.Customers.List;
             for (var customerIdx = 0; customerIdx < customerList.Count; customerIdx++)
             {
+                //adds customer data phone, first and last names
                 var customer = customerList[customerIdx];
                 customerListTxtbox.AppendText($"{customerIdx + 1}.{customer}{Environment.NewLine}");
+
+                //adds order button
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
-                btn.Size = new Size(25,25);
-                btn.Location = new Point(customerListTxtbox.ClientSize.Width - btn.Width, -1);
+                btn.Size = new Size(175, 50);
+                
+                btn.Location = new Point(customerListTxtbox.ClientSize.Width - btn.Width, e);
+                e += 55;
                 btn.Cursor = Cursors.Default;
                 //adds the functionality to the button
                 btn.Click += new EventHandler(orderbtn);
+                btn.Text = "Order";
                 customerListTxtbox.Controls.Add(btn);
                 
             }
 
         }
 
+        
+
         //order button to the customer
         private void orderbtn (object sender, EventArgs e)
         {
             Hide();
-            FormFactory.Get<FormMain>().ShowDialog();
+            FormFactory.Get<FormOrder>().ShowDialog();
         }
 
         //on load of the form it calls the method to display customers 
         private void FormCustomerList_Load(object sender, EventArgs e)
         {
             DisplayCustomers();
-            
+          
         }
         private void OnClickBtnCustomerListing(object sender, EventArgs e)
         {
