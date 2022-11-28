@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CoffeePointOfSale.Forms
 {
@@ -23,6 +24,7 @@ namespace CoffeePointOfSale.Forms
             _appSettings = appSettings;
             InitializeComponent();
         }
+       
 
         //displays customer data
         private void DisplayCustomers()
@@ -32,11 +34,30 @@ namespace CoffeePointOfSale.Forms
             {
                 var customer = customerList[customerIdx];
                 customerListTxtbox.AppendText($"{customerIdx + 1}.{customer}{Environment.NewLine}");
+                System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
+                btn.Size = new Size(25,25);
+                btn.Location = new Point(customerListTxtbox.ClientSize.Width - btn.Width, -1);
+                btn.Cursor = Cursors.Default;
+                //adds the functionality to the button
+                btn.Click += new EventHandler(orderbtn);
+                customerListTxtbox.Controls.Add(btn);
+                
             }
+
         }
+
+        //order button to the customer
+        private void orderbtn (object sender, EventArgs e)
+        {
+            Hide();
+            FormFactory.Get<FormMain>().ShowDialog();
+        }
+
+        //on load of the form it calls the method to display customers 
         private void FormCustomerList_Load(object sender, EventArgs e)
         {
             DisplayCustomers();
+            
         }
         private void OnClickBtnCustomerListing(object sender, EventArgs e)
         {
