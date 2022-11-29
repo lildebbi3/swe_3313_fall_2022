@@ -37,6 +37,7 @@
             // 
             // OnClickBtntoMain1
             // 
+            this.OnClickBtntoMain1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.OnClickBtntoMain1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.OnClickBtntoMain1.Location = new System.Drawing.Point(0, 2);
             this.OnClickBtntoMain1.Name = "OnClickBtntoMain1";
@@ -48,9 +49,10 @@
             // 
             // newCustomerBtn
             // 
+            this.newCustomerBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.newCustomerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.newCustomerBtn.Location = new System.Drawing.Point(385, 337);
-            this.newCustomerBtn.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.newCustomerBtn.Margin = new System.Windows.Forms.Padding(1);
             this.newCustomerBtn.Name = "newCustomerBtn";
             this.newCustomerBtn.Size = new System.Drawing.Size(157, 34);
             this.newCustomerBtn.TabIndex = 1;
@@ -60,6 +62,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(366, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
@@ -71,14 +74,15 @@
             // 
             // customerListTxtbox
             // 
+            this.customerListTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customerListTxtbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customerListTxtbox.Location = new System.Drawing.Point(184, 49);
-            this.customerListTxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customerListTxtbox.Location = new System.Drawing.Point(170, 51);
+            this.customerListTxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.customerListTxtbox.Multiline = true;
             this.customerListTxtbox.Name = "customerListTxtbox";
             this.customerListTxtbox.ReadOnly = true;
             this.customerListTxtbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.customerListTxtbox.Size = new System.Drawing.Size(588, 266);
+            this.customerListTxtbox.Size = new System.Drawing.Size(600, 266);
             this.customerListTxtbox.TabIndex = 3;
             this.customerListTxtbox.TextChanged += new System.EventHandler(this.customerListTxtbox_TextChanged);
             // 
@@ -94,7 +98,9 @@
             this.Controls.Add(this.OnClickBtntoMain1);
             this.Margin = new System.Windows.Forms.Padding(13, 23, 13, 23);
             this.MaximizeBox = true;
+            this.MinimumSize = new System.Drawing.Size(957, 466);
             this.Name = "FormCustomerList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormCustomerList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormCustomerList_Load);

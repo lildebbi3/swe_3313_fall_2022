@@ -301,8 +301,10 @@
             this.Controls.Add(this.mainMenuBtn);
             this.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
             this.MaximizeBox = true;
+            this.MinimumSize = new System.Drawing.Size(957, 466);
             this.Name = "FormOrder";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Jeff\'s Coffee Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormOrder_Load);
