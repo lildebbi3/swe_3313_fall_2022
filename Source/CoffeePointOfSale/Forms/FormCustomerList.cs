@@ -74,6 +74,7 @@ namespace CoffeePointOfSale.Forms
             DisplayCustomers();
           
         }
+
         private void OnClickBtnCustomerListing(object sender, EventArgs e)
         {
             Hide();
@@ -87,6 +88,9 @@ namespace CoffeePointOfSale.Forms
             FormFactory.Get<FormCreateCustomer>().Show();
         }
 
-        
+        private void customerListTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
