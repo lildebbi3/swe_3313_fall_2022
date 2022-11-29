@@ -20,7 +20,7 @@ namespace CoffeePointOfSale.Forms
         public FormPayment(IAppSettings appSettings)
         {
             InitializeComponent();
-            foreach (Drink drink in Program.inProgressOrder.AllDrinks) orderItems.Items.Add(drink);
+            //foreach (Drink drink in Program.inProgressOrder.AllDrinks) orderItems.Items.Add(drink);
             _appSettings = appSettings;
         }
 
