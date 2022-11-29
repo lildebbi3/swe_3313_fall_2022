@@ -9,31 +9,38 @@ using System.Threading.Tasks;
 namespace CoffeePointOfSale.Services.DrinkMenu
 {
     public class Drink
-    { 
-        public string DrinkType { get; set; }
-        public decimal Price { get; set; }
-        public int Quantity { get; set; }
-        public List<Customization> Customizations { get; set; } //list of all customizations applied to the drink
+    {
+        private List<Customization> _customizations;
+       
 
+        public string? Name { get; set; }
+        public decimal BasePrice { get; set; }
+
+        public Drink(List<Customization> customizations)
+        {
+            _customizations = customizations;
+        }
+        public List<Customization> CustomizationList {
+            get => _customizations;
+            set => _customizations = value ?? new List<Customization>(); 
+        } //list of all customizations applied to the drink
+
+        /*
         public Drink(string name = "") //constructor to initialize Customizations and ensure no null values for DrinkType and Quantity
         {
-            DrinkType = name;
+            Name = name;
             //Quantity = 1;
-            Customizations = new List<Customization>();
-        }
+            CustomizationList = new List<Customization>();
+        }*/
 
         public override string ToString()
         {
-            string temp; //create the string
-            if (Quantity == 1) temp = $"{DrinkType} - {Price}"; //if quantity of 1 dont display the quantity
-            else temp = $"{DrinkType} x{Quantity} - {Price * Quantity} ({Price} each)"; //if quantity is more than 1 display the quantity and mark the price up
-            foreach (Customization cust in Customizations) temp += $"\n\t+ {cust.ToString(Quantity)}"; //add each customization to the string
-            return temp; //return the string
+         return $"{Name} {BasePrice}";
         }
 
         public void AddCustomization(Customization customization)
         {
-            Customizations.Add(customization);
+            CustomizationList.Add(customization);
         }
     }
 }

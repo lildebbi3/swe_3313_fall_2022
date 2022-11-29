@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CoffeePointOfSale.Services.DrinkMenu
@@ -11,16 +12,15 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         public string Name { get; set; }
         public decimal Price { get; set; }
 
-        public Customization() //public constructor to ensure no values left null
+        public Customization(String name) //public constructor to ensure no values left null
         {
-            Name = "";
-            Price = 0;
+            Name = name;
         }
+        public string Url => Regex.Replace(Name.Trim(), "[^a-zA-Z0-9]", "-");
 
-        public string ToString(int quantity)
+        public string ToString()
         {
-            if (Price > 0) return $"{Name} +{Price*quantity}"; //if positive price return this
-            return $"{Name} -{Price*quantity}"; //if negative price return this
+            return $"{Name}: {Price}:";
         }
     }
 }
