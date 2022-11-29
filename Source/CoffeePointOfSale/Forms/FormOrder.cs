@@ -101,7 +101,7 @@ namespace CoffeePointOfSale.Forms
         //demonstrating how to get the customer from the customer list 
         private void FormOrder_Load(object sender, EventArgs e)
         {
-            coffeeLabel.Text = FormCustomerList.GetCustomer.ToString();
+            //coffeeLabel.Text = FormCustomerList.GetCustomer.ToString();
         }
 
         //return to main menu
