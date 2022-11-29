@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace CoffeePointOfSale.Services.DrinkMenu
 {
-    internal class Drink
+    public class Drink
     { 
         public string DrinkType { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
-        private List<Customization> Customizations { get; set; } //list of all customizations applied to the drink
+        public List<Customization> Customizations { get; set; } //list of all customizations applied to the drink
 
         public Drink(string name = "") //constructor to initialize Customizations and ensure no null values for DrinkType and Quantity
         {
             DrinkType = name;
-            Quantity = 1;
+            //Quantity = 1;
             Customizations = new List<Customization>();
         }
 

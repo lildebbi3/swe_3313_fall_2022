@@ -1,5 +1,4 @@
-﻿using CoffeePointOfSale.Services.Customer;
-using CoffeePointOfSale.Services.DrinkMenu;
+﻿using CoffeePointOfSale.Services.DrinkMenu;
 using CoffeePointOfSale.Services.Storage;
 
 namespace CoffeePointOfSale.Services.Menu;
@@ -11,6 +10,8 @@ public class DrinkMenuService : IDrinkMenuService
     public DrinkMenuService(IStorageService storageService)
     {
         _storageService = storageService;
-        //your DrinkMenu.json to load on start will go in the JsonStorage directory
+        Drinks = _storageService.Read<Drinks>(); //load drinks from JSON file
+        
     }
+    public Drinks Drinks { get; init; }
 }

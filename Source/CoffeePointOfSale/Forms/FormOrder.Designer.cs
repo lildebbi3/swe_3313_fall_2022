@@ -37,10 +37,9 @@
             this.waterBtn = new System.Windows.Forms.Button();
             this.minusBtnQ = new System.Windows.Forms.Button();
             this.plusBtnQ = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.subTotal = new System.Windows.Forms.TextBox();
+            this.salesTax = new System.Windows.Forms.TextBox();
+            this.total = new System.Windows.Forms.TextBox();
             this.payButton = new System.Windows.Forms.Button();
             this.espressoBtn = new System.Windows.Forms.Button();
             this.coffeeLabel = new System.Windows.Forms.Label();
@@ -93,7 +92,7 @@
             // coffeeBtn
             // 
             this.coffeeBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.coffeeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.coffeeBtn.BackColor = System.Drawing.Color.Olive;
             this.coffeeBtn.Location = new System.Drawing.Point(204, 75);
             this.coffeeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.coffeeBtn.Name = "coffeeBtn";
@@ -155,49 +154,41 @@
             this.plusBtnQ.UseVisualStyleBackColor = false;
             this.plusBtnQ.Click += new System.EventHandler(this.plusBtnQ_Click);
             // 
-            // button17
+            // subTotal
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button17.Location = new System.Drawing.Point(1026, 317);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(101, 22);
-            this.button17.TabIndex = 26;
-            this.button17.Text = "Pay via RPoints";
-            this.button17.UseVisualStyleBackColor = false;
+            this.subTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.subTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.subTotal.Location = new System.Drawing.Point(764, 214);
+            this.subTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.subTotal.Name = "subTotal";
+            this.subTotal.ReadOnly = true;
+            this.subTotal.Size = new System.Drawing.Size(143, 23);
+            this.subTotal.TabIndex = 28;
+            this.subTotal.Text = "Sub-Total:";
             // 
-            // textBox6
+            // salesTax
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox6.Location = new System.Drawing.Point(764, 214);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(143, 23);
-            this.textBox6.TabIndex = 28;
-            this.textBox6.Text = "Sub-Total:";
+            this.salesTax.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.salesTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.salesTax.Location = new System.Drawing.Point(764, 241);
+            this.salesTax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.salesTax.Name = "salesTax";
+            this.salesTax.ReadOnly = true;
+            this.salesTax.Size = new System.Drawing.Size(143, 23);
+            this.salesTax.TabIndex = 29;
+            this.salesTax.Text = "Sales Tax: ";
             // 
-            // textBox7
+            // total
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox7.Location = new System.Drawing.Point(764, 241);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(143, 23);
-            this.textBox7.TabIndex = 29;
-            this.textBox7.Text = "Sales Tax: ";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.textBox8.Location = new System.Drawing.Point(764, 268);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(143, 23);
-            this.textBox8.TabIndex = 30;
-            this.textBox8.Text = "Total: ";
+            this.total.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.total.Location = new System.Drawing.Point(764, 268);
+            this.total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Size = new System.Drawing.Size(143, 23);
+            this.total.TabIndex = 30;
+            this.total.Text = "Total: ";
             // 
             // payButton
             // 
@@ -296,10 +287,9 @@
             this.Controls.Add(this.coffeeLabel);
             this.Controls.Add(this.espressoBtn);
             this.Controls.Add(this.payButton);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button17);
+            this.Controls.Add(this.total);
+            this.Controls.Add(this.salesTax);
+            this.Controls.Add(this.subTotal);
             this.Controls.Add(this.QtyTxtbox);
             this.Controls.Add(this.plusBtnQ);
             this.Controls.Add(this.minusBtnQ);
@@ -331,10 +321,9 @@
         private Button waterBtn;
         private Button minusBtnQ;
         private Button plusBtnQ;
-        private Button button17;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private TextBox subTotal;
+        private TextBox salesTax;
+        private TextBox total;
         private Button payButton;
         private Button espressoBtn;
         private Label coffeeLabel;

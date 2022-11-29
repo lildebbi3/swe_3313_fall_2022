@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoffeePointOfSale.Services.DrinkMenu
 {
-    internal class Customization
+    public class Customization
     {
         public string Name { get; set; }
         public decimal Price { get; set; }

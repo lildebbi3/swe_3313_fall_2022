@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Services.DrinkMenu;
 using CoffeePointOfSale.Services.FormFactory;
 using CreditCardValidator;
 using System;
@@ -19,6 +20,7 @@ namespace CoffeePointOfSale.Forms
         public FormPayment(IAppSettings appSettings)
         {
             InitializeComponent();
+            foreach (Drink drink in Program.inProgressOrder.AllDrinks) orderItems.Items.Add(drink);
             _appSettings = appSettings;
         }
 

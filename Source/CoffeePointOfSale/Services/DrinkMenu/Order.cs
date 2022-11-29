@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using CoffeePointOfSale.Configuration;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,12 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         public void Add(Drink drink)
         {
             AllDrinks.Add(drink);
+            SubTotal += drink.Price * drink.Quantity;
+            foreach (Customization c in drink.Customizations) SubTotal += c.Price * drink.Quantity;
+
+            //Tax = subtotal * tax
+
+            Total = SubTotal + Tax;
         }
 
         public override string ToString()

@@ -9,6 +9,7 @@ internal static class Program
 {
     public static IServiceProvider? ServiceProvider { get; private set; }
     public static List<Order> allCurrentOrders = new List<Order>();
+    public static Order inProgressOrder;
 
     /// <summary>
     ///     The main entry point for the application.
