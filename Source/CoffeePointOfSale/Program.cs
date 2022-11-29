@@ -1,4 +1,5 @@
 using CoffeePointOfSale.Forms;
+using CoffeePointOfSale.Services.DrinkMenu;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -7,6 +8,7 @@ namespace CoffeePointOfSale;
 internal static class Program
 {
     public static IServiceProvider? ServiceProvider { get; private set; }
+    public static List<Order> allCurrentOrders = new List<Order>();
 
     /// <summary>
     ///     The main entry point for the application.
@@ -48,5 +50,10 @@ internal static class Program
     {
         return Host.CreateDefaultBuilder()
             .ConfigureServices((context, services) => Startup.ConfigureServices(services));
+    }
+
+    public static void AddToOrders(Order order)
+    {
+        allCurrentOrders.Add(order);
     }
 }

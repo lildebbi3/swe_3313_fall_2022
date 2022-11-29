@@ -18,59 +18,50 @@ namespace CoffeePointOfSale.Forms
     {
         private readonly ICustomerService _customerService;
         private IAppSettings _appSettings;
+        private IDrinkMenuService _drinkMenuService;
         private bool[] drinkSelected = new bool[]
         {
-            false, //coffee     0
-            false, //esspresso  1
-            false, //latte      2
-            false, //matcha     3
-            false, //cappucino  4
-            false, //water      5
-            false  //tea        6
+            false, //latte          0
+            false, //iced latte     1
+            false, //matcha latte   2
+            false, //coffe          3
+            false, //water          4
+            false  //espresso       5
         }; //this is a utility array to track what kind of drink is selected
+        private Order currentOrder;
+        private Drink currentDrink;
 
-        public FormOrder(IAppSettings appSettings, ICustomerService customerService)
+        public FormOrder(IAppSettings appSettings, ICustomerService customerService, IDrinkMenuService drinkMenuService)
         {
+            currentOrder = new Order();
             _appSettings = appSettings;
             _customerService = customerService;
+            _drinkMenuService = drinkMenuService;
             InitializeComponent();
 
-            ResetForm(false);
-            UpdateSelectedDrink(-1);
+            ResetForm(drinkCurrentlySelected:false);
         }
 
-        private void ResetForm(bool drinkCurrentlySelected = true) //reset the input sections of this form (does not affect the order list, subtotal, tax, total, or complete order button
+        private void ResetForm(string drinkType = "", bool drinkCurrentlySelected = true) //reset the input sections of this form (does not affect the order list, subtotal, tax, total, or complete order button
         {
+            orderItems.Items.Clear();
+            foreach (Drink drink in currentOrder.AllDrinks) orderItems.Items.Add(drink);
             QtyTxtbox.Text = "Qty: \n1";
+
+            //set default listbox values
+            customizationListBox.ClearSelected();
 
             if (!drinkCurrentlySelected) //if no drink has been selected
             {
-                //disable groups
-                custmzGroup.Enabled = false;
-                sizesGroup.Enabled = false;
-
-                //disable individual buttons
+                currentDrink = new Drink();
                 addDrinkBtn.Enabled = false;
+                UpdateSelectedDrink(-1);
             }
             else
             {
-                //enable groups
-                custmzGroup.Enabled = true;
-                sizesGroup.Enabled = true;
-
-                //enable individual buttons
                 addDrinkBtn.Enabled = true;
+                currentDrink = new Drink(drinkType);
             }
-
-            //set default radio values
-            regularRBtn.Checked = true;
-            if (drinkSelected[5]) coldRBtn.Checked = true;
-            else hotRBtn.Checked = true;
-
-            //set default checkbox values
-            nFMilkCB.Checked = wholeMilkCB.Checked = oatMilkCB.Checked = almondMilkCB.Checked = soyMilkCB.Checked = false;
-            sugarCB.Checked = sNLCB.Checked = steviaCB.Checked = false;
-            whippedCreamCB.Checked = chocolateSCB.Checked = foamCB.Checked = false;
         }
 
         //set the correct array slot to true for the given index
@@ -123,88 +114,53 @@ namespace CoffeePointOfSale.Forms
             FormFactory.Get<FormPayment>().Show();
         }
 
-        //deselect other sizes if this size is chosen
-        private void smallRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (smallRBtn.Checked) regularRBtn.Checked = largeRBtn.Checked = false;
-        }
-
-        //deselect other sizes if this size is chosen
-        private void regularRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (regularRBtn.Checked) smallRBtn.Checked = largeRBtn.Checked = false;
-        }
-
-        //deselect other sizes if this size is chosen
-        private void largeRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (largeRBtn.Checked) smallRBtn.Checked = regularRBtn.Checked = false;
-        }
-
-        //deselect cold if hot is chosen
-        private void hotRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (hotRBtn.Checked) coldRBtn.Checked = false;
-        }
-
-        //deselect hot if cold is chosen
-        private void coldRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            if (coldRBtn.Checked) hotRBtn.Checked = false;
-        }
-
-        //select coffee
-        private void coffeeObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(0);
-            ResetForm();
-        }
-
-        //select espresso
-        private void espressoObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(1);
-            ResetForm();
-        }
-
-        //select latte
-        private void latteObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(2);
-            ResetForm();
-        }
-
-        //select matcha
-        private void mgtlObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(3);
-            ResetForm();
-        }
-
-        //select cappuccino
-        private void cappuccinoObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(4);
-            ResetForm();
-        }
-
-        //select water
-        private void waterObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(5);
-            ResetForm();
-        }
-
-        //select tea
-        private void teaObtn_Click(object sender, EventArgs e)
-        {
-            UpdateSelectedDrink(6);
-            ResetForm();
-        }
-
         private void addDrinkBtn_Click(object sender, EventArgs e)
         {
+            currentDrink.Quantity = Convert.ToInt32(QtyTxtbox.Lines[1]);
+            currentOrder.Add(currentDrink);
+            ResetForm(drinkCurrentlySelected:false);
+        }
 
+        //latte button is clicked
+        private void latteBtn_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedDrink(0);
+            ResetForm("Latte");
+        }
+
+        //iced latte button is clicked
+        private void icedLatteBtn_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedDrink(1);
+            ResetForm("Iced Latte");
+        }
+
+        //iced matcha green tea latte button is clicked
+        private void matchaGreenBtn_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedDrink(2);
+            ResetForm("Iced Matcha Green Tea Latte");
+        }
+
+        //coffee button is clicked
+        private void coffeeBtn_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedDrink(3);
+            ResetForm("Coffee");
+        }
+
+        //iced water button is clicked
+        private void waterBtn_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedDrink(4);
+            ResetForm("Iced Water");
+        }
+
+        //espresso button is clicked
+        private void espressoBtn_Click(object sender, EventArgs e)
+        {
+            UpdateSelectedDrink(5);
+            ResetForm("Espresso");
         }
     }
 }

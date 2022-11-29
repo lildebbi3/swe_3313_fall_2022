@@ -5,18 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using static System.Windows.Forms.LinkLabel;
 
 namespace CoffeePointOfSale.Services.DrinkMenu
 {
     internal class Order
     {
-        public Customer.Customer CurrentCustomer { get; set; }
+        public Customer.Customer? CurrentCustomer { get; set; }
         public List<Drink> AllDrinks { get; set; }
         public decimal SubTotal { get; set; }
         public decimal Tax { get; set; }
         public decimal Total { get; set; }
-        public PaymentMethod Payment { get; set; }
-        public DateAndTime TransactionTime { get; set; }
+        public PaymentMethod? Payment { get; set; }
+        public DateAndTime? TransactionTime { get; set; }
 
 
         public Order() //constructor to initialize the list
@@ -33,12 +34,10 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         public override string ToString()
         {
             string temp = ""; //declare string
-            int itemNum = 1; //declare item number for display
-            foreach (Drink drink in AllDrinks) //for each drink in the list
+            for (int a = 0; a < AllDrinks.Count; a++)
             {
-                if (itemNum > 1) temp += $"\n{itemNum}-{drink}"; //if item number is greater than 1 add \n
-                else temp += $"{itemNum}-{drink}";
-                itemNum++; //increase item number
+                if (a > 0) temp += $"\n{a + 1}-{AllDrinks[a]}"; //if item index is greater than 0 add new line
+                else temp += $"{a + 1}-{AllDrinks[a]}";//otherwise do not add new line
             }
             return temp; //return string
         }
