@@ -48,7 +48,7 @@
             this.coffeeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.wholeMilkCB = new System.Windows.Forms.CheckBox();
-            this.nfMilkCB = new System.Windows.Forms.CheckBox();
+            this.nFMilkCB = new System.Windows.Forms.CheckBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.custmzGroup = new System.Windows.Forms.GroupBox();
             this.coldRBtn = new System.Windows.Forms.RadioButton();
@@ -56,7 +56,7 @@
             this.chocolateSCB = new System.Windows.Forms.CheckBox();
             this.whippedCreamCB = new System.Windows.Forms.CheckBox();
             this.foamCB = new System.Windows.Forms.CheckBox();
-            this.SNLCB = new System.Windows.Forms.CheckBox();
+            this.sNLCB = new System.Windows.Forms.CheckBox();
             this.steviaCB = new System.Windows.Forms.CheckBox();
             this.sugarCB = new System.Windows.Forms.CheckBox();
             this.soyMilkCB = new System.Windows.Forms.CheckBox();
@@ -94,6 +94,7 @@
             this.coffeeObtn.TabIndex = 3;
             this.coffeeObtn.Text = "Coffee";
             this.coffeeObtn.UseVisualStyleBackColor = false;
+            this.coffeeObtn.Click += new System.EventHandler(this.coffeeObtn_Click);
             // 
             // espressoObtn
             // 
@@ -105,6 +106,7 @@
             this.espressoObtn.TabIndex = 6;
             this.espressoObtn.Text = "Espresso";
             this.espressoObtn.UseVisualStyleBackColor = false;
+            this.espressoObtn.Click += new System.EventHandler(this.espressoObtn_Click);
             // 
             // mgtlObtn
             // 
@@ -116,6 +118,7 @@
             this.mgtlObtn.TabIndex = 7;
             this.mgtlObtn.Text = "Matcha Green Tea Latte";
             this.mgtlObtn.UseVisualStyleBackColor = false;
+            this.mgtlObtn.Click += new System.EventHandler(this.mgtlObtn_Click);
             // 
             // latteObtn
             // 
@@ -127,6 +130,7 @@
             this.latteObtn.TabIndex = 8;
             this.latteObtn.Text = "Latte";
             this.latteObtn.UseVisualStyleBackColor = false;
+            this.latteObtn.Click += new System.EventHandler(this.latteObtn_Click);
             // 
             // cappuccinoObtn
             // 
@@ -138,6 +142,7 @@
             this.cappuccinoObtn.TabIndex = 9;
             this.cappuccinoObtn.Text = "Cappuccino";
             this.cappuccinoObtn.UseVisualStyleBackColor = false;
+            this.cappuccinoObtn.Click += new System.EventHandler(this.cappuccinoObtn_Click);
             // 
             // minusBtnQ
             // 
@@ -236,6 +241,7 @@
             this.waterObtn.TabIndex = 32;
             this.waterObtn.Text = "Water";
             this.waterObtn.UseVisualStyleBackColor = false;
+            this.waterObtn.Click += new System.EventHandler(this.waterObtn_Click);
             // 
             // teaObtn
             // 
@@ -247,6 +253,7 @@
             this.teaObtn.TabIndex = 33;
             this.teaObtn.Text = "Tea";
             this.teaObtn.UseVisualStyleBackColor = false;
+            this.teaObtn.Click += new System.EventHandler(this.teaObtn_Click);
             // 
             // coffeeLabel
             // 
@@ -284,17 +291,17 @@
             this.wholeMilkCB.Text = "Whole Milk";
             this.wholeMilkCB.UseVisualStyleBackColor = false;
             // 
-            // nfMilkCB
+            // nFMilkCB
             // 
-            this.nfMilkCB.AutoSize = true;
-            this.nfMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.nfMilkCB.Location = new System.Drawing.Point(4, 18);
-            this.nfMilkCB.Margin = new System.Windows.Forms.Padding(2);
-            this.nfMilkCB.Name = "nfMilkCB";
-            this.nfMilkCB.Size = new System.Drawing.Size(96, 19);
-            this.nfMilkCB.TabIndex = 39;
-            this.nfMilkCB.Text = "Non-Fat Milk";
-            this.nfMilkCB.UseVisualStyleBackColor = false;
+            this.nFMilkCB.AutoSize = true;
+            this.nFMilkCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.nFMilkCB.Location = new System.Drawing.Point(4, 18);
+            this.nFMilkCB.Margin = new System.Windows.Forms.Padding(2);
+            this.nFMilkCB.Name = "nFMilkCB";
+            this.nFMilkCB.Size = new System.Drawing.Size(96, 19);
+            this.nFMilkCB.TabIndex = 39;
+            this.nFMilkCB.Text = "Non-Fat Milk";
+            this.nFMilkCB.UseVisualStyleBackColor = false;
             // 
             // custmzGroup
             // 
@@ -304,14 +311,14 @@
             this.custmzGroup.Controls.Add(this.chocolateSCB);
             this.custmzGroup.Controls.Add(this.whippedCreamCB);
             this.custmzGroup.Controls.Add(this.foamCB);
-            this.custmzGroup.Controls.Add(this.SNLCB);
+            this.custmzGroup.Controls.Add(this.sNLCB);
             this.custmzGroup.Controls.Add(this.steviaCB);
             this.custmzGroup.Controls.Add(this.sugarCB);
             this.custmzGroup.Controls.Add(this.soyMilkCB);
             this.custmzGroup.Controls.Add(this.almondMilkCB);
             this.custmzGroup.Controls.Add(this.oatMilkCB);
             this.custmzGroup.Controls.Add(this.wholeMilkCB);
-            this.custmzGroup.Controls.Add(this.nfMilkCB);
+            this.custmzGroup.Controls.Add(this.nFMilkCB);
             this.custmzGroup.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.custmzGroup.Location = new System.Drawing.Point(16, 214);
             this.custmzGroup.Margin = new System.Windows.Forms.Padding(2);
@@ -382,17 +389,17 @@
             this.foamCB.Text = "Foam";
             this.foamCB.UseVisualStyleBackColor = false;
             // 
-            // SNLCB
+            // sNLCB
             // 
-            this.SNLCB.AutoSize = true;
-            this.SNLCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.SNLCB.Location = new System.Drawing.Point(131, 39);
-            this.SNLCB.Margin = new System.Windows.Forms.Padding(2);
-            this.SNLCB.Name = "SNLCB";
-            this.SNLCB.Size = new System.Drawing.Size(94, 19);
-            this.SNLCB.TabIndex = 46;
-            this.SNLCB.Text = "Sweet\'N\'Low";
-            this.SNLCB.UseVisualStyleBackColor = false;
+            this.sNLCB.AutoSize = true;
+            this.sNLCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.sNLCB.Location = new System.Drawing.Point(131, 39);
+            this.sNLCB.Margin = new System.Windows.Forms.Padding(2);
+            this.sNLCB.Name = "sNLCB";
+            this.sNLCB.Size = new System.Drawing.Size(94, 19);
+            this.sNLCB.TabIndex = 46;
+            this.sNLCB.Text = "Sweet\'N\'Low";
+            this.sNLCB.UseVisualStyleBackColor = false;
             // 
             // steviaCB
             // 
@@ -595,7 +602,7 @@
         private Label coffeeLabel;
         private Label label1;
         private CheckBox wholeMilkCB;
-        private CheckBox nfMilkCB;
+        private CheckBox nFMilkCB;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private GroupBox custmzGroup;
         private CheckBox oatMilkCB;
@@ -603,7 +610,7 @@
         private CheckBox sugarCB;
         private CheckBox soyMilkCB;
         private CheckBox almondMilkCB;
-        private CheckBox SNLCB;
+        private CheckBox sNLCB;
         private CheckBox chocolateSCB;
         private CheckBox whippedCreamCB;
         private CheckBox foamCB;
