@@ -1,5 +1,6 @@
 ﻿using CoffeePointOfSale.Configuration;
 using CoffeePointOfSale.Services.Customer;
+using CoffeePointOfSale.Services.DrinkMenu;
 using CoffeePointOfSale.Services.FormFactory;
 using System;
 using System.Collections.Generic;
@@ -199,6 +200,11 @@ namespace CoffeePointOfSale.Forms
         {
             UpdateSelectedDrink(6);
             ResetForm();
+        }
+
+        private void addDrinkBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

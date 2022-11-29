@@ -471,6 +471,7 @@
             this.addDrinkBtn.TabIndex = 42;
             this.addDrinkBtn.Text = "Add Drink";
             this.addDrinkBtn.UseVisualStyleBackColor = false;
+            this.addDrinkBtn.Click += new System.EventHandler(this.addDrinkBtn_Click);
             // 
             // sizesGroup
             // 
