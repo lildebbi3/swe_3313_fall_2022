@@ -45,7 +45,7 @@
             this.coffeeLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.addDrinkBtn = new System.Windows.Forms.Button();
-            this.QtyTxtbox = new System.Windows.Forms.TextBox();
+            this.qtyTxtbox = new System.Windows.Forms.TextBox();
             this.customizationListBox = new System.Windows.Forms.CheckedListBox();
             this.orderItems = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -54,12 +54,10 @@
             // 
             this.mainMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mainMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.mainMenuBtn.Location = new System.Drawing.Point(137, 3);
-            this.mainMenuBtn.Location = new System.Drawing.Point(172, 2);
+            this.mainMenuBtn.Location = new System.Drawing.Point(150, 2);
             this.mainMenuBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainMenuBtn.Name = "mainMenuBtn";
-            this.mainMenuBtn.Size = new System.Drawing.Size(123, 43);
+            this.mainMenuBtn.Size = new System.Drawing.Size(108, 32);
             this.mainMenuBtn.TabIndex = 0;
             this.mainMenuBtn.Text = "Main Menu";
             this.mainMenuBtn.UseVisualStyleBackColor = false;
@@ -69,13 +67,10 @@
             // 
             this.latteBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.latteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-           this.latteBtn.Location = new System.Drawing.Point(215, 99);
-            this.latteBtn.Location = new System.Drawing.Point(240, 74);
+            this.latteBtn.Location = new System.Drawing.Point(210, 56);
             this.latteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.latteBtn.Name = "latteBtn";
-            this.latteBtn.Size = new System.Drawing.Size(106, 47);
+            this.latteBtn.Size = new System.Drawing.Size(93, 35);
             this.latteBtn.TabIndex = 3;
             this.latteBtn.Text = "Latte";
             this.latteBtn.UseVisualStyleBackColor = false;
@@ -85,11 +80,10 @@
             // 
             this.icedLatteBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.icedLatteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.icedLatteBtn.Location = new System.Drawing.Point(215, 159);
-            this.icedLatteBtn.Location = new System.Drawing.Point(240, 119);
+            this.icedLatteBtn.Location = new System.Drawing.Point(210, 89);
             this.icedLatteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icedLatteBtn.Name = "icedLatteBtn";
-            this.icedLatteBtn.Size = new System.Drawing.Size(106, 47);
+            this.icedLatteBtn.Size = new System.Drawing.Size(93, 35);
             this.icedLatteBtn.TabIndex = 6;
             this.icedLatteBtn.Text = "Iced Latte";
             this.icedLatteBtn.UseVisualStyleBackColor = false;
@@ -99,14 +93,10 @@
             // 
             this.coffeeBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.coffeeBtn.BackColor = System.Drawing.Color.Olive;
-
-            this.coffeeBtn.Location = new System.Drawing.Point(370, 100);
-
-            this.coffeeBtn.Location = new System.Drawing.Point(376, 75);
+            this.coffeeBtn.Location = new System.Drawing.Point(329, 56);
             this.coffeeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.coffeeBtn.Name = "coffeeBtn";
-            this.coffeeBtn.Size = new System.Drawing.Size(106, 47);
+            this.coffeeBtn.Size = new System.Drawing.Size(93, 35);
             this.coffeeBtn.TabIndex = 7;
             this.coffeeBtn.Text = "Coffee";
             this.coffeeBtn.UseVisualStyleBackColor = false;
@@ -116,12 +106,10 @@
             // 
             this.matchaGreenBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.matchaGreenBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.matchaGreenBtn.Location = new System.Drawing.Point(215, 219);
-            this.matchaGreenBtn.Location = new System.Drawing.Point(240, 164);
+            this.matchaGreenBtn.Location = new System.Drawing.Point(210, 123);
             this.matchaGreenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.matchaGreenBtn.Name = "matchaGreenBtn";
-            this.matchaGreenBtn.Size = new System.Drawing.Size(106, 47);
+            this.matchaGreenBtn.Size = new System.Drawing.Size(93, 35);
             this.matchaGreenBtn.TabIndex = 8;
             this.matchaGreenBtn.Text = "Matcha Latte";
             this.matchaGreenBtn.UseVisualStyleBackColor = false;
@@ -131,11 +119,10 @@
             // 
             this.waterBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.waterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.waterBtn.Location = new System.Drawing.Point(370, 159);
-            this.waterBtn.Location = new System.Drawing.Point(376, 119);
+            this.waterBtn.Location = new System.Drawing.Point(329, 89);
             this.waterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.waterBtn.Name = "waterBtn";
-            this.waterBtn.Size = new System.Drawing.Size(106, 47);
+            this.waterBtn.Size = new System.Drawing.Size(93, 35);
             this.waterBtn.TabIndex = 9;
             this.waterBtn.Text = "Water";
             this.waterBtn.UseVisualStyleBackColor = false;
@@ -145,11 +132,10 @@
             // 
             this.minusBtnQ.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.minusBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.minusBtnQ.Location = new System.Drawing.Point(543, 99);
-            this.minusBtnQ.Location = new System.Drawing.Point(527, 74);
+            this.minusBtnQ.Location = new System.Drawing.Point(461, 56);
             this.minusBtnQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.minusBtnQ.Name = "minusBtnQ";
-            this.minusBtnQ.Size = new System.Drawing.Size(39, 64);
+            this.minusBtnQ.Size = new System.Drawing.Size(34, 48);
             this.minusBtnQ.TabIndex = 22;
             this.minusBtnQ.Text = "-";
             this.minusBtnQ.UseVisualStyleBackColor = false;
@@ -159,14 +145,10 @@
             // 
             this.plusBtnQ.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.plusBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.plusBtnQ.Location = new System.Drawing.Point(668, 99);
-
-            this.plusBtnQ.Location = new System.Drawing.Point(637, 74);
+            this.plusBtnQ.Location = new System.Drawing.Point(557, 56);
             this.plusBtnQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.plusBtnQ.Name = "plusBtnQ";
-            this.plusBtnQ.Size = new System.Drawing.Size(39, 64);
+            this.plusBtnQ.Size = new System.Drawing.Size(34, 48);
             this.plusBtnQ.TabIndex = 23;
             this.plusBtnQ.Text = "+";
             this.plusBtnQ.UseVisualStyleBackColor = false;
@@ -176,14 +158,11 @@
             // 
             this.subTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.subTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.subTotal.Location = new System.Drawing.Point(1010, 285);
-
-            this.subTotal.Location = new System.Drawing.Point(936, 214);
+            this.subTotal.Location = new System.Drawing.Point(819, 160);
             this.subTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subTotal.Name = "subTotal";
             this.subTotal.ReadOnly = true;
-            this.subTotal.Size = new System.Drawing.Size(163, 27);
+            this.subTotal.Size = new System.Drawing.Size(143, 23);
             this.subTotal.TabIndex = 28;
             this.subTotal.Text = "Sub-Total:";
             // 
@@ -191,15 +170,11 @@
             // 
             this.salesTax.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.salesTax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.salesTax.Location = new System.Drawing.Point(1010, 321);
-
-            this.salesTax.Location = new System.Drawing.Point(936, 241);
+            this.salesTax.Location = new System.Drawing.Point(819, 181);
             this.salesTax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.salesTax.Name = "salesTax";
             this.salesTax.ReadOnly = true;
-            this.salesTax.Size = new System.Drawing.Size(163, 27);
+            this.salesTax.Size = new System.Drawing.Size(143, 23);
             this.salesTax.TabIndex = 29;
             this.salesTax.Text = "Sales Tax: ";
             // 
@@ -207,13 +182,11 @@
             // 
             this.total.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.total.Location = new System.Drawing.Point(1010, 357);
-           this.total.Location = new System.Drawing.Point(936, 268);
+            this.total.Location = new System.Drawing.Point(819, 201);
             this.total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.total.Name = "total";
             this.total.ReadOnly = true;
-            this.total.Size = new System.Drawing.Size(163, 27);
+            this.total.Size = new System.Drawing.Size(143, 23);
             this.total.TabIndex = 30;
             this.total.Text = "Total: ";
             // 
@@ -221,12 +194,10 @@
             // 
             this.payButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.payButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.payButton.Location = new System.Drawing.Point(1010, 436);
-
-            this.payButton.Location = new System.Drawing.Point(936, 327);
+            this.payButton.Location = new System.Drawing.Point(819, 245);
             this.payButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.payButton.Name = "payButton";
-            this.payButton.Size = new System.Drawing.Size(163, 80);
+            this.payButton.Size = new System.Drawing.Size(143, 60);
             this.payButton.TabIndex = 31;
             this.payButton.Text = "Complete Order";
             this.payButton.UseVisualStyleBackColor = false;
@@ -236,13 +207,10 @@
             // 
             this.espressoBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.espressoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.espressoBtn.Location = new System.Drawing.Point(370, 219);
-
-            this.espressoBtn.Location = new System.Drawing.Point(376, 164);
+            this.espressoBtn.Location = new System.Drawing.Point(329, 123);
             this.espressoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-    this.espressoBtn.Name = "espressoBtn";
-            this.espressoBtn.Size = new System.Drawing.Size(106, 47);
+            this.espressoBtn.Name = "espressoBtn";
+            this.espressoBtn.Size = new System.Drawing.Size(93, 35);
             this.espressoBtn.TabIndex = 32;
             this.espressoBtn.Text = "Espresso";
             this.espressoBtn.UseVisualStyleBackColor = false;
@@ -252,12 +220,10 @@
             // 
             this.coffeeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.coffeeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.coffeeLabel.Location = new System.Drawing.Point(215, 61);
-            this.coffeeLabel.Location = new System.Drawing.Point(240, 46);
-
+            this.coffeeLabel.Location = new System.Drawing.Point(210, 34);
             this.coffeeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.coffeeLabel.Name = "coffeeLabel";
-            this.coffeeLabel.Size = new System.Drawing.Size(262, 24);
+            this.coffeeLabel.Size = new System.Drawing.Size(229, 18);
             this.coffeeLabel.TabIndex = 34;
             this.coffeeLabel.Tag = "";
             this.coffeeLabel.Text = "Drinks";
@@ -267,70 +233,53 @@
             // 
             this.addDrinkBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.addDrinkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.addDrinkBtn.Location = new System.Drawing.Point(542, 184);
-            this.addDrinkBtn.Location = new System.Drawing.Point(526, 138);
+            this.addDrinkBtn.Location = new System.Drawing.Point(460, 104);
             this.addDrinkBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.addDrinkBtn.Name = "addDrinkBtn";
-            this.addDrinkBtn.Size = new System.Drawing.Size(165, 81);
+            this.addDrinkBtn.Size = new System.Drawing.Size(144, 61);
             this.addDrinkBtn.TabIndex = 42;
             this.addDrinkBtn.Text = "Add Drink";
             this.addDrinkBtn.UseVisualStyleBackColor = false;
             this.addDrinkBtn.Click += new System.EventHandler(this.addDrinkBtn_Click);
             // 
-            // QtyTxtbox
+            // qtyTxtbox
             // 
-            this.QtyTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.QtyTxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-
-            this.QtyTxtbox.Location = new System.Drawing.Point(574, 99);
-
-            this.QtyTxtbox.Location = new System.Drawing.Point(554, 74);
-            this.QtyTxtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.QtyTxtbox.Multiline = true;
-            this.QtyTxtbox.Name = "QtyTxtbox";
-            this.QtyTxtbox.ReadOnly = true;
-            this.QtyTxtbox.Size = new System.Drawing.Size(101, 63);
-            this.QtyTxtbox.TabIndex = 24;
-            this.QtyTxtbox.Text = "Qty: 1";
-            this.QtyTxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.qtyTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.qtyTxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.qtyTxtbox.Location = new System.Drawing.Point(485, 56);
+            this.qtyTxtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.qtyTxtbox.Multiline = true;
+            this.qtyTxtbox.Name = "qtyTxtbox";
+            this.qtyTxtbox.ReadOnly = true;
+            this.qtyTxtbox.Size = new System.Drawing.Size(89, 48);
+            this.qtyTxtbox.TabIndex = 24;
+            this.qtyTxtbox.Text = "Qty: \r\n1";
+            this.qtyTxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // customizationListBox
             // 
             this.customizationListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customizationListBox.FormattingEnabled = true;
-
-            this.customizationListBox.Location = new System.Drawing.Point(155, 285);
-            this.customizationListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customizationListBox.Location = new System.Drawing.Point(188, 214);
+            this.customizationListBox.Location = new System.Drawing.Point(164, 160);
             this.customizationListBox.Name = "customizationListBox";
-            this.customizationListBox.Size = new System.Drawing.Size(550, 224);
+            this.customizationListBox.Size = new System.Drawing.Size(482, 166);
             this.customizationListBox.TabIndex = 51;
             // 
             // orderItems
             // 
-
             this.orderItems.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.orderItems.Location = new System.Drawing.Point(747, 16);
-            this.orderItems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.orderItems.Name = "orderItems";
-            this.orderItems.Size = new System.Drawing.Size(426, 264);
-            this.orderItems.Location = new System.Drawing.Point(817, 8);
+            this.orderItems.Location = new System.Drawing.Point(715, 6);
             this.orderItems.Multiline = true;
             this.orderItems.Name = "orderItems";
-            this.orderItems.Size = new System.Drawing.Size(358, 187);
+            this.orderItems.Size = new System.Drawing.Size(314, 141);
             this.orderItems.TabIndex = 52;
             // 
             // FormOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-
-            this.ClientSize = new System.Drawing.Size(1348, 721);
-
-            this.ClientSize = new System.Drawing.Size(1284, 701);
+            this.ClientSize = new System.Drawing.Size(1181, 547);
             this.Controls.Add(this.orderItems);
             this.Controls.Add(this.customizationListBox);
             this.Controls.Add(this.addDrinkBtn);
@@ -340,7 +289,7 @@
             this.Controls.Add(this.total);
             this.Controls.Add(this.salesTax);
             this.Controls.Add(this.subTotal);
-            this.Controls.Add(this.QtyTxtbox);
+            this.Controls.Add(this.qtyTxtbox);
             this.Controls.Add(this.plusBtnQ);
             this.Controls.Add(this.minusBtnQ);
             this.Controls.Add(this.waterBtn);
@@ -350,15 +299,14 @@
             this.Controls.Add(this.latteBtn);
             this.Controls.Add(this.mainMenuBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 9, 3, 9);
+            this.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
             this.MaximizeBox = true;
-            this.MinimumSize = new System.Drawing.Size(1366, 768);
+            this.MinimumSize = new System.Drawing.Size(1197, 586);
             this.Name = "FormOrder";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Jeff\'s Coffee Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormOrder_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +330,7 @@
         private Label coffeeLabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button addDrinkBtn;
-        private TextBox QtyTxtbox;
+        private TextBox qtyTxtbox;
         private CheckedListBox customizationListBox;
         private TextBox orderItems;
     }
