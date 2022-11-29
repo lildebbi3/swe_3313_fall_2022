@@ -2,5 +2,6 @@
 
 public interface IDrinkMenuService 
 {
-    Drinks Drinks { get; init; }
+    public IReadOnlyList<Drink> DrinkMenuList { get; init; }
+
 }
