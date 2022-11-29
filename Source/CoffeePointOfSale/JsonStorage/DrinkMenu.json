@@ -1,109 +1,109 @@
 {
   "Drink": 
     {
-      "Types": [
+      "Type": [
         {
-          "Type": "Coffee",
+          "Type1": "Coffee",
           "Description": "Standard medium brewed coffee",
-          "BasePrice": 2.50
+          "BasePrice": "2.50"
         },
         {
-          "Type": "Latte",
+          "Type2": "Latte",
           "Description": "Espresso shot, steamed milk, foamed milk",
-          "BasePrice": 4.00
+          "BasePrice": "4.00"
         },
         {
-          "Type": "Matcha Green Tea Latte",
+          "Type3": "Matcha Green Tea Latte",
           "Description": "Espresso shot, matcha green tea flavor, steamed milk, foamed milk",
-          "BasePrice": 5.25
+          "BasePrice": "5.25"
         },
         {
-          "Type": "Espresso",
+          "Type4": "Espresso",
           "Description": "Just a shot of esspresso",
-          "BasePrice": 2.50
+          "BasePrice": "2.50"
         },
         {
-          "Type": "Cappuccino",
+          "Type5": "Cappuccino",
           "Description": "Two esspresso shots, steamed milk",
-          "BasePrice": 5.00
+          "BasePrice": "5.00"
         },
         {
-          "Type": "Water",
+          "Type6": "Water",
           "Description": "Just water",
-          "BasePrice": 0.00
+          "BasePrice": "0.00"
         },
         {
-          "Type": "Tea",
+          "Type7": "Tea",
           "Description": "Black tea distilled in water",
-          "BasePrice": 2.50
+          "BasePrice": "2.50"
         }
       ],
-      "Sizes": [
+      "Size": [
         {
-          "Size": "Small",
-          "Price": -1.00
+          "SizeA": "Small",
+          "Price": "-1.00"
         },
         {
-          "Size": "Regular",
-          "Price": 0.00
+          "SizeB": "Regular",
+          "Price": "0.00"
         },
         {
-          "Size": "Large",
-          "Price": 1.00
+          "SizeC": "Large",
+          "Price": "1.00"
         }
       ],
       "Customizations": [
         {
-          "Temperature": "Hot",
-          "Price": 0.00
+          "TemperatureA": "Hot",
+          "Price": "0.00"
         },
         {
-          "Temperature": "Cold/Iced",
-          "Price": 0.00
+          "TemperatureB": "Cold/Iced",
+          "Price": "0.00"
         },
         {
-          "Creamer": "Non-Fat Milk",
-          "Price": 0.00
+          "CreamerA": "Non-Fat Milk",
+          "Price": "0.00"
         },
         {
-          "Creamer": "Whole Milk",
-          "Price": 0.00
+          "CreamerB": "Whole Milk",
+          "Price": "0.00"
         },
         {
-          "Creamer": "Oat Milk",
-          "Price": 1.50
+          "CreamerC": "Oat Milk",
+          "Price": "1.50"
         },
         {
-          "Creamer": "Almond Milk",
-          "Price": 1.50
+          "CreamerD": "Almond Milk",
+          "Price": "1.50"
         },
         {
-          "Creamer": "Soy Milk",
-          "Price": 1.50
+          "CreamerE": "Soy Milk",
+          "Price": "1.50"
         },
         {
-          "Sweetner": "Sugar",
-          "Price": 0.00
+          "SweetnerA": "Sugar",
+          "Price": "0.00"
         },
         {
-          "Sweetner": "Stevia",
-          "Price": 0.00
+          "SweetnerB": "Stevia",
+          "Price": "0.00"
         },
         {
-          "Sweetner": "Sweet'N Low",
-          "Price": 0.00
+          "SweetnerA": "Sweet'N Low",
+          "Price": "0.00"
         },
         {
           "Topping": "Foam",
-          "Price": 0.00
+          "Price": "0.00"
         },
         {
           "Topping": "Whipped Cream",
-          "Price": 0.00
+          "Price": "0.00"
         },
         {
           "Topping": "Chocalate Syrup",
-          "Price": 0.00
+          "Price": "0.00"
         }
       ]
     }
