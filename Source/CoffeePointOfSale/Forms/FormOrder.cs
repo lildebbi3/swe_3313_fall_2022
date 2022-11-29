@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Contracts;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,7 @@ namespace CoffeePointOfSale.Forms
             false, //water          4
             false  //espresso       5
         }; //this is a utility array to track what kind of drink is selected
-        
+        public int drinkType = 0;
         private Color defaultButtonColor, selectedColor;
 
         public FormOrder(IAppSettings appSettings, ICustomerService customerService, IDrinkMenuService drinkMenuService)
@@ -48,42 +49,8 @@ namespace CoffeePointOfSale.Forms
             //ResetForm(drinkCurrentlySelected:false);
         }
 
-        /*private void ResetForm(string drinkType = "", bool drinkCurrentlySelected = true) //reset the input sections of this form (does not affect the order list, subtotal, tax, total, or complete order button
-        {
-            orderItems.Items.Clear();
-            //foreach (Drink drink in currentOrder.AllDrinks) orderItems.Items.Add(drink);
-           // QtyTxtbox.Text = "Qty: \n1";
-            //subTotal.Text = $"Sub-Total:\t${currentOrder.SubTotal}";
-            //salesTax.Text = $"Sales Tax:\t${currentOrder.Tax}";
-            //total.Text = $"Total:\t${currentOrder.Total}";
 
-            //set default listbox values
-            customizationListBox.ClearSelected();
 
-            if (!drinkCurrentlySelected) //if no drink has been selected
-            {
-                latteBtn.BackColor = icedLatteBtn.BackColor = matchaGreenBtn.BackColor = coffeeBtn.BackColor = waterBtn.BackColor = espressoBtn.BackColor = defaultButtonColor;
-                ///currentDrink = new Drink();
-                addDrinkBtn.Enabled = false;
-                UpdateSelectedDrink(-1);
-            }
-            else
-            {
-                addDrinkBtn.Enabled = true;
-               // currentDrink = new Drink(drinkType); 
-                var drinkList = _drinkMenuService.DrinkMenuList;
-                //MessageBox.Show("This is for debugging\nDrinklist size is " + drinkList.Count);
-                for (var drinkIndex = 0; drinkIndex < drinkList.Count; drinkIndex++)
-                {
-                    var drink = drinkList[drinkIndex];
-                    MessageBox.Show("Drink type is " + drink.Name);
-                    if (drink.Name == drinkType)
-                    {
-                        foreach (Customization c in drink.CustomizationList) customizationListBox.Items.Add(c);
-                    }
-                }
-            }
-        }*/
 
         //set the correct array slot to true for the given index
         //pass -1 to set all to false
@@ -103,18 +70,48 @@ namespace CoffeePointOfSale.Forms
             //coffeeLabel.Text = FormCustomerList.GetCustomer.ToString();
         }
         
-        private void populateCB(int drinkType)
+        //populates the customizations listbox with the corresponding drink number
+        private void populateCB()
         {
+            //clears the listbox
+            customizationListBox.Items.Clear();
+            //gets the DrinkMenuList and sets the choosen drink by the userr
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
-
-            
-            for(var index=0; index < drink.CustomizationList.Count; index++)
+             
+            //loops over the customizations adding them to the listbox
+            for (var index=0; index < drink.CustomizationList.Count; index++)
             {
                 var customization = drink.CustomizationList[index];
                 customizationListBox.Items.Add(customization.ToString());
 
             }
+        }
+
+        //gets the checked boxes of customizations by the drink and returns a bool array of the checked boxes
+        private bool[] determineCustomizations()
+        {
+            //gets the DrinkMenuList and sets the choosen drink by the userr
+            var drinkMenuList = _drinkMenuService.DrinkMenuList;
+            var drink = drinkMenuList[drinkType];
+
+            //sets up the calculations
+            bool[] checkedBoxes = new bool [drink.CustomizationList.Count];
+            
+
+            //loops through the boxes detecting if they are checked.
+            for(int customNum=0; customNum< customizationListBox.Items.Count;customNum++)
+            {
+                if(customizationListBox.GetItemChecked(customNum))
+                {
+                    checkedBoxes[customNum] = true;
+                }
+                else
+                {
+                    checkedBoxes[customNum] = false;
+                }
+            }
+            return checkedBoxes;
         }
 
         //return to main menu
@@ -146,25 +143,40 @@ namespace CoffeePointOfSale.Forms
             Close();
             FormFactory.Get<FormPayment>().Show();
         }
-
+   
+        //this method should take the drink and its customizations and display it onto the orderItems textbox
         private void addDrinkBtn_Click(object sender, EventArgs e)
         {
-           
-           
+            var drinkMenuList = _drinkMenuService.DrinkMenuList;
+            var drink = drinkMenuList[drinkType];
+            bool[] customs = determineCustomizations();
+
+            orderItems.AppendText(drink.ToString());
+            for(var index = 0; index < drink.CustomizationList.Count; index++)
+            {
+                if (customs[index] == true)
+                {
+                    orderItems.AppendText(drink.CustomizationList[index].ToString());
+                }
+            }
+
+            /*
+            var drink = _drinkMenuService.DrinkMenuList[0];
+            var order = new Order()
+             {
+                 CurrentCustomer = FormCustomerList.GetCustomer,
+                 Tax = (drink.BasePrice * _appSettings.Tax.Rate),
+                 Total = ((drink.BasePrice * _appSettings.Tax.Rate) + (drink.BasePrice))
+             };*/
+
             //ResetForm(drinkCurrentlySelected:false);
         }
 
         //latte button is clicked
         private void latteBtn_Click(object sender, EventArgs e)
         {
-            populateCB(0);
-            //var drink = _drinkMenuService.DrinkMenuList[0];
-           /* var order = new Order()
-            {
-                CurrentCustomer = FormCustomerList.GetCustomer,
-                Tax = (drink.BasePrice * _appSettings.Tax.Rate),
-                Total = ((drink.BasePrice * _appSettings.Tax.Rate) + (drink.BasePrice))
-            };*/
+            drinkType = 0;
+            populateCB();
             UpdateSelectedDrink(0);
             latteBtn.BackColor = selectedColor;
             waterBtn.BackColor = coffeeBtn.BackColor = matchaGreenBtn.BackColor = icedLatteBtn.BackColor = espressoBtn.BackColor = defaultButtonColor;
@@ -174,6 +186,8 @@ namespace CoffeePointOfSale.Forms
         //iced latte button is clicked
         private void icedLatteBtn_Click(object sender, EventArgs e)
         {
+            drinkType = 1;
+            populateCB();
             UpdateSelectedDrink(1);
             icedLatteBtn.BackColor = selectedColor;
             waterBtn.BackColor = coffeeBtn.BackColor = matchaGreenBtn.BackColor = espressoBtn.BackColor = latteBtn.BackColor = defaultButtonColor;
@@ -183,6 +197,8 @@ namespace CoffeePointOfSale.Forms
         //iced matcha green tea latte button is clicked
         private void matchaGreenBtn_Click(object sender, EventArgs e)
         {
+            drinkType = 2;
+            populateCB();
             UpdateSelectedDrink(2);
             matchaGreenBtn.BackColor = selectedColor;
             waterBtn.BackColor = coffeeBtn.BackColor = espressoBtn.BackColor = icedLatteBtn.BackColor = latteBtn.BackColor = defaultButtonColor;
@@ -192,6 +208,8 @@ namespace CoffeePointOfSale.Forms
         //coffee button is clicked
         private void coffeeBtn_Click(object sender, EventArgs e)
         {
+            drinkType = 3;
+            populateCB();
             UpdateSelectedDrink(3);
             coffeeBtn.BackColor = selectedColor;
             waterBtn.BackColor = espressoBtn.BackColor = matchaGreenBtn.BackColor = icedLatteBtn.BackColor = latteBtn.BackColor = defaultButtonColor;
@@ -201,6 +219,8 @@ namespace CoffeePointOfSale.Forms
         //iced water button is clicked
         private void waterBtn_Click(object sender, EventArgs e)
         {
+            drinkType = 4;
+            populateCB();
             UpdateSelectedDrink(4);
             waterBtn.BackColor = selectedColor;
             espressoBtn.BackColor = coffeeBtn.BackColor = matchaGreenBtn.BackColor = icedLatteBtn.BackColor = latteBtn.BackColor = defaultButtonColor;
@@ -210,6 +230,8 @@ namespace CoffeePointOfSale.Forms
         //espresso button is clicked
         private void espressoBtn_Click(object sender, EventArgs e)
         {
+            drinkType = 5;
+            populateCB();
             UpdateSelectedDrink(5);
             espressoBtn.BackColor = selectedColor;
             waterBtn.BackColor = coffeeBtn.BackColor = matchaGreenBtn.BackColor = icedLatteBtn.BackColor = latteBtn.BackColor = defaultButtonColor;
