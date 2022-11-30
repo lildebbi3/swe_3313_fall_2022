@@ -48,7 +48,7 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         internal class PaymentMethod
         {
             public bool IsCC { get; set; } //true if used credit card, false if used rewards points
-            public string? cardDetails { get; set; } //the card number, can be null since can use rewards points
+            public string? CardDetails { get; set; } //the card number, can be null since can use rewards points
             public int RewardsEarned { get; set; } //number of rewards points earned
             public int RewardsCost { get; set; } //number of rewards points it would cost to pay with points
         }

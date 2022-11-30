@@ -30,7 +30,7 @@ namespace CoffeePointOfSale.Forms
 
             if (temp.Payment.IsCC)
             {
-                ccLabel.Text = "Payment Method: Card";
+                ccLabel.Text = $"Payment Method: Card **** **** **** {temp.Payment.CardDetails}";
                 rpLabel.Text = $"Rewards Earned: {temp.Payment.RewardsEarned}";
             }
             else
