@@ -22,6 +22,7 @@ namespace CoffeePointOfSale.Forms
         private IAppSettings? _appSettings;
         private readonly ICustomerService _customerService;
         private bool validExp;
+        private Customer tempCust;
 
         public FormPayment(IAppSettings appSettings, ICustomerService customerService)
         {
@@ -37,7 +38,8 @@ namespace CoffeePointOfSale.Forms
             totalLabel.Text = $"    Total: ${Program.RemoveDecimalPlaces(Program.currentOrder.Total)}";
 
             Program.currentOrder.Payment = new Order.PaymentMethod(); //create new payment for the order
-            Program.currentOrder.CustomerGUID = Program.currentCustomer.GUID;
+            tempCust = _customerService.Customers[Program.currentPhone];
+            if (tempCust == null) MessageBox.Show("WHAT THE FUCK");
 
             int tempRC = 0, tempRE = 0;
             if (!Program.useAnon)
@@ -58,10 +60,8 @@ namespace CoffeePointOfSale.Forms
                 rpCostLabel.Text = $"Rewards Cost: {tempRC}";
                 rpToEarnLabel.Text = $"Rewards to Earn: {tempRE}";
 
-
-
-                currentRPLabel.Text = $"{Program.currentCustomer.firstName}'s Points: {Program.currentCustomer.RewardPoints}";
-                if (Program.currentCustomer.RewardPoints >= tempRC) RewardPaymentBtn.Enabled = true;
+                currentRPLabel.Text = $"{tempCust.firstName}'s Points: {tempCust.RewardPoints}";
+                if (tempCust.RewardPoints >= tempRC) RewardPaymentBtn.Enabled = true;
             }
             else
             {
@@ -76,6 +76,7 @@ namespace CoffeePointOfSale.Forms
         private void paymentCancelBtn_Click(object sender, EventArgs e)
         {
             Program.useAnon = false;
+            Program.currentPhone = "anonymous";
             Close();
             FormFactory.Get<FormMain>().Show();
         }
@@ -118,8 +119,8 @@ namespace CoffeePointOfSale.Forms
 
                 temp.TransactionTime = DateTime.Now;
 
-                if (!Program.useAnon) Program.currentCustomer.RewardPoints -= temp.Payment.RewardsCost;
-                Program.currentCustomer.Orders.Add(temp);
+                if (!Program.useAnon) tempCust.RewardPoints -= temp.Payment.RewardsCost;
+                tempCust.Orders.Add(temp);
                 _customerService.Write();
 
                 Program.useAnon = false;
@@ -185,8 +186,8 @@ namespace CoffeePointOfSale.Forms
 
             temp.TransactionTime = DateTime.Now;
 
-            Program.currentCustomer.RewardPoints -= temp.Payment.RewardsCost;
-            Program.currentCustomer.Orders.Add(temp);
+            tempCust.RewardPoints -= temp.Payment.RewardsCost;
+            tempCust.Orders.Add(temp);
             _customerService.Write();
 
             Program.useAnon = false;

@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace CoffeePointOfSale.Forms
 {
@@ -48,18 +49,9 @@ namespace CoffeePointOfSale.Forms
             coffeeBtn.BackColor = defaultButtonColor; //set the coffee button to the normal color before the user ever sees the selected color
 
             //reset Program.currentOrder
-            Program.currentOrder = new Order();
-            if (Program.useAnon)
-            {
-                Program.currentOrder.CustomerGUID = "0";
-                Program.currentCustomer = _customerService.Customers["anonymous"];
-            }
-            else
-            {
-                Program.currentOrder.CustomerGUID = FormCustomerList.GetCustomer.GUID;
-                Program.currentCustomer = _customerService.Customers["", Program.currentOrder.CustomerGUID];
-            }
-
+            Customer temp = _customerService.Customers[Program.currentPhone];
+            if (temp == null) temp = _customerService.Customers["anonymous"];
+            Program.currentOrder = new Order(temp.GUID);
 
 
 
@@ -126,9 +118,12 @@ namespace CoffeePointOfSale.Forms
             //gets the DrinkMenuList and sets the choosen drink by the userr
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
-             
+            
+            priceDrinkL.Text = drink.Name + ": " + drink.BasePrice;
+
+
             //loops over the customizations adding them to the listbox
-            for (var index=0; index < drink.CustomizationList.Count; index++)
+         for (var index=0; index < drink.CustomizationList.Count; index++)
             {
                 var customization = drink.CustomizationList[index];
                 customizationListBox.Items.Add(customization.ToString());
@@ -164,6 +159,7 @@ namespace CoffeePointOfSale.Forms
         private void mainMenuBtn_Click(object sender, EventArgs e)
         {
             Program.useAnon = false;
+            Program.currentPhone = "anonymous";
             Close();
             FormFactory.Get<FormMain>().Show();
         }
@@ -259,6 +255,7 @@ namespace CoffeePointOfSale.Forms
         //latte button is clicked
         private void latteBtn_Click(object sender, EventArgs e)
         {
+            
             qtyTxtbox.Text = "Qty: \n1";
             drinkType = 0;
             populateCB();

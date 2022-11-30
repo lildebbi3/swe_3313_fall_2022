@@ -39,7 +39,7 @@
             // 
             this.OnClickBtntoMain1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.OnClickBtntoMain1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.OnClickBtntoMain1.Location = new System.Drawing.Point(0, 2);
+            this.OnClickBtntoMain1.Location = new System.Drawing.Point(137, 2);
             this.OnClickBtntoMain1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OnClickBtntoMain1.Name = "OnClickBtntoMain1";
             this.OnClickBtntoMain1.Size = new System.Drawing.Size(123, 42);
@@ -52,7 +52,7 @@
             // 
             this.newCustomerBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.newCustomerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newCustomerBtn.Location = new System.Drawing.Point(440, 426);
+            this.newCustomerBtn.Location = new System.Drawing.Point(577, 426);
             this.newCustomerBtn.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.newCustomerBtn.Name = "newCustomerBtn";
             this.newCustomerBtn.Size = new System.Drawing.Size(179, 46);
@@ -65,7 +65,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(418, 10);
+            this.label1.Location = new System.Drawing.Point(555, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 30);
@@ -77,13 +77,13 @@
             // 
             this.customerListTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customerListTxtbox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customerListTxtbox.Location = new System.Drawing.Point(194, 68);
-            this.customerListTxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customerListTxtbox.Location = new System.Drawing.Point(115, 68);
+            this.customerListTxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.customerListTxtbox.Multiline = true;
             this.customerListTxtbox.Name = "customerListTxtbox";
             this.customerListTxtbox.ReadOnly = true;
             this.customerListTxtbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.customerListTxtbox.Size = new System.Drawing.Size(685, 354);
+            this.customerListTxtbox.Size = new System.Drawing.Size(1091, 354);
             this.customerListTxtbox.TabIndex = 3;
             this.customerListTxtbox.TextChanged += new System.EventHandler(this.customerListTxtbox_TextChanged);
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1075, 570);
+            this.ClientSize = new System.Drawing.Size(1348, 721);
             this.Controls.Add(this.customerListTxtbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newCustomerBtn);

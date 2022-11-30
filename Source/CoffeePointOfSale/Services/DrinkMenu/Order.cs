@@ -24,9 +24,10 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         public DateTime? TransactionTime { get; set; }
 
 
-        public Order() //constructor to initialize the list
+        public Order(string guid) //constructor to initialize the list
         {
             AllDrinks = new List<Drink>();
+            CustomerGUID = guid;
         }
 
         //add a drink to the order

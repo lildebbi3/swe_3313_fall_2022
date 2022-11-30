@@ -46,8 +46,10 @@ namespace CoffeePointOfSale.Forms
 
                 //adds order button
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
+                //creates a button of the required size
                 btn.Size = new Size(160, 50);
                 btn.Location = new Point(customerListTxtbox.ClientSize.Width - btn.Width, e);
+                //fixes the problem of buttons stacking one top of another by creating a space between each button.
                 e += 55;
                 btn.Cursor = Cursors.Default;
                 btn.Text = "Order";
@@ -57,6 +59,7 @@ namespace CoffeePointOfSale.Forms
                 void orderbtn(object sender, EventArgs e)
                 {
                     FormCustomerList.GetCustomer = customer;
+                    Program.currentPhone = customer.Phone;
                     Hide();
                     FormFactory.Get<FormOrder>().ShowDialog();
                 }

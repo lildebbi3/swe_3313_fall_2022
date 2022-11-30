@@ -10,9 +10,9 @@ internal static class Program
 {
     public static IServiceProvider? ServiceProvider { get; private set; }
     public static List<Order> listOfAllOrders = new List<Order>();
-    public static Order currentOrder;
+    public static Order? currentOrder;
     public static bool useAnon = false;
-    public static Customer currentCustomer;
+    public static string currentPhone = "anonymous";
 
     /// <summary>
     ///     The main entry point for the application.

@@ -33,19 +33,11 @@ public partial class FormManagement : FormNoCloseBase
     /// <summary>
     /// Remove this from your project... here to show you how to get the customer list
     /// </summary>
-    private void DemonstrateGettingCustomerList()
-    {
-        var customerList = _customerService.Customers.List;
-        for (var customerIdx = 0; customerIdx < customerList.Count; customerIdx++)
-        {
-            var customer = customerList[customerIdx];
-            txtDeleteThis.AppendText($"{customerIdx+1}.{customer}{Environment.NewLine}");
-        }
-    }
+   
 
     private void OnLoadFormManagement(object sender, EventArgs e)
     {
-        DemonstrateGettingCustomerList();
+       
     }
 
     private void GenerateCSVbtn_Click(object sender, EventArgs e)
