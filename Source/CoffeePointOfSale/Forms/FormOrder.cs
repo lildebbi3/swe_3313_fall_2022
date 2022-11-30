@@ -30,7 +30,8 @@ namespace CoffeePointOfSale.Forms
             false, //water          4
             false  //espresso       5
         }; //this is a utility array to track what kind of drink is selected
-        public int drinkType = 0;
+        public int drinkType;
+        public int quantityofDrink = 0;
         private Color defaultButtonColor, selectedColor;
 
         public FormOrder(IAppSettings appSettings, ICustomerService customerService, IDrinkMenuService drinkMenuService)
@@ -122,8 +123,7 @@ namespace CoffeePointOfSale.Forms
 
             //sets up the calculations
             bool[] checkedBoxes = new bool [drink.CustomizationList.Count];
-            
-
+          
             //loops through the boxes detecting if they are checked.
             for(int customNum=0; customNum< customizationListBox.Items.Count;customNum++)
             {
@@ -151,8 +151,14 @@ namespace CoffeePointOfSale.Forms
         private void minusBtnQ_Click(object sender, EventArgs e)
         {
             int temp = Convert.ToInt32(qtyTxtbox.Lines[1]);
-            if (temp >= 2) temp--;
+            if (temp >= 2)
+            {
+                temp--;
+                quantityofDrink--;
+            }
+
             qtyTxtbox.Text = $"Qty: \n{temp}";
+            
           
         }
 
@@ -162,6 +168,7 @@ namespace CoffeePointOfSale.Forms
             int temp = Convert.ToInt32(qtyTxtbox.Lines[1]);
             temp++;
             qtyTxtbox.Text = $"Qty: \n{temp}";
+            quantityofDrink++;
         }
 
         //populate checkbox for customizations
@@ -193,6 +200,8 @@ namespace CoffeePointOfSale.Forms
             
             ResetForm();
         }
+
+
 
         //latte button is clicked
         private void latteBtn_Click(object sender, EventArgs e)

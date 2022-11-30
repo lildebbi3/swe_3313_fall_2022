@@ -10,7 +10,12 @@
       "FirstName": "Richard",
       "LastName": "Dickson",
       "Phone": "404-444-5555",
-      "RewardPoints": 95
+      "RewardPoints": 95,
+      "Orders": [
+        {
+
+        }
+      ]
     }
   }
 }

@@ -12,7 +12,6 @@ namespace CoffeePointOfSale.Services.DrinkMenu
     {
         private List<Customization> _customizations;
        
-
         public string? Name { get; set; }
         public decimal BasePrice { get; set; }
 

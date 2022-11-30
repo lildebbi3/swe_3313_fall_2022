@@ -16,8 +16,8 @@ public class DrinkMenuService : IDrinkMenuService
         _storageService = storageService;
 
         var drinkMenuList = LoadDrinkMenuFromJsonFile();
-        var sortedDrinkMenuList = SortDrinkMenuList(drinkMenuList);
-        DrinkMenuList = sortedDrinkMenuList.AsReadOnly();
+        //var sortedDrinkMenuList = SortDrinkMenuList(drinkMenuList);
+        DrinkMenuList = drinkMenuList.AsReadOnly();
         
     }
 
