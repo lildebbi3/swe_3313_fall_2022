@@ -18,9 +18,7 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         public decimal Tax { get; set; }
         public decimal Total { get; set; }
         public PaymentMethod? Payment { get; set; }
-        public DateAndTime? TransactionTime { get; set; }
-
-        public List<Drink>? DrinkList { get; set; }
+        public DateTime? TransactionTime { get; set; }
 
 
         public Order() //constructor to initialize the list

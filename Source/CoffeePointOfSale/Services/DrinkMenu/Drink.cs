@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace CoffeePointOfSale.Services.DrinkMenu
 {
@@ -14,6 +15,7 @@ namespace CoffeePointOfSale.Services.DrinkMenu
        
         public string? Name { get; set; }
         public decimal BasePrice { get; set; }
+
 
         public Drink(List<Customization> customizations)
         {
@@ -28,7 +30,14 @@ namespace CoffeePointOfSale.Services.DrinkMenu
 
         public override string ToString()
         {
-         return $"{Name} {BasePrice}";
+            string temp = $"{Name} - {BasePrice}";
+            return temp;
+        }
+
+        public string ToString(int quantity)
+        {
+            string temp = $"{Name} x{quantity} - {BasePrice * quantity} (@{BasePrice} per)";
+            return temp;
         }
 
         public void AddCustomization(Customization customization)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,16 @@ namespace CoffeePointOfSale.Services.DrinkMenu
         }
         public string Url => Regex.Replace(Name.Trim(), "[^a-zA-Z0-9]", "-");
 
-        public string ToString()
+        public override string ToString()
         {
-            return $"{Name}: {Price}:";
+            string temp = $"{Name} - {Price}";
+            return temp;
+        }
+        
+        public string ToString(int quantity)
+        {
+            string temp = $"{Name} x{quantity} - {Price * quantity} (@{Price} per)";
+            return temp;
         }
     }
 }

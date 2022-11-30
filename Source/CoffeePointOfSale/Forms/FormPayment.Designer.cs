@@ -41,6 +41,11 @@
             this.orderTotalLabel = new System.Windows.Forms.Label();
             this.CCwarningLabel = new System.Windows.Forms.Label();
             this.orderItems = new System.Windows.Forms.ListBox();
+            this.subtotalLabel = new System.Windows.Forms.Label();
+            this.salestaxLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.rpToEarnLabel = new System.Windows.Forms.Label();
+            this.rpCostLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // paymentCancelBtn
@@ -59,7 +64,7 @@
             // ccNumTxtbox
             // 
             this.ccNumTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ccNumTxtbox.Location = new System.Drawing.Point(372, 155);
+            this.ccNumTxtbox.Location = new System.Drawing.Point(372, 210);
             this.ccNumTxtbox.Margin = new System.Windows.Forms.Padding(1);
             this.ccNumTxtbox.Name = "ccNumTxtbox";
             this.ccNumTxtbox.Size = new System.Drawing.Size(210, 23);
@@ -68,7 +73,7 @@
             // ExpDateTxtbox
             // 
             this.ExpDateTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ExpDateTxtbox.Location = new System.Drawing.Point(372, 197);
+            this.ExpDateTxtbox.Location = new System.Drawing.Point(372, 252);
             this.ExpDateTxtbox.Margin = new System.Windows.Forms.Padding(1);
             this.ExpDateTxtbox.Name = "ExpDateTxtbox";
             this.ExpDateTxtbox.Size = new System.Drawing.Size(210, 23);
@@ -77,7 +82,7 @@
             // cvvTxtbox
             // 
             this.cvvTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cvvTxtbox.Location = new System.Drawing.Point(372, 239);
+            this.cvvTxtbox.Location = new System.Drawing.Point(372, 294);
             this.cvvTxtbox.Margin = new System.Windows.Forms.Padding(1);
             this.cvvTxtbox.Name = "cvvTxtbox";
             this.cvvTxtbox.Size = new System.Drawing.Size(210, 23);
@@ -88,7 +93,7 @@
             this.cardLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cardLabel.AutoSize = true;
             this.cardLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cardLabel.Location = new System.Drawing.Point(314, 160);
+            this.cardLabel.Location = new System.Drawing.Point(314, 215);
             this.cardLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.cardLabel.Name = "cardLabel";
             this.cardLabel.Size = new System.Drawing.Size(42, 15);
@@ -100,7 +105,7 @@
             this.ExpDateLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ExpDateLabel.AutoSize = true;
             this.ExpDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ExpDateLabel.Location = new System.Drawing.Point(303, 199);
+            this.ExpDateLabel.Location = new System.Drawing.Point(303, 254);
             this.ExpDateLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.ExpDateLabel.Name = "ExpDateLabel";
             this.ExpDateLabel.Size = new System.Drawing.Size(53, 15);
@@ -112,7 +117,7 @@
             this.CvvLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CvvLabel.AutoSize = true;
             this.CvvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CvvLabel.Location = new System.Drawing.Point(328, 241);
+            this.CvvLabel.Location = new System.Drawing.Point(328, 296);
             this.CvvLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.CvvLabel.Name = "CvvLabel";
             this.CvvLabel.Size = new System.Drawing.Size(29, 15);
@@ -123,7 +128,7 @@
             // 
             this.CCPaymentBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CCPaymentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.CCPaymentBtn.Location = new System.Drawing.Point(248, 328);
+            this.CCPaymentBtn.Location = new System.Drawing.Point(248, 383);
             this.CCPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CCPaymentBtn.Name = "CCPaymentBtn";
             this.CCPaymentBtn.Size = new System.Drawing.Size(186, 32);
@@ -136,13 +141,14 @@
             // 
             this.RewardPaymentBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RewardPaymentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.RewardPaymentBtn.Location = new System.Drawing.Point(480, 328);
+            this.RewardPaymentBtn.Location = new System.Drawing.Point(480, 383);
             this.RewardPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RewardPaymentBtn.Name = "RewardPaymentBtn";
             this.RewardPaymentBtn.Size = new System.Drawing.Size(186, 32);
             this.RewardPaymentBtn.TabIndex = 13;
             this.RewardPaymentBtn.Text = "Pay With Rewards";
             this.RewardPaymentBtn.UseVisualStyleBackColor = false;
+            this.RewardPaymentBtn.Click += new System.EventHandler(this.RewardPaymentBtn_Click);
             // 
             // orderTotalLabel
             // 
@@ -161,7 +167,7 @@
             this.CCwarningLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CCwarningLabel.AutoSize = true;
             this.CCwarningLabel.ForeColor = System.Drawing.Color.Red;
-            this.CCwarningLabel.Location = new System.Drawing.Point(260, 286);
+            this.CCwarningLabel.Location = new System.Drawing.Point(260, 341);
             this.CCwarningLabel.Name = "CCwarningLabel";
             this.CCwarningLabel.Size = new System.Drawing.Size(352, 15);
             this.CCwarningLabel.TabIndex = 16;
@@ -178,12 +184,79 @@
             this.orderItems.Size = new System.Drawing.Size(210, 124);
             this.orderItems.TabIndex = 17;
             // 
+            // subtotalLabel
+            // 
+            this.subtotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.subtotalLabel.AutoSize = true;
+            this.subtotalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.subtotalLabel.Location = new System.Drawing.Point(372, 148);
+            this.subtotalLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.subtotalLabel.Name = "subtotalLabel";
+            this.subtotalLabel.Size = new System.Drawing.Size(96, 15);
+            this.subtotalLabel.TabIndex = 18;
+            this.subtotalLabel.Text = "Sub-Total: $00.00";
+            // 
+            // salestaxLabel
+            // 
+            this.salestaxLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.salestaxLabel.AutoSize = true;
+            this.salestaxLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.salestaxLabel.Location = new System.Drawing.Point(372, 168);
+            this.salestaxLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.salestaxLabel.Name = "salestaxLabel";
+            this.salestaxLabel.Size = new System.Drawing.Size(92, 15);
+            this.salestaxLabel.TabIndex = 19;
+            this.salestaxLabel.Text = "Sales Tax: $00.00";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.totalLabel.Location = new System.Drawing.Point(372, 187);
+            this.totalLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(71, 15);
+            this.totalLabel.TabIndex = 20;
+            this.totalLabel.Text = "Total: $00.00";
+            this.totalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // rpToEarnLabel
+            // 
+            this.rpToEarnLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rpToEarnLabel.AutoSize = true;
+            this.rpToEarnLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rpToEarnLabel.Location = new System.Drawing.Point(490, 187);
+            this.rpToEarnLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.rpToEarnLabel.Name = "rpToEarnLabel";
+            this.rpToEarnLabel.Size = new System.Drawing.Size(73, 15);
+            this.rpToEarnLabel.TabIndex = 22;
+            this.rpToEarnLabel.Text = "RP to Earn: 0";
+            this.rpToEarnLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // rpCostLabel
+            // 
+            this.rpCostLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rpCostLabel.AutoSize = true;
+            this.rpCostLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rpCostLabel.Location = new System.Drawing.Point(490, 168);
+            this.rpCostLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.rpCostLabel.Name = "rpCostLabel";
+            this.rpCostLabel.Size = new System.Drawing.Size(60, 15);
+            this.rpCostLabel.TabIndex = 21;
+            this.rpCostLabel.Text = "RP Cost: 0";
+            // 
             // FormPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(941, 427);
+            this.Controls.Add(this.rpToEarnLabel);
+            this.Controls.Add(this.rpCostLabel);
+            this.Controls.Add(this.totalLabel);
+            this.Controls.Add(this.salestaxLabel);
+            this.Controls.Add(this.subtotalLabel);
             this.Controls.Add(this.orderItems);
             this.Controls.Add(this.CCwarningLabel);
             this.Controls.Add(this.orderTotalLabel);
@@ -221,5 +294,10 @@
         private Label orderTotalLabel;
         private Label CCwarningLabel;
         private ListBox orderItems;
+        private Label subtotalLabel;
+        private Label salestaxLabel;
+        private Label totalLabel;
+        private Label rpToEarnLabel;
+        private Label rpCostLabel;
     }
 }

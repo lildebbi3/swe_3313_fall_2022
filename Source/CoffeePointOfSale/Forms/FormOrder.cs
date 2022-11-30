@@ -31,17 +31,12 @@ namespace CoffeePointOfSale.Forms
             false  //espresso       5
         }; //this is a utility array to track what kind of drink is selected
         public int drinkType;
-        decimal drinksubtotal;
-        decimal drinktotal;
-        decimal drinktax;
+        decimal orderSubtotal, tax, total;
         public int quantityofDrink = 1;
         private Color defaultButtonColor, selectedColor;
 
-        
-
         public FormOrder(IAppSettings appSettings, ICustomerService customerService, IDrinkMenuService drinkMenuService)
         {
-
             _appSettings = appSettings;
             _customerService = customerService;
             _drinkMenuService = drinkMenuService;
@@ -52,11 +47,17 @@ namespace CoffeePointOfSale.Forms
             selectedColor = coffeeBtn.BackColor; //this is the color the coffe button is set to in the editor, the values are 128, 128, 0 (idk how to set color directly from the value without having one that is changed in the editor)
             coffeeBtn.BackColor = defaultButtonColor; //set the coffee button to the normal color before the user ever sees the selected color
 
+            //reset Program.currentOrder
+            Program.currentOrder = new Order();
+            Program.currentOrder.CurrentCustomer = FormCustomerList.GetCustomer;
+
             ResetForm();
         }
 
         private void ResetForm()
         {
+            quantityofDrink = 1;
+
             if (drinkSelected[0])
             {
                 latteBtn.PerformClick();
@@ -153,32 +154,20 @@ namespace CoffeePointOfSale.Forms
         //decrease quantity of drink
         private void minusBtnQ_Click(object sender, EventArgs e)
         {
-            int temp = Convert.ToInt32(qtyTxtbox.Lines[1]);
-            if (temp >= 2)
-            {
-                temp--;
-                quantityofDrink--;
-            }
-            qtyTxtbox.Text = $"Qty: \n{temp}";
+            if (quantityofDrink >= 2) quantityofDrink--; 
+            qtyTxtbox.Text = $"Qty: \n{quantityofDrink}";
         }
 
         //increase quantity of drink
         private void plusBtnQ_Click(object sender, EventArgs e)
         {
-            int temp = Convert.ToInt32(qtyTxtbox.Lines[1]);
-            temp++;
             quantityofDrink++;
-            qtyTxtbox.Text = $"Qty: \n{temp}";
+            qtyTxtbox.Text = $"Qty: \n{quantityofDrink}";
         }
-
-        //populate checkbox for customizations
-       
 
         //go to payment form
         private void payButton_Click(object sender, EventArgs e)
         {
-           
-            //Program.inProgressOrder = 
             Close();
             FormFactory.Get<FormPayment>().Show();
         }
@@ -189,76 +178,58 @@ namespace CoffeePointOfSale.Forms
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
             bool[] customs = determineCustomizations();
-            getDrinkCost(drink, customs);
 
-            orderItems.AppendText(drink.ToString());
-            
+            if (quantityofDrink == 1) orderItems.Items.Add(drink.ToString()); //if quantity is not 1 calls a different toString method
+            else orderItems.Items.Add(drink.ToString(quantityofDrink));
+
+            decimal tempPrice = drink.BasePrice; //temporary total price of an item
+
+            List<Customization> tempCustomizations = new List<Customization>();
+            //foreach possible customization on the drink
             for(var index = 0; index < drink.CustomizationList.Count; index++)
             {
-                if (customs[index] == true)
+                if (customs[index] == true) //if customization addded
                 {
-                    orderItems.AppendText(drink.CustomizationList[index].ToString());
-                   
+                    orderItems.Items.Add("+" + drink.CustomizationList[index].ToString()); //add customization to display
+                    tempPrice += drink.CustomizationList[index].Price; //increase the temporary total price by the customization price
+                    tempCustomizations.Add(drink.CustomizationList[index]);
                 }
             }
-            //puts pricing on screen
-            subTotalLabel.Text=(drinksubtotal.ToString());
-            salesTaxLabel.Text = ( drinktax.ToString());
-            totalLabel.Text=(drinktotal.ToString());
-            quantityofDrink = 1;
 
-          
-          //this is suppose to create the order object to be sent to the payment form where it can then be added to the customer DB  
-            var orderedDrink = new Drink(drink.CustomizationList)
+            if (tempPrice != drink.BasePrice) //if tempPrice has changed (if customizations are added that change the price
+            {
+                if (quantityofDrink == 1) orderItems.Items.Add($"\tItem total: {tempPrice}"); //different displays for drink quantities
+                else orderItems.Items.Add($"\tItem total: {tempPrice * quantityofDrink} (@{tempPrice} per)");
+            }
+
+            //calculate the prices
+            CalculatePrices(tempPrice);
+
+
+            //this is supposed to create the order object to be sent to the payment form where it can then be added to the customer DB  
+            Drink orderedDrink = new Drink(tempCustomizations)
             {
                 Name = drink.Name,
                 BasePrice = drink.BasePrice
-
             };
-            var order = new Order()
-            {
-                CurrentCustomer = FormCustomerList.GetCustomer,
-                SubTotal = drinksubtotal,
-                Tax = drinktax,
-                Total = drinktotal,
-                Payment =
-                {
+            Program.currentOrder.SubTotal = orderSubtotal;
+            Program.currentOrder.Tax = tax;
+            Program.currentOrder.Total = total;
 
-                },
-                AllDrinks =
-                {
-
-                }
-            };
-            order.AllDrinks.Add(orderedDrink);
+            for (int a = 0; a < quantityofDrink; a++) Program.currentOrder.AllDrinks.Add(orderedDrink); //add the drink to the order q times
 
             ResetForm();
         }
-      
 
-        //calculates pricing with customizations 
-        private void getDrinkCost(Drink drink, bool[] customs)
+        private void CalculatePrices(decimal tempPrice)
         {
-            decimal subtotal = Convert.ToDecimal(subTotalLabel.Text);
-            decimal tax = _appSettings.Tax.Rate;
-            decimal total = Convert.ToDecimal(totalLabel.Text);
-
-            subtotal += drink.BasePrice * quantityofDrink;
-            for (var index = 0; index < drink.CustomizationList.Count; index++)
-            {
-                if (customs[index] == true)
-                {
-                    subtotal = subtotal + drink.CustomizationList[index].Price;
-                }
-            }
-            total += (subtotal * tax) + subtotal;
-            //returns the drinks subtotal,tax amount, and total
-            drinksubtotal = subtotal;
-            drinktax = (subtotal * tax);
-            drinktotal = total;
+            orderSubtotal += tempPrice * quantityofDrink;
+            subTotalLabel.Text = $"{orderSubtotal}";
+            tax = orderSubtotal * _appSettings.Tax.Rate;
+            salesTaxLabel.Text = $"{tax}";
+            total = tax + orderSubtotal;
+            totalLabel.Text = $"{total}";
         }
-
-
 
         //latte button is clicked
         private void latteBtn_Click(object sender, EventArgs e)

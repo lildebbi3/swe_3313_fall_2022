@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CoffeePointOfSale.Services.DrinkMenu;
 
 namespace CoffeePointOfSale.Forms
 {
@@ -19,11 +20,12 @@ namespace CoffeePointOfSale.Forms
         {
             InitializeComponent();
             _appSettings = appSettings;
-        }
 
-        private void FormReceipt_Load(object sender, EventArgs e)
-        {
-
+            Order temp = Program.listOfAllOrders[Program.listOfAllOrders.Count - 1];
+            Program.DisplayOrderToListBox(temp, recieptItems);
+            subtotalLabel.Text = $"Sub-Total: ${temp.SubTotal}";
+            salestaxLabel.Text = $"Sales Tax: ${temp.Tax}";
+            totalLabel.Text = $"    Total: ${temp.Total}";
         }
 
         private void RecceiptMainMenubtn_Click(object sender, EventArgs e)
