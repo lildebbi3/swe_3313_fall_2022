@@ -1,4 +1,5 @@
-﻿using CoffeePointOfSale.Services.DrinkMenu;
+﻿using CoffeePointOfSale.Forms;
+using CoffeePointOfSale.Services.DrinkMenu;
 using Newtonsoft.Json;
 
 namespace CoffeePointOfSale.Services.Customer;
@@ -73,6 +74,6 @@ public class Customer
     {
         return IsAnonymous  
             ? "Anonymous Customer"
-            :$"{Phone}     {lastName}     {firstName}     Reward points:{RewardPoints}";
+            :$"{lastName}  {firstName}  {Phone} Reward points:{RewardPoints}";
     }
 }

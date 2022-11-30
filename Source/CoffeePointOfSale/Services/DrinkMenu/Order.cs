@@ -12,8 +12,10 @@ namespace CoffeePointOfSale.Services.DrinkMenu
 {
     public class Order
     {
-        public string? CustomerGUID { get; set; }
+       
         public Customer.Customer? CurrentCustomer { get; set; }
+
+        public string? CustomerGUID { get; set; }
         public List<Drink> AllDrinks { get; set; }
         public decimal SubTotal { get; set; }
         public decimal Tax { get; set; }

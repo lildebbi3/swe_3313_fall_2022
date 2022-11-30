@@ -46,7 +46,7 @@ namespace CoffeePointOfSale.Forms
 
                 //adds order button
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
-                btn.Size = new Size(175, 50);
+                btn.Size = new Size(160, 50);
                 btn.Location = new Point(customerListTxtbox.ClientSize.Width - btn.Width, e);
                 e += 55;
                 btn.Cursor = Cursors.Default;
