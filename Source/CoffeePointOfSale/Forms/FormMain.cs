@@ -27,7 +27,7 @@ public partial class FormMain : FormBase
     private void OnClickBtnCustomerListing(object sender, EventArgs e)
     {
         Hide();
-        FormFactory.Get<FormCustomerList>().ShowDialog();
+        FormFactory.Get<FormCustomerList>().Show();
     }
 
     //btn takes user to order form
@@ -35,6 +35,6 @@ public partial class FormMain : FormBase
     {
         Program.useAnon = true;
         Hide();
-        FormFactory.Get<FormOrder>().ShowDialog();
+        FormFactory.Get<FormOrder>().Show();
     }
 }

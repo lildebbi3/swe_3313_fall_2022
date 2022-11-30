@@ -16,6 +16,7 @@ public class Customers
     [JsonIgnore] //not written to JSON file... this is a list view of the dictionary, so only the dictionary is written
     public IReadOnlyList<Customer> List =>
         _customerDict.Select(c => c.Value)
+            .OrderBy(c => c.lastName)
             .OrderBy(c => c.IsAnonymous ? 0 : 1)
             .ToList();
 
