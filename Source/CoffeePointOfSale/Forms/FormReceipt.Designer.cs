@@ -46,10 +46,9 @@
             // 
             this.RecceiptMainMenubtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RecceiptMainMenubtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.RecceiptMainMenubtn.Location = new System.Drawing.Point(0, 2);
-            this.RecceiptMainMenubtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RecceiptMainMenubtn.Location = new System.Drawing.Point(137, 3);
             this.RecceiptMainMenubtn.Name = "RecceiptMainMenubtn";
-            this.RecceiptMainMenubtn.Size = new System.Drawing.Size(108, 32);
+            this.RecceiptMainMenubtn.Size = new System.Drawing.Size(123, 43);
             this.RecceiptMainMenubtn.TabIndex = 0;
             this.RecceiptMainMenubtn.Text = "MainMenu";
             this.RecceiptMainMenubtn.UseVisualStyleBackColor = false;
@@ -64,10 +63,11 @@
             // 
             this.recieptItems.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.recieptItems.FormattingEnabled = true;
-            this.recieptItems.ItemHeight = 15;
-            this.recieptItems.Location = new System.Drawing.Point(330, 2);
+            this.recieptItems.ItemHeight = 20;
+            this.recieptItems.Location = new System.Drawing.Point(456, 13);
+            this.recieptItems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.recieptItems.Name = "recieptItems";
-            this.recieptItems.Size = new System.Drawing.Size(330, 334);
+            this.recieptItems.Size = new System.Drawing.Size(331, 344);
             this.recieptItems.TabIndex = 2;
             // 
             // totalLabel
@@ -75,10 +75,10 @@
             this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalLabel.AutoSize = true;
             this.totalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.totalLabel.Location = new System.Drawing.Point(330, 390);
+            this.totalLabel.Location = new System.Drawing.Point(456, 484);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(71, 15);
+            this.totalLabel.Size = new System.Drawing.Size(92, 20);
             this.totalLabel.TabIndex = 23;
             this.totalLabel.Text = "Total: $00.00";
             this.totalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -88,10 +88,10 @@
             this.salestaxLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.salestaxLabel.AutoSize = true;
             this.salestaxLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.salestaxLabel.Location = new System.Drawing.Point(330, 371);
+            this.salestaxLabel.Location = new System.Drawing.Point(456, 459);
             this.salestaxLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.salestaxLabel.Name = "salestaxLabel";
-            this.salestaxLabel.Size = new System.Drawing.Size(92, 15);
+            this.salestaxLabel.Size = new System.Drawing.Size(118, 20);
             this.salestaxLabel.TabIndex = 22;
             this.salestaxLabel.Text = "Sales Tax: $00.00";
             // 
@@ -100,10 +100,10 @@
             this.subtotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.subtotalLabel.AutoSize = true;
             this.subtotalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.subtotalLabel.Location = new System.Drawing.Point(330, 351);
+            this.subtotalLabel.Location = new System.Drawing.Point(456, 432);
             this.subtotalLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.subtotalLabel.Name = "subtotalLabel";
-            this.subtotalLabel.Size = new System.Drawing.Size(96, 15);
+            this.subtotalLabel.Size = new System.Drawing.Size(123, 20);
             this.subtotalLabel.TabIndex = 21;
             this.subtotalLabel.Text = "Sub-Total: $00.00";
             // 
@@ -112,10 +112,10 @@
             this.rpLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rpLabel.AutoSize = true;
             this.rpLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rpLabel.Location = new System.Drawing.Point(499, 371);
+            this.rpLabel.Location = new System.Drawing.Point(649, 459);
             this.rpLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.rpLabel.Name = "rpLabel";
-            this.rpLabel.Size = new System.Drawing.Size(109, 15);
+            this.rpLabel.Size = new System.Drawing.Size(138, 20);
             this.rpLabel.TabIndex = 24;
             this.rpLabel.Text = "RP earned/payed: 0";
             // 
@@ -124,10 +124,10 @@
             this.ccLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ccLabel.AutoSize = true;
             this.ccLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ccLabel.Location = new System.Drawing.Point(499, 351);
+            this.ccLabel.Location = new System.Drawing.Point(649, 432);
             this.ccLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.ccLabel.Name = "ccLabel";
-            this.ccLabel.Size = new System.Drawing.Size(130, 15);
+            this.ccLabel.Size = new System.Drawing.Size(159, 20);
             this.ccLabel.TabIndex = 26;
             this.ccLabel.Text = "Payment Method: Card";
             // 
@@ -136,10 +136,10 @@
             this.datetimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.datetimeLabel.AutoSize = true;
             this.datetimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.datetimeLabel.Location = new System.Drawing.Point(499, 390);
+            this.datetimeLabel.Location = new System.Drawing.Point(649, 484);
             this.datetimeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.datetimeLabel.Name = "datetimeLabel";
-            this.datetimeLabel.Size = new System.Drawing.Size(89, 15);
+            this.datetimeLabel.Size = new System.Drawing.Size(114, 20);
             this.datetimeLabel.TabIndex = 27;
             this.datetimeLabel.Text = "Date and Time: ";
             // 
@@ -148,19 +148,19 @@
             this.guidLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guidLabel.AutoSize = true;
             this.guidLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guidLabel.Location = new System.Drawing.Point(330, 409);
+            this.guidLabel.Location = new System.Drawing.Point(456, 509);
             this.guidLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.guidLabel.Name = "guidLabel";
-            this.guidLabel.Size = new System.Drawing.Size(201, 15);
+            this.guidLabel.Size = new System.Drawing.Size(255, 20);
             this.guidLabel.TabIndex = 28;
             this.guidLabel.Text = "Customer\'s GUID: 165-a11-51e65-s16";
             // 
             // FormReceipt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(941, 427);
+            this.ClientSize = new System.Drawing.Size(1348, 721);
             this.Controls.Add(this.guidLabel);
             this.Controls.Add(this.datetimeLabel);
             this.Controls.Add(this.ccLabel);
@@ -170,9 +170,9 @@
             this.Controls.Add(this.subtotalLabel);
             this.Controls.Add(this.recieptItems);
             this.Controls.Add(this.RecceiptMainMenubtn);
-            this.Margin = new System.Windows.Forms.Padding(3, 7, 3, 7);
+            this.Margin = new System.Windows.Forms.Padding(3, 9, 3, 9);
             this.MaximizeBox = true;
-            this.MinimumSize = new System.Drawing.Size(957, 466);
+            this.MinimumSize = new System.Drawing.Size(1091, 606);
             this.Name = "FormReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Jeff\'s Coffee Shop";
