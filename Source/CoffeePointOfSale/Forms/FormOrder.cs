@@ -126,7 +126,7 @@ namespace CoffeePointOfSale.Forms
             //gets the DrinkMenuList and sets the choosen drink by the userr
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
-             
+            customizationListBox.Items.Add(drink.Name + ": " + drink.BasePrice);
             //loops over the customizations adding them to the listbox
             for (var index=0; index < drink.CustomizationList.Count; index++)
             {
