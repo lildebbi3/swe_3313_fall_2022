@@ -24,13 +24,7 @@ namespace CoffeePointOfSale.Services.DrinkMenu
             set => _customizations = value ?? new List<Customization>(); 
         } //list of all customizations applied to the drink
 
-        /*
-        public Drink(string name = "") //constructor to initialize Customizations and ensure no null values for DrinkType and Quantity
-        {
-            Name = name;
-            //Quantity = 1;
-            CustomizationList = new List<Customization>();
-        }*/
+       
 
         public override string ToString()
         {

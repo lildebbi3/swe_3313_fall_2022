@@ -37,6 +37,8 @@ namespace CoffeePointOfSale.Forms
         public int quantityofDrink = 1;
         private Color defaultButtonColor, selectedColor;
 
+        
+
         public FormOrder(IAppSettings appSettings, ICustomerService customerService, IDrinkMenuService drinkMenuService)
         {
 
@@ -175,6 +177,7 @@ namespace CoffeePointOfSale.Forms
         //go to payment form
         private void payButton_Click(object sender, EventArgs e)
         {
+           
             //Program.inProgressOrder = 
             Close();
             FormFactory.Get<FormPayment>().Show();
@@ -203,8 +206,35 @@ namespace CoffeePointOfSale.Forms
             salesTaxLabel.Text = ( drinktax.ToString());
             totalLabel.Text=(drinktotal.ToString());
             quantityofDrink = 1;
+
+          
+          //this is suppose to create the order object to be sent to the payment form where it can then be added to the customer DB  
+            var orderedDrink = new Drink(drink.CustomizationList)
+            {
+                Name = drink.Name,
+                BasePrice = drink.BasePrice
+
+            };
+            var order = new Order()
+            {
+                CurrentCustomer = FormCustomerList.GetCustomer,
+                SubTotal = drinksubtotal,
+                Tax = drinktax,
+                Total = drinktotal,
+                Payment =
+                {
+
+                },
+                AllDrinks =
+                {
+
+                }
+            };
+            order.AllDrinks.Add(orderedDrink);
+
             ResetForm();
         }
+      
 
         //calculates pricing with customizations 
         private void getDrinkCost(Drink drink, bool[] customs)
