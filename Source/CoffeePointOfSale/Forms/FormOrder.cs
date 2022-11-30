@@ -34,7 +34,7 @@ namespace CoffeePointOfSale.Forms
         decimal drinksubtotal;
         decimal drinktotal;
         decimal drinktax;
-        public int quantityofDrink = 0;
+        public int quantityofDrink = 1;
         private Color defaultButtonColor, selectedColor;
 
         public FormOrder(IAppSettings appSettings, ICustomerService customerService, IDrinkMenuService drinkMenuService)
@@ -123,10 +123,8 @@ namespace CoffeePointOfSale.Forms
             //gets the DrinkMenuList and sets the choosen drink by the userr
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
-
             //sets up the calculations
             bool[] checkedBoxes = new bool [drink.CustomizationList.Count];
-          
             //loops through the boxes detecting if they are checked.
             for(int customNum=0; customNum< customizationListBox.Items.Count;customNum++)
             {
@@ -200,36 +198,34 @@ namespace CoffeePointOfSale.Forms
                    
                 }
             }
+            //puts pricing on screen
             subTotalLabel.Text=(drinksubtotal.ToString());
             salesTaxLabel.Text = ( drinktax.ToString());
             totalLabel.Text=(drinktotal.ToString());
-            
-
-
+            quantityofDrink = 1;
             ResetForm();
         }
 
+        //calculates pricing with customizations 
         private void getDrinkCost(Drink drink, bool[] customs)
         {
-           
             decimal subtotal = Convert.ToDecimal(subTotalLabel.Text);
             decimal tax = _appSettings.Tax.Rate;
             decimal total = Convert.ToDecimal(totalLabel.Text);
 
-            subtotal += drink.BasePrice;
+            subtotal += drink.BasePrice * quantityofDrink;
             for (var index = 0; index < drink.CustomizationList.Count; index++)
             {
                 if (customs[index] == true)
                 {
-                    subtotal += drink.CustomizationList[index].Price;
-                    total += (subtotal * tax) + subtotal;
+                    subtotal = subtotal + drink.CustomizationList[index].Price;
                 }
             }
-
-            drinktotal = total;
+            total += (subtotal * tax) + subtotal;
+            //returns the drinks subtotal,tax amount, and total
             drinksubtotal = subtotal;
-            drinktax = (total * tax);
-
+            drinktax = (subtotal * tax);
+            drinktotal = total;
         }
 
 
