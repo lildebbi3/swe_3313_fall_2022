@@ -1,12 +1,14 @@
 {
   "Customers": {
     "anonymous": {
+      "GUID":  "0",
       "FirstName": "anonymous",
       "LastName": "anonymous",
       "Phone": "anonymous",
       "RewardPoints": 0
     },
     "404-444-5555": {
+      "GUID":  "1",
       "FirstName": "Richard",
       "LastName": "Dickson",
       "Phone": "404-444-5555",

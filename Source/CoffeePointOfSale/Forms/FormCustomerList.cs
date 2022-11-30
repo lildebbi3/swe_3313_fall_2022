@@ -26,7 +26,7 @@ namespace CoffeePointOfSale.Forms
         }
 
         //redneck way of getting the customer
-       public static Customer GetCustomer
+       public static Customer? GetCustomer
         {
             get; set;
         }

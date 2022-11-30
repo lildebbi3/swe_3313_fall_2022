@@ -34,6 +34,20 @@ public class Customers
     }
 
     /// <summary>
+    /// Indexer to return a specific customer by GUID.
+    /// </summary>
+    /// <param name="GUID"></param>
+    /// <returns>Returns a customer if GUID was found. Returns null otherwise. Does not throw.</returns>
+    public Customer? this[string enterNull, string GUID]
+    {
+        get
+        {
+            GUID = (GUID ?? "").Trim(); //ensures the GUID is not null and has no leading or trailing spaces
+            return _customerDict.ContainsKey(GUID) ? _customerDict[GUID] : null;
+        }
+    }
+
+    /// <summary>
     /// Adds a new customer to the customer dictionary.
     /// </summary>
     /// <param name="customer"></param>

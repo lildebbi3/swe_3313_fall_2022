@@ -24,9 +24,9 @@ namespace CoffeePointOfSale.Forms
 
             Order temp = Program.listOfAllOrders[Program.listOfAllOrders.Count - 1];
             Program.DisplayOrderToListBox(temp, recieptItems);
-            subtotalLabel.Text = $"Sub-Total: ${temp.SubTotal}";
-            salestaxLabel.Text = $"Sales Tax: ${temp.Tax}";
-            totalLabel.Text = $"    Total: ${temp.Total}";
+            subtotalLabel.Text = $"Sub-Total: ${Program.RemoveDecimalPlaces(temp.SubTotal)}";
+            salestaxLabel.Text = $"Sales Tax: ${Program.RemoveDecimalPlaces(temp.Tax)}";
+            totalLabel.Text = $"    Total: ${Program.RemoveDecimalPlaces(temp.Total)}";
 
             if (temp.Payment.IsCC)
             {
@@ -38,9 +38,10 @@ namespace CoffeePointOfSale.Forms
                 ccLabel.Text = "Payment Method: Rewards ";
                 rpLabel.Text = $"Rewards Used: {temp.Payment.RewardsCost}";
             }
-            rpLabel.Text += $" New Balance: {temp.CurrentCustomer.RewardPoints}";
+            rpLabel.Text += $" New Balance: {Program.currentCustomer.RewardPoints}";
 
             datetimeLabel.Text = $"Date and Time: {temp.TransactionTime}";
+            guidLabel.Text = $"{Program.currentCustomer.firstName}'s GUID: {Program.currentCustomer.GUID}";
         }
 
         private void RecceiptMainMenubtn_Click(object sender, EventArgs e)

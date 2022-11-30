@@ -32,11 +32,12 @@ namespace CoffeePointOfSale.Forms
             //for every drink in the order
             Program.DisplayOrderToListBox(Program.currentOrder, orderItems);
 
-            subtotalLabel.Text = $"Sub-Total: ${Program.currentOrder.SubTotal}";
-            salestaxLabel.Text = $"Sales Tax: ${Program.currentOrder.Tax}";
-            totalLabel.Text = $"    Total: ${Program.currentOrder.Total}";
+            subtotalLabel.Text = $"Sub-Total: ${Program.RemoveDecimalPlaces(Program.currentOrder.SubTotal)}";
+            salestaxLabel.Text = $"Sales Tax: ${Program.RemoveDecimalPlaces(Program.currentOrder.Tax)}";
+            totalLabel.Text = $"    Total: ${Program.RemoveDecimalPlaces(Program.currentOrder.Total)}";
 
             Program.currentOrder.Payment = new Order.PaymentMethod(); //create new payment for the order
+            Program.currentOrder.CustomerGUID = Program.currentCustomer.GUID;
 
             int tempRC = 0, tempRE = 0;
             if (!Program.useAnon)
@@ -57,8 +58,10 @@ namespace CoffeePointOfSale.Forms
                 rpCostLabel.Text = $"Rewards Cost: {tempRC}";
                 rpToEarnLabel.Text = $"Rewards to Earn: {tempRE}";
 
-                currentRPLabel.Text = $"{Program.currentOrder.CurrentCustomer.firstName}'s Points: {Program.currentOrder.CurrentCustomer.RewardPoints}";
-                if (Program.currentOrder.CurrentCustomer.RewardPoints >= tempRC) RewardPaymentBtn.Enabled = true;
+
+
+                currentRPLabel.Text = $"{Program.currentCustomer.firstName}'s Points: {Program.currentCustomer.RewardPoints}";
+                if (Program.currentCustomer.RewardPoints >= tempRC) RewardPaymentBtn.Enabled = true;
             }
             else
             {
@@ -115,12 +118,9 @@ namespace CoffeePointOfSale.Forms
 
                 temp.TransactionTime = DateTime.Now;
 
-                if (!Program.useAnon)
-                {
-                    temp.CurrentCustomer.RewardPoints += temp.Payment.RewardsEarned;
-                    _customerService.Write();
-                }
-
+                if (!Program.useAnon) Program.currentCustomer.RewardPoints -= temp.Payment.RewardsCost;
+                Program.currentCustomer.Orders.Add(temp);
+                _customerService.Write();
 
                 Program.useAnon = false;
                 Program.AddToOrders(temp); //add the current temporary order to the list of completed orders
@@ -185,7 +185,8 @@ namespace CoffeePointOfSale.Forms
 
             temp.TransactionTime = DateTime.Now;
 
-            temp.CurrentCustomer.RewardPoints -= temp.Payment.RewardsCost;
+            Program.currentCustomer.RewardPoints -= temp.Payment.RewardsCost;
+            Program.currentCustomer.Orders.Add(temp);
             _customerService.Write();
 
             Program.useAnon = false;

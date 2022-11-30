@@ -10,8 +10,9 @@ using static System.Windows.Forms.LinkLabel;
 
 namespace CoffeePointOfSale.Services.DrinkMenu
 {
-    internal class Order
+    public class Order
     {
+        public string? CustomerGUID { get; set; }
         public Customer.Customer? CurrentCustomer { get; set; }
         public List<Drink> AllDrinks { get; set; }
         public decimal SubTotal { get; set; }
@@ -45,7 +46,7 @@ namespace CoffeePointOfSale.Services.DrinkMenu
 
 
         //included paymentmethod class
-        internal class PaymentMethod
+        public class PaymentMethod
         {
             public bool IsCC { get; set; } //true if used credit card, false if used rewards points
             public string? CardDetails { get; set; } //the card number, can be null since can use rewards points

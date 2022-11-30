@@ -49,9 +49,18 @@ namespace CoffeePointOfSale.Forms
 
             //reset Program.currentOrder
             Program.currentOrder = new Order();
-            Program.currentOrder.CurrentCustomer = FormCustomerList.GetCustomer;
+            if (Program.useAnon)
+            {
+                Program.currentOrder.CustomerGUID = "0";
+                Program.currentCustomer = _customerService.Customers["anonymous"];
+            }
+            else
+            {
+                Program.currentOrder.CustomerGUID = FormCustomerList.GetCustomer.GUID;
+                Program.currentCustomer = _customerService.Customers["", Program.currentOrder.CustomerGUID];
+            }
 
-            if (Program.useAnon) Program.currentOrder.CurrentCustomer = _customerService.Customers["anonymous"];
+
 
             payButton.Enabled = false;
             addDrinkBtn.Enabled = false;
@@ -233,11 +242,17 @@ namespace CoffeePointOfSale.Forms
         private void CalculatePrices(decimal tempPrice)
         {
             orderSubtotal += tempPrice * quantityofDrink;
-            subTotalLabel.Text = $"{orderSubtotal}";
+            string subTotalText = $"{orderSubtotal}";
+            subTotalText = Program.RemoveDecimalPlaces(subTotalText);
+            subTotalLabel.Text = subTotalText;
             tax = orderSubtotal * _appSettings.Tax.Rate;
-            salesTaxLabel.Text = $"{tax}";
+            string taxText = $"{tax}";
+            taxText = Program.RemoveDecimalPlaces(taxText);
+            salesTaxLabel.Text = taxText;
             total = tax + orderSubtotal;
-            totalLabel.Text = $"{total}";
+            string totalText = $"{total}";
+            totalText = Program.RemoveDecimalPlaces(totalText);
+            totalLabel.Text = totalText;
         }
 
         //latte button is clicked
