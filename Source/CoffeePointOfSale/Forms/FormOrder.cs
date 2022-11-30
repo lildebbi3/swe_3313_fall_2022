@@ -31,6 +31,9 @@ namespace CoffeePointOfSale.Forms
             false  //espresso       5
         }; //this is a utility array to track what kind of drink is selected
         public int drinkType;
+        decimal drinksubtotal;
+        decimal drinktotal;
+        decimal drinktax;
         public int quantityofDrink = 0;
         private Color defaultButtonColor, selectedColor;
 
@@ -156,10 +159,7 @@ namespace CoffeePointOfSale.Forms
                 temp--;
                 quantityofDrink--;
             }
-
             qtyTxtbox.Text = $"Qty: \n{temp}";
-            
-          
         }
 
         //increase quantity of drink
@@ -167,8 +167,8 @@ namespace CoffeePointOfSale.Forms
         {
             int temp = Convert.ToInt32(qtyTxtbox.Lines[1]);
             temp++;
-            qtyTxtbox.Text = $"Qty: \n{temp}";
             quantityofDrink++;
+            qtyTxtbox.Text = $"Qty: \n{temp}";
         }
 
         //populate checkbox for customizations
@@ -188,17 +188,48 @@ namespace CoffeePointOfSale.Forms
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
             bool[] customs = determineCustomizations();
+            getDrinkCost(drink, customs);
 
             orderItems.AppendText(drink.ToString());
+            
             for(var index = 0; index < drink.CustomizationList.Count; index++)
             {
                 if (customs[index] == true)
                 {
                     orderItems.AppendText(drink.CustomizationList[index].ToString());
+                   
                 }
             }
+            subTotalLabel.Text=(drinksubtotal.ToString());
+            salesTaxLabel.Text = ( drinktax.ToString());
+            totalLabel.Text=(drinktotal.ToString());
             
+
+
             ResetForm();
+        }
+
+        private void getDrinkCost(Drink drink, bool[] customs)
+        {
+           
+            decimal subtotal = Convert.ToDecimal(subTotalLabel.Text);
+            decimal tax = _appSettings.Tax.Rate;
+            decimal total = Convert.ToDecimal(totalLabel.Text);
+
+            subtotal += drink.BasePrice;
+            for (var index = 0; index < drink.CustomizationList.Count; index++)
+            {
+                if (customs[index] == true)
+                {
+                    subtotal += drink.CustomizationList[index].Price;
+                    total += (subtotal * tax) + subtotal;
+                }
+            }
+
+            drinktotal = total;
+            drinksubtotal = subtotal;
+            drinktax = (total * tax);
+
         }
 
 
