@@ -48,18 +48,9 @@ namespace CoffeePointOfSale.Forms
             coffeeBtn.BackColor = defaultButtonColor; //set the coffee button to the normal color before the user ever sees the selected color
 
             //reset Program.currentOrder
-            Program.currentOrder = new Order();
-            if (Program.useAnon)
-            {
-                Program.currentOrder.CustomerGUID = "0";
-                Program.currentCustomer = _customerService.Customers["anonymous"];
-            }
-            else
-            {
-                Program.currentOrder.CustomerGUID = FormCustomerList.GetCustomer.GUID;
-                Program.currentCustomer = _customerService.Customers["", Program.currentOrder.CustomerGUID];
-            }
-
+            Customer temp = _customerService.Customers[Program.currentPhone];
+            if (temp == null) temp = _customerService.Customers["anonymous"];
+            Program.currentOrder = new Order(temp.GUID);
 
 
 
@@ -164,6 +155,7 @@ namespace CoffeePointOfSale.Forms
         private void mainMenuBtn_Click(object sender, EventArgs e)
         {
             Program.useAnon = false;
+            Program.currentPhone = "anonymous";
             Close();
             FormFactory.Get<FormMain>().Show();
         }

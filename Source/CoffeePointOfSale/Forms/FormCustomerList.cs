@@ -59,6 +59,7 @@ namespace CoffeePointOfSale.Forms
                 void orderbtn(object sender, EventArgs e)
                 {
                     FormCustomerList.GetCustomer = customer;
+                    Program.currentPhone = customer.Phone;
                     Hide();
                     FormFactory.Get<FormOrder>().ShowDialog();
                 }

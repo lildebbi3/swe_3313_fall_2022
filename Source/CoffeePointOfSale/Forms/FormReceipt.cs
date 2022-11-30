@@ -23,6 +23,7 @@ namespace CoffeePointOfSale.Forms
             InitializeComponent();
             _appSettings = appSettings;
             _customerService = customerService;
+            Customer tempCust = _customerService.Customers[Program.currentPhone];
 
             Order temp = Program.listOfAllOrders[Program.listOfAllOrders.Count - 1];
             Program.DisplayOrderToListBox(temp, recieptItems);
@@ -40,15 +41,16 @@ namespace CoffeePointOfSale.Forms
                 ccLabel.Text = "Payment Method: Rewards ";
                 rpLabel.Text = $"Rewards Used: {temp.Payment.RewardsCost}";
             }
-            rpLabel.Text += $" New Balance: {Program.currentCustomer.RewardPoints}";
+            rpLabel.Text += $" New Balance: {tempCust.RewardPoints}";
 
             datetimeLabel.Text = $"Date and Time: {temp.TransactionTime}";
-            guidLabel.Text = $"{Program.currentCustomer.firstName}'s GUID: {Program.currentCustomer.GUID}";
+            guidLabel.Text = $"{tempCust.firstName}'s GUID: {tempCust.GUID}";
             _customerService = customerService;
         }
 
         private void RecceiptMainMenubtn_Click(object sender, EventArgs e)
         {
+            Program.currentPhone = "anonymous";
             Close();
             FormFactory.Get<FormMain>().Show();
         }
