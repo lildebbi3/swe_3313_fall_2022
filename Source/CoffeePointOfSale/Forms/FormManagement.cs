@@ -3,6 +3,8 @@ using CoffeePointOfSale.Forms.Base;
 using CoffeePointOfSale.Services.CsvExtract;
 using CoffeePointOfSale.Services.Customer;
 using CoffeePointOfSale.Services.FormFactory;
+using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CoffeePointOfSale.Forms;
 
@@ -44,4 +46,68 @@ public partial class FormManagement : FormNoCloseBase
     {
         DemonstrateGettingCustomerList();
     }
+
+    private void GenerateCSVbtn_Click(object sender, EventArgs e)
+    {
+        // Creating file path
+        var outputDirectory = Path.GetTempPath(); //find OS temp directory
+        var csvFilename = $"output_{DateTime.Now.Ticks}.csv";
+        var csvPathAndFilename = Path.Join(outputDirectory, csvFilename);
+
+        // Creating list of customers and csv extract lines
+        var csvExtractLines = new List<csvExtractLine>();
+        var customerList = _customerService.Customers.List;
+
+        for (int i = 0; i < customerList.Count; i++)
+        {
+            for (int j = 0; j < customerList[i].Orders.Count; j++)
+            {
+                csvExtractLine csvExtract = new csvExtractLine
+                {
+                    customerFirstName = customerList[i].firstName,
+                    customerLastName = customerList[i].lastName,
+                    customerPhone = customerList[i].Phone,
+                    transactionDate = customerList[i].Orders[j].TransactionTime,
+                    subtotal = customerList[i].Orders[j].SubTotal,
+                    tax = customerList[i].Orders[j].Tax,
+                    total = customerList[i].Orders[j].Total,
+                };
+
+                csvExtractLines.Add(csvExtract);
+            }
+        }
+
+        _csvExtract.WriteCsvFile(csvExtractLines, csvPathAndFilename);
+
+        try
+        {
+            var processStartInfo = new ProcessStartInfo(csvPathAndFilename)
+            {
+                WorkingDirectory = outputDirectory,
+                UseShellExecute = true
+            };
+            Process.Start(processStartInfo);
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Failed to open [{csvPathAndFilename}]: {ex.Message}");
+        }
+    }
+
+    public class csvExtractLine
+    {
+
+        //public string GUID { get; set; }
+        public string customerFirstName { get; set; } 
+        public string customerLastName { get; set; }
+        public string customerPhone { get; set; }
+        public DateTime? transactionDate { get; set; }
+        public decimal subtotal { get; set; }
+        public decimal tax { get; set; }
+        public decimal total { get; set; }
+
+
+    }
+
 }

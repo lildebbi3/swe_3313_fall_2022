@@ -17,10 +17,12 @@ namespace CoffeePointOfSale.Forms
     public partial class FormReceipt : Base.FormNoCloseBase
     {
         private IAppSettings? _appSettings;
-        public FormReceipt(IAppSettings appSettings)
+        private ICustomerService? _customerService;
+        public FormReceipt(IAppSettings appSettings, ICustomerService? customerService)
         {
             InitializeComponent();
             _appSettings = appSettings;
+            _customerService = customerService;
 
             Order temp = Program.listOfAllOrders[Program.listOfAllOrders.Count - 1];
             Program.DisplayOrderToListBox(temp, recieptItems);
@@ -42,6 +44,7 @@ namespace CoffeePointOfSale.Forms
 
             datetimeLabel.Text = $"Date and Time: {temp.TransactionTime}";
             guidLabel.Text = $"{Program.currentCustomer.firstName}'s GUID: {Program.currentCustomer.GUID}";
+            _customerService = customerService;
         }
 
         private void RecceiptMainMenubtn_Click(object sender, EventArgs e)
