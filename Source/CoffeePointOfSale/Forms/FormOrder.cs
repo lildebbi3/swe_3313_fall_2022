@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace CoffeePointOfSale.Forms
 {
@@ -117,9 +118,12 @@ namespace CoffeePointOfSale.Forms
             //gets the DrinkMenuList and sets the choosen drink by the userr
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
-            customizationListBox.Items.Add(drink.Name + ": " + drink.BasePrice);
+            
+            priceDrinkL.Text = drink.Name + ": " + drink.BasePrice;
+
+
             //loops over the customizations adding them to the listbox
-            for (var index=0; index < drink.CustomizationList.Count; index++)
+         for (var index=0; index < drink.CustomizationList.Count; index++)
             {
                 var customization = drink.CustomizationList[index];
                 customizationListBox.Items.Add(customization.ToString());
@@ -251,6 +255,7 @@ namespace CoffeePointOfSale.Forms
         //latte button is clicked
         private void latteBtn_Click(object sender, EventArgs e)
         {
+            
             qtyTxtbox.Text = "Qty: \n1";
             drinkType = 0;
             populateCB();
