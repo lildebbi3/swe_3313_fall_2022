@@ -73,6 +73,6 @@ public class Customer
     {
         return IsAnonymous  
             ? "Anonymous Customer"
-            :$"{Phone}                {lastName}                {firstName}";
+            :$"{Phone}     {lastName}     {firstName}     Reward points:{RewardPoints}";
     }
 }

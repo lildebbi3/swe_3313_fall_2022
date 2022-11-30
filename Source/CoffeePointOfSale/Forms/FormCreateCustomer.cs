@@ -45,9 +45,9 @@ namespace CoffeePointOfSale.Forms
             string phoneNumber = textBoxPN.Text;
             string firstName = textBoxFN.Text;
             string lastName = textBoxLN.Text;
-
+            int nameCharCount = firstName.Count() + lastName.Count();
             //checks if lastname and firstname are empty, if they are then displays message
-            if ((lastName=="")||(firstName==""))
+            if (nameCharCount<9)
             {
 
                 CCwarningLabel.Visible = true;

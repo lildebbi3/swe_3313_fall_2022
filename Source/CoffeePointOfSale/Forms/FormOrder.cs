@@ -62,6 +62,7 @@ namespace CoffeePointOfSale.Forms
 
 
 
+
             payButton.Enabled = false;
             addDrinkBtn.Enabled = false;
 
@@ -224,7 +225,7 @@ namespace CoffeePointOfSale.Forms
             CalculatePrices(tempPrice);
 
 
-            //this is supposed to create the order object to be sent to the payment form where it can then be added to the customer DB  
+            //adds drink to the order
             Drink orderedDrink = new Drink(tempCustomizations)
             {
                 Name = drink.Name,
