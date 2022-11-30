@@ -296,7 +296,7 @@
             this.orderItems.Location = new System.Drawing.Point(735, 135);
             this.orderItems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.orderItems.Name = "orderItems";
-            this.orderItems.Size = new System.Drawing.Size(358, 184);
+            this.orderItems.Size = new System.Drawing.Size(358, 144);
             this.orderItems.TabIndex = 56;
             // 
             // priceDrinkL
