@@ -1,4 +1,5 @@
 ﻿using CoffeePointOfSale.Configuration;
+using CoffeePointOfSale.Services.Customer;
 using CoffeePointOfSale.Services.DrinkMenu;
 using CoffeePointOfSale.Services.FormFactory;
 using CreditCardValidator;
@@ -19,10 +20,13 @@ namespace CoffeePointOfSale.Forms
     public partial class FormPayment : Base.FormNoCloseBase
     {
         private IAppSettings? _appSettings;
-        public FormPayment(IAppSettings appSettings)
+        private readonly ICustomerService _customerService;
+
+        public FormPayment(IAppSettings appSettings, ICustomerService customerService)
         {
             InitializeComponent();
             _appSettings = appSettings;
+            _customerService = customerService;
 
             //for every drink in the order
             Program.DisplayOrderToListBox(Program.currentOrder, orderItems);
@@ -33,26 +37,41 @@ namespace CoffeePointOfSale.Forms
 
             Program.currentOrder.Payment = new Order.PaymentMethod(); //create new payment for the order
 
-            //calculate the cost to pay with rewards points
-            decimal tempRewardsCost = Program.currentOrder.Total * _appSettings.Rewards.PointsPerDollar * 100;
-            decimal dif1 = tempRewardsCost % 1;
-            int tempRC = (int)(tempRewardsCost + dif1);
-            Program.currentOrder.Payment.RewardsCost = tempRC;
+            int tempRC = 0, tempRE = 0;
+            if (!Program.useAnon)
+            {
+                //calculate the cost to pay with rewards points
+                decimal tempRewardsCost = Program.currentOrder.Total * _appSettings.Rewards.PointsPerDollar * 10;
+                decimal dif1 = tempRewardsCost % 1;
+                tempRC = (int)(tempRewardsCost + dif1);
+                Program.currentOrder.Payment.RewardsCost = tempRC;
 
-            //calculate the points earned if payed with cc
-            decimal tempRewardsEarned = Program.currentOrder.Total * _appSettings.Rewards.PointsPerDollar;
-            decimal dif2 = tempRewardsEarned % 1;
-            int tempRE = (int)(tempRewardsEarned + dif2);
-            Program.currentOrder.Payment.RewardsEarned = tempRE;
+                //calculate the points earned if payed with cc
+                decimal tempRewardsEarned = Program.currentOrder.Total * _appSettings.Rewards.PointsPerDollar;
+                decimal dif2 = tempRewardsEarned % 1;
+                tempRE = (int)(tempRewardsEarned + dif2);
+                Program.currentOrder.Payment.RewardsEarned = tempRE;
 
-            //set displays
-            rpCostLabel.Text = $"Rewards Cost: {tempRC}";
-            rpToEarnLabel.Text = $"Rewards to Earn: {tempRE}";
+                //set displays
+                rpCostLabel.Text = $"Rewards Cost: {tempRC}";
+                rpToEarnLabel.Text = $"Rewards to Earn: {tempRE}";
+
+                currentRPLabel.Text = $"{Program.currentOrder.CurrentCustomer.firstName}'s Points: {Program.currentOrder.CurrentCustomer.RewardPoints}";
+                if (Program.currentOrder.CurrentCustomer.RewardPoints >= tempRC) RewardPaymentBtn.Enabled = true;
+            }
+            else
+            {
+                currentRPLabel.Text = "Anonymous customer";
+                rpCostLabel.Text = "cannot use or earn";
+                rpToEarnLabel.Text = "rewards points";
+                RewardPaymentBtn.Text = "Unavailable";
+            }
         }
 
         //cancel payment button, takes you back to main menu
         private void paymentCancelBtn_Click(object sender, EventArgs e)
         {
+            Program.useAnon = false;
             Close();
             FormFactory.Get<FormMain>().Show();
         }
@@ -76,6 +95,14 @@ namespace CoffeePointOfSale.Forms
 
                 temp.TransactionTime = DateTime.Now;
 
+                if (!Program.useAnon)
+                {
+                    temp.CurrentCustomer.RewardPoints += temp.Payment.RewardsEarned;
+                    _customerService.Write();
+                }
+
+
+                Program.useAnon = false;
                 Program.AddToOrders(temp); //add the current temporary order to the list of completed orders
                 Close();
                 FormFactory.Get<FormReceipt>().Show();
@@ -85,13 +112,18 @@ namespace CoffeePointOfSale.Forms
 
         private void RewardPaymentBtn_Click(object sender, EventArgs e)
         {
-            //this button needs to have verification added
+            //verification for this button is done before the user ever clicks on it,
+            //it is disabled if the user does not have enough points or is anonymous
             Order temp = Program.currentOrder;
             temp.Payment.IsCC = false;
             temp.Payment.RewardsEarned = 0;
 
             temp.TransactionTime = DateTime.Now;
 
+            temp.CurrentCustomer.RewardPoints -= temp.Payment.RewardsCost;
+            _customerService.Write();
+
+            Program.useAnon = false;
             Program.AddToOrders(temp);
             Close();
             FormFactory.Get<FormReceipt>().Show();

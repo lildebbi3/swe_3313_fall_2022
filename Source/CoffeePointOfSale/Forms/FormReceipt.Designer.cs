@@ -35,6 +35,9 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.salestaxLabel = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
+            this.rpLabel = new System.Windows.Forms.Label();
+            this.ccLabel = new System.Windows.Forms.Label();
+            this.datetimeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,12 +106,51 @@
             this.subtotalLabel.TabIndex = 21;
             this.subtotalLabel.Text = "Sub-Total: $00.00";
             // 
+            // rpLabel
+            // 
+            this.rpLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rpLabel.AutoSize = true;
+            this.rpLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rpLabel.Location = new System.Drawing.Point(499, 371);
+            this.rpLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.rpLabel.Name = "rpLabel";
+            this.rpLabel.Size = new System.Drawing.Size(109, 15);
+            this.rpLabel.TabIndex = 24;
+            this.rpLabel.Text = "RP earned/payed: 0";
+            // 
+            // ccLabel
+            // 
+            this.ccLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ccLabel.AutoSize = true;
+            this.ccLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ccLabel.Location = new System.Drawing.Point(499, 351);
+            this.ccLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.ccLabel.Name = "ccLabel";
+            this.ccLabel.Size = new System.Drawing.Size(130, 15);
+            this.ccLabel.TabIndex = 26;
+            this.ccLabel.Text = "Payment Method: Card";
+            // 
+            // datetimeLabel
+            // 
+            this.datetimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.datetimeLabel.AutoSize = true;
+            this.datetimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.datetimeLabel.Location = new System.Drawing.Point(499, 390);
+            this.datetimeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.datetimeLabel.Name = "datetimeLabel";
+            this.datetimeLabel.Size = new System.Drawing.Size(89, 15);
+            this.datetimeLabel.TabIndex = 27;
+            this.datetimeLabel.Text = "Date and Time: ";
+            // 
             // FormReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(941, 427);
+            this.Controls.Add(this.datetimeLabel);
+            this.Controls.Add(this.ccLabel);
+            this.Controls.Add(this.rpLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.salestaxLabel);
             this.Controls.Add(this.subtotalLabel);
@@ -137,5 +179,8 @@
         private Label subtotalLabel;
         private Label pointsEarnedLabel;
         private Label paymentMethodLabel;
+        private Label ccLabel;
+        private Label rpLabel;
+        private Label datetimeLabel;
     }
 }

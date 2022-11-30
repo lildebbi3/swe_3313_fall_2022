@@ -55,6 +55,7 @@
             // 
             // mainMenuBtn
             // 
+            this.mainMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mainMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.mainMenuBtn.Location = new System.Drawing.Point(28, 9);
             this.mainMenuBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -67,6 +68,7 @@
             // 
             // latteBtn
             // 
+            this.latteBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.latteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.latteBtn.Location = new System.Drawing.Point(88, 63);
             this.latteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -79,6 +81,7 @@
             // 
             // icedLatteBtn
             // 
+            this.icedLatteBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.icedLatteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.icedLatteBtn.Location = new System.Drawing.Point(88, 96);
             this.icedLatteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -91,6 +94,7 @@
             // 
             // coffeeBtn
             // 
+            this.coffeeBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.coffeeBtn.BackColor = System.Drawing.Color.Olive;
             this.coffeeBtn.Location = new System.Drawing.Point(207, 63);
             this.coffeeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -103,6 +107,7 @@
             // 
             // matchaGreenBtn
             // 
+            this.matchaGreenBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.matchaGreenBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.matchaGreenBtn.Location = new System.Drawing.Point(88, 130);
             this.matchaGreenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -115,6 +120,7 @@
             // 
             // waterBtn
             // 
+            this.waterBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.waterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.waterBtn.Location = new System.Drawing.Point(207, 96);
             this.waterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -127,6 +133,7 @@
             // 
             // minusBtnQ
             // 
+            this.minusBtnQ.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.minusBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.minusBtnQ.Location = new System.Drawing.Point(340, 63);
             this.minusBtnQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -139,6 +146,7 @@
             // 
             // plusBtnQ
             // 
+            this.plusBtnQ.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.plusBtnQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.plusBtnQ.Location = new System.Drawing.Point(435, 63);
             this.plusBtnQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -151,6 +159,7 @@
             // 
             // subTotalLabel
             // 
+            this.subTotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.subTotalLabel.BackColor = System.Drawing.Color.White;
             this.subTotalLabel.Location = new System.Drawing.Point(697, 167);
             this.subTotalLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -162,6 +171,7 @@
             // 
             // salesTaxLabel
             // 
+            this.salesTaxLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.salesTaxLabel.BackColor = System.Drawing.Color.White;
             this.salesTaxLabel.Location = new System.Drawing.Point(697, 188);
             this.salesTaxLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -173,6 +183,7 @@
             // 
             // totalLabel
             // 
+            this.totalLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalLabel.BackColor = System.Drawing.Color.White;
             this.totalLabel.Location = new System.Drawing.Point(697, 211);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,6 +195,7 @@
             // 
             // payButton
             // 
+            this.payButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.payButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.payButton.Location = new System.Drawing.Point(697, 252);
             this.payButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -196,6 +208,7 @@
             // 
             // espressoBtn
             // 
+            this.espressoBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.espressoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.espressoBtn.Location = new System.Drawing.Point(207, 130);
             this.espressoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -208,6 +221,7 @@
             // 
             // coffeeLabel
             // 
+            this.coffeeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.coffeeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.coffeeLabel.Location = new System.Drawing.Point(88, 41);
             this.coffeeLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
@@ -220,6 +234,7 @@
             // 
             // addDrinkBtn
             // 
+            this.addDrinkBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.addDrinkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.addDrinkBtn.Location = new System.Drawing.Point(338, 111);
             this.addDrinkBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,6 +247,7 @@
             // 
             // qtyTxtbox
             // 
+            this.qtyTxtbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.qtyTxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.qtyTxtbox.Location = new System.Drawing.Point(371, 63);
             this.qtyTxtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -245,6 +261,7 @@
             // 
             // customizationListBox
             // 
+            this.customizationListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.customizationListBox.FormattingEnabled = true;
             this.customizationListBox.Location = new System.Drawing.Point(42, 177);
             this.customizationListBox.Name = "customizationListBox";
@@ -253,6 +270,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.textBox1.Location = new System.Drawing.Point(619, 167);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -264,6 +282,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.textBox2.Location = new System.Drawing.Point(619, 190);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -275,6 +294,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.textBox3.Location = new System.Drawing.Point(619, 211);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -286,6 +306,7 @@
             // 
             // orderItems
             // 
+            this.orderItems.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.orderItems.FormattingEnabled = true;
             this.orderItems.ItemHeight = 15;
             this.orderItems.Location = new System.Drawing.Point(593, 13);

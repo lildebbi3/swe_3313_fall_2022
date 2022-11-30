@@ -51,6 +51,11 @@ namespace CoffeePointOfSale.Forms
             Program.currentOrder = new Order();
             Program.currentOrder.CurrentCustomer = FormCustomerList.GetCustomer;
 
+            if (Program.useAnon) Program.currentOrder.CurrentCustomer = _customerService.Customers["anonymous"];
+
+            payButton.Enabled = false;
+            addDrinkBtn.Enabled = false;
+
             ResetForm();
         }
 
@@ -100,6 +105,7 @@ namespace CoffeePointOfSale.Forms
                 drinkSelected[a] = false;
                 if (a == indexForTrue) drinkSelected[a] = true;
             }
+            addDrinkBtn.Enabled = true;
         }
         
         //populates the customizations listbox with the corresponding drink number
@@ -147,6 +153,7 @@ namespace CoffeePointOfSale.Forms
         //return to main menu
         private void mainMenuBtn_Click(object sender, EventArgs e)
         {
+            Program.useAnon = false;
             Close();
             FormFactory.Get<FormMain>().Show();
         }
@@ -175,6 +182,8 @@ namespace CoffeePointOfSale.Forms
         //this method should take the drink and its customizations and display it onto the orderItems textbox
         private void addDrinkBtn_Click(object sender, EventArgs e)
         {
+            payButton.Enabled = true;
+
             var drinkMenuList = _drinkMenuService.DrinkMenuList;
             var drink = drinkMenuList[drinkType];
             bool[] customs = determineCustomizations();

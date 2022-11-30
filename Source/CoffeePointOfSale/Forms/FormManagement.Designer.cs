@@ -54,6 +54,7 @@
             this.txtDeleteThis.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtDeleteThis.Multiline = true;
             this.txtDeleteThis.Name = "txtDeleteThis";
+            this.txtDeleteThis.ReadOnly = true;
             this.txtDeleteThis.Size = new System.Drawing.Size(299, 120);
             this.txtDeleteThis.TabIndex = 1;
             // 

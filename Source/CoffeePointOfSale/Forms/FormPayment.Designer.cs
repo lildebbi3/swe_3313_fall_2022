@@ -46,6 +46,7 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.rpToEarnLabel = new System.Windows.Forms.Label();
             this.rpCostLabel = new System.Windows.Forms.Label();
+            this.currentRPLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // paymentCancelBtn
@@ -141,6 +142,7 @@
             // 
             this.RewardPaymentBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RewardPaymentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.RewardPaymentBtn.Enabled = false;
             this.RewardPaymentBtn.Location = new System.Drawing.Point(480, 383);
             this.RewardPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RewardPaymentBtn.Name = "RewardPaymentBtn";
@@ -246,12 +248,25 @@
             this.rpCostLabel.TabIndex = 21;
             this.rpCostLabel.Text = "RP Cost: 0";
             // 
+            // currentRPLabel
+            // 
+            this.currentRPLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.currentRPLabel.AutoSize = true;
+            this.currentRPLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.currentRPLabel.Location = new System.Drawing.Point(490, 148);
+            this.currentRPLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.currentRPLabel.Name = "currentRPLabel";
+            this.currentRPLabel.Size = new System.Drawing.Size(115, 15);
+            this.currentRPLabel.TabIndex = 23;
+            this.currentRPLabel.Text = "Customer\'s Points: 0";
+            // 
             // FormPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(941, 427);
+            this.Controls.Add(this.currentRPLabel);
             this.Controls.Add(this.rpToEarnLabel);
             this.Controls.Add(this.rpCostLabel);
             this.Controls.Add(this.totalLabel);
@@ -299,5 +314,6 @@
         private Label totalLabel;
         private Label rpToEarnLabel;
         private Label rpCostLabel;
+        private Label currentRPLabel;
     }
 }

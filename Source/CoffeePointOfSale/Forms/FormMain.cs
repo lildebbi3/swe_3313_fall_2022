@@ -33,6 +33,7 @@ public partial class FormMain : FormBase
     //btn takes user to order form
     private void button1_Click(object sender, EventArgs e)
     {
+        Program.useAnon = true;
         Hide();
         FormFactory.Get<FormOrder>().ShowDialog();
     }
